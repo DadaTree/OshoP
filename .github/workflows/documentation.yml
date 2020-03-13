@@ -1,1 +1,12 @@
-name: Build documentat
+name: Build documentation
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "docs/**"
+
+jobs:
+  build:
+    uses: huggingface/doc-builder/.github/workflows/buil
