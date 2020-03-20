@@ -16,4 +16,5 @@ jobs:
       commit_sha: ${{ github.event.pull_request.head.sha }}
       pr_number: ${{ github.event.number }}
       package: huggingface.js
-      path_to_docs: huggingface.j
+      path_to_docs: huggingface.js/docs
+      additional_args: --not_python_module
