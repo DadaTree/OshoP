@@ -6,4 +6,6 @@ We use `pnpm` as our package manager. You need to use it, eg `pnpm install` inst
 
 ## Code style
 
-If you want to format the whole code
+If you want to format the whole codebase, you can do `pnpm -r format` at the root.
+
+Otherwise, we avoid runtime dependencies unless they're strictly needed. For exam
