@@ -12,4 +12,6 @@ Otherwise, we avoid runtime dependencies unless they're strictly needed. For exa
 
 ## Pull requests
 
-Keep your
+Keep your changes scoped to the subject of the PR!
+
+It's not a hard requirement, but please consider using an icon from [Gitmoji](https://g
