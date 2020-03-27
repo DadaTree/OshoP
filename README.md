@@ -76,3 +76,37 @@ await commit({
     path: "pytorch_model.bin",
     content: new Blob(...) // Can work with native File in browsers
   }]
+});
+
+const inference = new HfInference(HF_ACCESS_TOKEN);
+
+await inference.translation({
+  model: 't5-base',
+  inputs: 'My name is Wolfgang and I live in Berlin'
+})
+
+await inference.textToImage({
+  inputs: 'award winning high resolution photo of a giant tortoise/((ladybird)) hybrid, [trending on artstation]',
+  negative_prompt: 'blurry',
+  model: 'stabilityai/stable-diffusion-2',
+})
+```
+
+There are more features of course, check each library's README!
+
+## Formatting & testing
+
+```console
+pnpm install
+
+pnpm -r format
+pnpm -r test
+```
+
+## Building
+
+```
+pnpm -r build
+```
+
+This will generate ESM and CJS javascript files in `packages/*/dist`, eg `packages/inference/dist/index.mjs`.
