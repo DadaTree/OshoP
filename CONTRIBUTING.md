@@ -22,4 +22,4 @@ The files in `/docs` are automatically generated, do not edit them!
 
 ## Tests
 
-If you want to run only specific t
+If you want to run only specific tests, you can do `pnpm test -- -t "test name"`
