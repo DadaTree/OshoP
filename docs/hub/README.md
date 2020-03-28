@@ -8,4 +8,7 @@ npm add @huggingface/hub
 
 ## Usage
 
-For some of the calls, you nee
+For some of the calls, you need to create an account and generate an [access token](https://huggingface.co/settings/tokens).
+
+```ts
+import { createRepo, commit, deleteRepo, listFil
