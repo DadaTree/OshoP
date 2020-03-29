@@ -11,4 +11,7 @@ npm add @huggingface/hub
 For some of the calls, you need to create an account and generate an [access token](https://huggingface.co/settings/tokens).
 
 ```ts
-import { createRepo, commit, deleteRepo, listFil
+import { createRepo, commit, deleteRepo, listFiles } from "@huggingface/hub";
+import type { RepoId, Credentials } from "@huggingface/hub";
+
+const repo: RepoId = { type: 
