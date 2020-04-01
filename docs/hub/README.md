@@ -27,3 +27,11 @@ await commit({
       operation: "addOrUpdate",
       path: "file.txt",
       content: new Blob(["Hello World"]),
+    },
+  ],
+});
+
+await (await downloadFile({ repo, path: "README.md" })).text();
+
+for await (const fileInfo of listFiles({repo})) {
+  con
