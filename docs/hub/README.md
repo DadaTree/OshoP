@@ -19,4 +19,11 @@ const credentials: Credentials = { accessToken: "hf_..." };
 
 await createRepo({ repo, credentials, license: "mit" });
 
-awa
+await commit({
+  repo,
+  credentials,
+  operations: [
+    {
+      operation: "addOrUpdate",
+      path: "file.txt",
+      content: new Blob(["Hello World"]),
