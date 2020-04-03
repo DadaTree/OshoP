@@ -34,4 +34,12 @@ await commit({
 await (await downloadFile({ repo, path: "README.md" })).text();
 
 for await (const fileInfo of listFiles({repo})) {
-  con
+  console.log(fileInfo);
+}
+
+await deleteRepo({ repo, credentials });
+```
+
+## Performance considerations
+
+When uploading large files, you may want to run th
