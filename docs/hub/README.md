@@ -42,4 +42,6 @@ await deleteRepo({ repo, credentials });
 
 ## Performance considerations
 
-When uploading large files, you may want to run th
+When uploading large files, you may want to run the `commit` calls inside a worker, to offload the sha256 computations.
+
+Also, use `Blob` to avoid loading the whole files in RAM. In `
