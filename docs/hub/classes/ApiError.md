@@ -12,4 +12,11 @@ Error thrown when an API call to the Hugging Face Hub fails.
 
 ### constructor
 
-• **new 
+• **new ApiError**(`url`, `statusCode`, `requestId?`, `message?`)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `url` | `string` |
+| `statusCod
