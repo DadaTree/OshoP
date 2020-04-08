@@ -19,4 +19,14 @@ Error thrown when an API call to the Hugging Face Hub fails.
 | Name | Type |
 | :------ | :------ |
 | `url` | `string` |
-| `statusCod
+| `statusCode` | `number` |
+| `requestId?` | `string` |
+| `message?` | `string` |
+
+#### Overrides
+
+Error.constructor
+
+#### Defined in
+
+[hub/src/er
