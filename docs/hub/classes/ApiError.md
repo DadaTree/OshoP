@@ -31,4 +31,16 @@ Error.constructor
 
 [hub/src/error.ts:33](https://github.com/huggingface/huggingface.js/blob/main/packages/hub/src/error.ts#L33)
 
-## Proper
+## Properties
+
+### cause
+
+• `Optional` **cause**: `unknown`
+
+#### Inherited from
+
+Error.cause
+
+#### Defined in
+
+doc-internal/node_modules/.pnpm/typescr
