@@ -43,4 +43,14 @@ Error.cause
 
 #### Defined in
 
-doc-internal/node_modules/.pnpm/typescr
+doc-internal/node_modules/.pnpm/typescript@4.9.5/node_modules/typescript/lib/lib.es2022.error.d.ts:26
+
+___
+
+### data
+
+• `Optional` **data**: `JsonObject`
+
+#### Defined in
+
+[hub/src/error.ts:
