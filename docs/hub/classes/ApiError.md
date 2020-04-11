@@ -29,4 +29,6 @@ Error.constructor
 
 #### Defined in
 
-[hub/src/er
+[hub/src/error.ts:33](https://github.com/huggingface/huggingface.js/blob/main/packages/hub/src/error.ts#L33)
+
+## Proper
