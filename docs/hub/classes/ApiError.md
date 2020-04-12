@@ -53,4 +53,10 @@ ___
 
 #### Defined in
 
-[hub/src/error.ts:
+[hub/src/error.ts:31](https://github.com/huggingface/huggingface.js/blob/main/packages/hub/src/error.ts#L31)
+
+___
+
+### message
+
+• **message**:
