@@ -71,4 +71,14 @@ doc-internal/node_modules/.pnpm/typescript@4.9.5/node_modules/typescript/lib/lib
 
 ___
 
-#
+### name
+
+• **name**: `string`
+
+#### Inherited from
+
+Error.name
+
+#### Defined in
+
+doc-internal/node_modules/.pnpm/typescript@4.9.5/
