@@ -91,4 +91,12 @@ ___
 
 #### Defined in
 
-[hub/src/er
+[hub/src/error.ts:30](https://github.com/huggingface/huggingface.js/blob/main/packages/hub/src/error.ts#L30)
+
+___
+
+### stack
+
+• `Optional` **stack**: `string`
+
+#### Inherite
