@@ -109,4 +109,10 @@ doc-internal/node_modules/.pnpm/typescript@4.9.5/node_modules/typescript/lib/lib
 
 ___
 
-##
+### statusCode
+
+• **statusCode**: `number`
+
+#### Defined in
+
+[hub/src/error.ts:28](https://github.com/huggingface/huggingface.js/blob/main/pack
