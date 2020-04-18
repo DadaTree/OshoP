@@ -99,4 +99,14 @@ ___
 
 • `Optional` **stack**: `string`
 
-#### Inherite
+#### Inherited from
+
+Error.stack
+
+#### Defined in
+
+doc-internal/node_modules/.pnpm/typescript@4.9.5/node_modules/typescript/lib/lib.es5.d.ts:1055
+
+___
+
+##
