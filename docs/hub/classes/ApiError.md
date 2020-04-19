@@ -115,4 +115,14 @@ ___
 
 #### Defined in
 
-[hub/src/error.ts:28](https://github.com/huggingface/huggingface.js/blob/main/pack
+[hub/src/error.ts:28](https://github.com/huggingface/huggingface.js/blob/main/packages/hub/src/error.ts#L28)
+
+___
+
+### url
+
+• **url**: `string`
+
+#### Defined in
+
+[hub/src/error.ts:29](https://github.com/huggingface/huggingfac
