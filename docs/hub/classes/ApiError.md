@@ -147,4 +147,17 @@ https://v8.dev/docs/stack-trace-api#customizing-stack-traces
 
 | Name | Type |
 | :------ | :------ |
-| `err` |
+| `err` | `Error` |
+| `stackTraces` | `CallSite`[] |
+
+##### Returns
+
+`any`
+
+#### Inherited from
+
+Error.prepareStackTrace
+
+#### Defined in
+
+hub/node_modules/.pnpm/@types+node@18.13.0/node_m
