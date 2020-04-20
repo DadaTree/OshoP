@@ -160,4 +160,14 @@ Error.prepareStackTrace
 
 #### Defined in
 
-hub/node_modules/.pnpm/@types+node@18.13.0/node_m
+hub/node_modules/.pnpm/@types+node@18.13.0/node_modules/@types/node/globals.d.ts:11
+
+___
+
+### stackTraceLimit
+
+▪ `Static` **stackTraceLimit**: `number`
+
+#### Inherited from
+
+Error.stackTraceLimit
