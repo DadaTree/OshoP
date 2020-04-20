@@ -138,3 +138,13 @@ ___
 ▸ (`err`, `stackTraces`): `any`
 
 Optional override for formatting stack traces
+
+**`See`**
+
+https://v8.dev/docs/stack-trace-api#customizing-stack-traces
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `err` |
