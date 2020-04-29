@@ -171,3 +171,11 @@ ___
 #### Inherited from
 
 Error.stackTraceLimit
+
+#### Defined in
+
+hub/node_modules/.pnpm/@types+node@18.13.0/node_modules/@types/node/globals.d.ts:13
+
+## Methods
+
+### captureStackTra
