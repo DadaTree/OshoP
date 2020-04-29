@@ -184,4 +184,11 @@ hub/node_modules/.pnpm/@types+node@18.13.0/node_modules/@types/node/globals.d.ts
 
 Create .stack property on a target object
 
-#### Par
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `targetObject` | `object` |
+| `constructorOpt?` | `Function` |
+
+#### Returns
