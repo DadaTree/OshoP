@@ -201,4 +201,4 @@ Error.captureStackTrace
 
 #### Defined in
 
-hub/node_modules/.pnpm/@types+node@18.13.0/node_modules/@types/
+hub/node_modules/.pnpm/@types+node@18.13.0/node_modules/@types/node/globals.d.ts:4

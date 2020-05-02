@@ -1,0 +1,5 @@
+# Interface: CommitParams
+
+## Properties
+
+###
