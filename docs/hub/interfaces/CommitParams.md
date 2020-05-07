@@ -20,4 +20,10 @@ ___
 
 • **credentials**: [`Credentials`](Credentials)
 
-####
+#### Defined in
+
+[hub/src/lib/commit.ts:50](https://github.com/huggingface/huggingface.js/blob/main/packages/hub/src/lib/commit.ts#L50)
+
+___
+
+### descri
