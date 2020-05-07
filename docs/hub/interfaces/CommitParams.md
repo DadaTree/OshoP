@@ -26,4 +26,10 @@ ___
 
 ___
 
-### descri
+### description
+
+• `Optional` **description**: `string`
+
+#### Defined in
+
+[hub/src/lib/commit.ts:47](https://github.com/huggingface/huggingface.js/blob/main/packages/hub/src/lib/
