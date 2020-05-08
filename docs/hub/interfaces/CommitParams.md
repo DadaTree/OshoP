@@ -42,4 +42,12 @@ ___
 
 #### Defined in
 
-[hub/src/lib/commit.ts:61](https://github.com/huggingfac
+[hub/src/lib/commit.ts:61](https://github.com/huggingface/huggingface.js/blob/main/packages/hub/src/lib/commit.ts#L61)
+
+___
+
+### isPullRequest
+
+• `Optional` **isPullRequest**: `boolean`
+
+#### De
