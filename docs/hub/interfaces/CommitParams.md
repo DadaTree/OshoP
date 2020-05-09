@@ -62,4 +62,12 @@ ___
 
 #### Defined in
 
-[hub/src/lib/commit.ts:49](https://github.com/huggingface/
+[hub/src/lib/commit.ts:49](https://github.com/huggingface/huggingface.js/blob/main/packages/hub/src/lib/commit.ts#L49)
+
+___
+
+### parentCommit
+
+• `Optional` **parentCommit**: `string`
+
+Par
