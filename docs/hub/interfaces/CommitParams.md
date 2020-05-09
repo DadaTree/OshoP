@@ -50,4 +50,12 @@ ___
 
 • `Optional` **isPullRequest**: `boolean`
 
-#### De
+#### Defined in
+
+[hub/src/lib/commit.ts:60](https://github.com/huggingface/huggingface.js/blob/main/packages/hub/src/lib/commit.ts#L60)
+
+___
+
+### operations
+
+• **o
