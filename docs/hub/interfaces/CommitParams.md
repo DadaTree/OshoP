@@ -58,4 +58,8 @@ ___
 
 ### operations
 
-• **o
+• **operations**: [`CommitOperation`](../modules#commitoperation)[]
+
+#### Defined in
+
+[hub/src/lib/commit.ts:49](https://github.com/huggingface/
