@@ -73,4 +73,8 @@ ___
 Parent commit. Optional
 
 - When opening a PR: will use parentCommit as the parent commit
-- When committing on a branch: Will make sure that there were no i
+- When committing on a branch: Will make sure that there were no intermediate commits
+
+#### Defined in
+
+[hub/src/lib/commit.ts:59](https://github.com/huggingface/huggingface.js/blob/main/pac
