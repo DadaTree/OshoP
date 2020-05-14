@@ -77,4 +77,14 @@ Parent commit. Optional
 
 #### Defined in
 
-[hub/src/lib/commit.ts:59](https://github.com/huggingface/huggingface.js/blob/main/pac
+[hub/src/lib/commit.ts:59](https://github.com/huggingface/huggingface.js/blob/main/packages/hub/src/lib/commit.ts#L59)
+
+___
+
+### repo
+
+• **repo**: [`RepoId`](RepoId)
+
+#### Defined in
+
+[hub/src/lib/commit.ts:48](h
