@@ -87,4 +87,10 @@ ___
 
 #### Defined in
 
-[hub/src/lib/commit.ts:48](h
+[hub/src/lib/commit.ts:48](https://github.com/huggingface/huggingface.js/blob/main/packages/hub/src/lib/commit.ts#L48)
+
+___
+
+### title
+
+• **title**: `str
