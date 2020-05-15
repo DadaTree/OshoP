@@ -93,4 +93,8 @@ ___
 
 ### title
 
-• **title**: `str
+• **title**: `string`
+
+#### Defined in
+
+[hub/src/lib/commit.ts:46](https://github.com/huggingface/huggingface.js/blob/main/packages/hub/src/lib/commit.t
