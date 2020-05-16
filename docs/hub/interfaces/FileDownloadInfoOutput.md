@@ -10,4 +10,14 @@ In case of LFS file, link to download directly from cloud provider
 
 #### Defined in
 
-[hub/src/lib/file-download-info.ts:12](https://github.com/huggingface/huggingface.js/bl
+[hub/src/lib/file-download-info.ts:12](https://github.com/huggingface/huggingface.js/blob/main/packages/hub/src/lib/file-download-info.ts#L12)
+
+___
+
+### etag
+
+• **etag**: `string`
+
+#### Defined in
+
+[hub/sr
