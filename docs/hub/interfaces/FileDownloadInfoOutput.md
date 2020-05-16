@@ -20,4 +20,4 @@ ___
 
 #### Defined in
 
-[hub/sr
+[hub/src/lib/file-download-info.ts:8](https://github.com/huggingface/huggingface.js/blob/main/packages/hub/src/lib/file-download-info.ts#L8
