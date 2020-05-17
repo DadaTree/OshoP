@@ -30,4 +30,4 @@ ___
 
 #### Defined in
 
-[hub/src/lib/file-download-info.ts:7](https://github.com/huggi
+[hub/src/lib/file-download-info.ts:7](https://github.com/huggingface/huggingface.js/blob/main/packages/hub/src/lib/file-download-info.ts#L7)
