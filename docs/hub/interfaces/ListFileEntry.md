@@ -60,3 +60,21 @@ ___
 [hub/src/lib/list-files.ts:24](https://github.com/huggingface/huggingface.js/blob/main/packages/hub/src/lib/list-files.ts#L24)
 
 ___
+
+### size
+
+• **size**: `number`
+
+#### Defined in
+
+[hub/src/lib/list-files.ts:10](https://github.com/huggingface/huggingface.js/blob/main/packages/hub/src/lib/list-files.ts#L10)
+
+___
+
+### type
+
+• **type**: ``"file"`` \| ``"directory"`` \| ``"unknown"``
+
+#### Defined in
+
+[hub/src/lib/list-files.ts:9](https://github.com/huggingface/huggingface.js/blob/main/packages/hub/src/lib/list-files.ts#L9)
