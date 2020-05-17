@@ -20,4 +20,14 @@ ___
 
 #### Defined in
 
-[hub/src/lib/file-download-info.ts:8](https://github.com/huggingface/huggingface.js/blob/main/packages/hub/src/lib/file-download-info.ts#L8
+[hub/src/lib/file-download-info.ts:8](https://github.com/huggingface/huggingface.js/blob/main/packages/hub/src/lib/file-download-info.ts#L8)
+
+___
+
+### size
+
+• **size**: `number`
+
+#### Defined in
+
+[hub/src/lib/file-download-info.ts:7](https://github.com/huggi
