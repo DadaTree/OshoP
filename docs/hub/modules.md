@@ -210,3 +210,16 @@ with params.recursive set to `true`.
 | :------ | :------ | :------ |
 | `params` | `Object` | - |
 | `params.credentials?` | [`Credentials`](interfaces/Credentials) | - |
+| `params.hubUrl?` | `string` | - |
+| `params.path?` | `string` | Eg 'data' for listing all files in the 'data' folder. Leave it empty to list all files in the repo. |
+| `params.recursive?` | `boolean` | Do we want to list files in subdirectories? |
+| `params.repo` | [`RepoId`](interfaces/RepoId) | - |
+| `params.revision?` | `string` | - |
+
+#### Returns
+
+`AsyncGenerator`<[`ListFileEntry`](interfaces/ListFileEntry)\>
+
+#### Defined in
+
+[hub/src/lib/list-files.ts:31](https://github.com/huggingface/huggingface.js/blob/main/packages/hub/src/lib/list-files.ts#L31)
