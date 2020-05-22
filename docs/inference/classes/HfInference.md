@@ -6,4 +6,9 @@
 
 • **new HfInference**(`apiKey?`, `defaultOptions?`)
 
-#### Paramet
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `apiKey` | `string` | `""` |
+| `defaultOptions` | [`Options`](../interfaces/Optio
