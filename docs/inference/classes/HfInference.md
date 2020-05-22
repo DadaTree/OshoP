@@ -11,4 +11,8 @@
 | Name | Type | Default value |
 | :------ | :------ | :------ |
 | `apiKey` | `string` | `""` |
-| `defaultOptions` | [`Options`](../interfaces/Optio
+| `defaultOptions` | [`Options`](../interfaces/Options) | `{}` |
+
+#### Defined in
+
+[HfInference.ts:507](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInferen
