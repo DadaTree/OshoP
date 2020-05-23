@@ -25,4 +25,10 @@
 
 #### Defined in
 
-[HfInference.ts:504](https://gi
+[HfInference.ts:504](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInference.ts#L504)
+
+___
+
+### defaultOptions
+
+• `Private` `Readonly` **defaultOp
