@@ -31,4 +31,8 @@ ___
 
 ### defaultOptions
 
-• `Private` `Readonly` **defaultOp
+• `Private` `Readonly` **defaultOptions**: [`Options`](../interfaces/Options)
+
+#### Defined in
+
+[HfInference.ts:505](https://github.com/huggingface/huggingface.js/blob/main/
