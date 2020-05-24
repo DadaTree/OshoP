@@ -35,4 +35,10 @@ ___
 
 #### Defined in
 
-[HfInference.ts:505](https://github.com/huggingface/huggingface.js/blob/main/
+[HfInference.ts:505](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInference.ts#L505)
+
+## Methods
+
+### audioClassification
+
+▸ **audioClassification**(`args`, `options?`): `Promise`<[`Audio
