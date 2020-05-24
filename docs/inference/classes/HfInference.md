@@ -41,4 +41,6 @@ ___
 
 ### audioClassification
 
-▸ **audioClassification**(`args`, `options?`): `Promise`<[`Audio
+▸ **audioClassification**(`args`, `options?`): `Promise`<[`AudioClassificationReturn`](../modules#audioclassificationreturn)\>
+
+This task reads some audio input and outputs the likelihood of classes.
