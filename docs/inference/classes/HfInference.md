@@ -50,4 +50,9 @@ Recommended model:  superb/hubert-large-superb-er
 
 | Name | Type |
 | :------ | :------ |
-| `args` | [`AudioClassificationArgs`](../m
+| `args` | [`AudioClassificationArgs`](../modules#audioclassificationargs) |
+| `options?` | [`Options`](../interfaces/Options) |
+
+#### Returns
+
+`Promise`<[`AudioClassificationReturn`](../mo
