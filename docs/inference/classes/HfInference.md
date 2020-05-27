@@ -59,4 +59,10 @@ Recommended model:  superb/hubert-large-superb-er
 
 #### Defined in
 
-[HfInference.ts:617](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInfe
+[HfInference.ts:617](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInference.ts#L617)
+
+___
+
+### automaticSpeechRecognition
+
+▸ **automaticSpeechRecognition**(`args`, `options?`): `Promise`<[`AutomaticSpeechRecognitionReturn
