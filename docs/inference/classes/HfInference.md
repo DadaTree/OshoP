@@ -55,4 +55,8 @@ Recommended model:  superb/hubert-large-superb-er
 
 #### Returns
 
-`Promise`<[`AudioClassificationReturn`](../mo
+`Promise`<[`AudioClassificationReturn`](../modules#audioclassificationreturn)\>
+
+#### Defined in
+
+[HfInference.ts:617](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInfe
