@@ -65,4 +65,7 @@ ___
 
 ### automaticSpeechRecognition
 
-▸ **automaticSpeechRecognition**(`args`, `options?`): `Promise`<[`AutomaticSpeechRecognitionReturn
+▸ **automaticSpeechRecognition**(`args`, `options?`): `Promise`<[`AutomaticSpeechRecognitionReturn`](../interfaces/AutomaticSpeechRecognitionReturn)\>
+
+This task reads some audio input and outputs the said words within the audio files.
+Recommended model
