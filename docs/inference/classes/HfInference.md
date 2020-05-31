@@ -68,4 +68,10 @@ ___
 ▸ **automaticSpeechRecognition**(`args`, `options?`): `Promise`<[`AutomaticSpeechRecognitionReturn`](../interfaces/AutomaticSpeechRecognitionReturn)\>
 
 This task reads some audio input and outputs the said words within the audio files.
-Recommended model
+Recommended model (english language): facebook/wav2vec2-large-960h-lv60-self
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `args` | [`AutomaticSpeechReco
