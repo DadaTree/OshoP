@@ -74,4 +74,9 @@ Recommended model (english language): facebook/wav2vec2-large-960h-lv60-self
 
 | Name | Type |
 | :------ | :------ |
-| `args` | [`AutomaticSpeechReco
+| `args` | [`AutomaticSpeechRecognitionArgs`](../modules#automaticspeechrecognitionargs) |
+| `options?` | [`Options`](../interfaces/Options) |
+
+#### Returns
+
+`Promise`<[`Automati
