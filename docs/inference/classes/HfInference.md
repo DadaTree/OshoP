@@ -83,4 +83,10 @@ Recommended model (english language): facebook/wav2vec2-large-960h-lv60-self
 
 #### Defined in
 
-[HfInference.ts:603](https://github.com/huggingf
+[HfInference.ts:603](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInference.ts#L603)
+
+___
+
+### conversational
+
+▸ **conversational**(`args`, `options?`): `Promise`<[
