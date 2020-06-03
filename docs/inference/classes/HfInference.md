@@ -79,4 +79,8 @@ Recommended model (english language): facebook/wav2vec2-large-960h-lv60-self
 
 #### Returns
 
-`Promise`<[`Automati
+`Promise`<[`AutomaticSpeechRecognitionReturn`](../interfaces/AutomaticSpeechRecognitionReturn)\>
+
+#### Defined in
+
+[HfInference.ts:603](https://github.com/huggingf
