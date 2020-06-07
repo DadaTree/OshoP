@@ -98,4 +98,10 @@ This task corresponds to any chatbot like structure. Models tend to have shorter
 | Name | Type |
 | :------ | :------ |
 | `args` | [`ConversationalArgs`](../modules#conversationalargs) |
-| `options?` |
+| `options?` | [`Options`](../interfaces/Options) |
+
+#### Returns
+
+`Promise`<[`ConversationalReturn`](../interfaces/ConversationalReturn)\>
+
+#### Def
