@@ -89,4 +89,6 @@ ___
 
 ### conversational
 
-▸ **conversational**(`args`, `options?`): `Promise`<[
+▸ **conversational**(`args`, `options?`): `Promise`<[`ConversationalReturn`](../interfaces/ConversationalReturn)\>
+
+This task corresponds to any chatbot like structure. Models tend to have shorter max_length, so please
