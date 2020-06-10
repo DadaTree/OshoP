@@ -104,4 +104,10 @@ This task corresponds to any chatbot like structure. Models tend to have shorter
 
 `Promise`<[`ConversationalReturn`](../interfaces/ConversationalReturn)\>
 
-#### Def
+#### Defined in
+
+[HfInference.ts:588](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInference.ts#L588)
+
+___
+
+### featureExtra
