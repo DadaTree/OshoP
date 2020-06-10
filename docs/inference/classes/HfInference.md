@@ -110,4 +110,8 @@ This task corresponds to any chatbot like structure. Models tend to have shorter
 
 ___
 
-### featureExtra
+### featureExtraction
+
+▸ **featureExtraction**(`args`, `options?`): `Promise`<[`FeatureExtractionReturn`](../modules#featureextractionreturn)\>
+
+This 
