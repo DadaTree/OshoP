@@ -117,3 +117,8 @@ ___
 This task reads some text and outputs raw float values, that are usually consumed as part of a semantic database/semantic search.
 
 #### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `args` | [`FeatureExtractionArgs`](../modules#featureextractionargs) |
+| `options?` | [`Opti
