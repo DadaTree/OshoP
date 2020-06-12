@@ -114,4 +114,6 @@ ___
 
 ▸ **featureExtraction**(`args`, `options?`): `Promise`<[`FeatureExtractionReturn`](../modules#featureextractionreturn)\>
 
-This 
+This task reads some text and outputs raw float values, that are usually consumed as part of a semantic database/semantic search.
+
+#### Parameters
