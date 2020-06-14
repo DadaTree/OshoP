@@ -129,4 +129,8 @@ This task reads some text and outputs raw float values, that are usually consume
 
 #### Defined in
 
-[
+[HfInference.ts:595](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInference.ts#L595)
+
+___
+
+### 
