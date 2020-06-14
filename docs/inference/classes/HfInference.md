@@ -121,4 +121,12 @@ This task reads some text and outputs raw float values, that are usually consume
 | Name | Type |
 | :------ | :------ |
 | `args` | [`FeatureExtractionArgs`](../modules#featureextractionargs) |
-| `options?` | [`Opti
+| `options?` | [`Options`](../interfaces/Options) |
+
+#### Returns
+
+`Promise`<[`FeatureExtractionReturn`](../modules#featureextractionreturn)\>
+
+#### Defined in
+
+[
