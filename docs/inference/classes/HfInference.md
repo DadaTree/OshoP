@@ -143,4 +143,9 @@ Tries to fill in a hole with a missing word (token to be precise). That’s the 
 
 | Name | Type |
 | :------ | :------ |
-| `args` | [`
+| `args` | [`FillMaskArgs`](../modules#fillmaskargs) |
+| `options?` | [`Options`](../interfaces/Options) |
+
+#### Returns
+
+`Promise`<[`FillMaskReturn`](
