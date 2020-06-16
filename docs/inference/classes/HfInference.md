@@ -133,4 +133,8 @@ This task reads some text and outputs raw float values, that are usually consume
 
 ___
 
-### 
+### fillMask
+
+▸ **fillMask**(`args`, `options?`): `Promise`<[`FillMaskReturn`](../modules#fillmaskreturn)\>
+
+Tries to fill in a hole wit
