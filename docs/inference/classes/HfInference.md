@@ -137,4 +137,10 @@ ___
 
 ▸ **fillMask**(`args`, `options?`): `Promise`<[`FillMaskReturn`](../modules#fillmaskreturn)\>
 
-Tries to fill in a hole wit
+Tries to fill in a hole with a missing word (token to be precise). That’s the base task for BERT models.
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `args` | [`
