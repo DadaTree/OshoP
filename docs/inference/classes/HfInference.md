@@ -148,4 +148,8 @@ Tries to fill in a hole with a missing word (token to be precise). That’s the 
 
 #### Returns
 
-`Promise`<[`FillMaskReturn`](
+`Promise`<[`FillMaskReturn`](../modules#fillmaskreturn)\>
+
+#### Defined in
+
+[HfInference.ts:515](https://github.com/huggingface/huggingface.js/blob/main/packa
