@@ -152,4 +152,10 @@ Tries to fill in a hole with a missing word (token to be precise). That’s the 
 
 #### Defined in
 
-[HfInference.ts:515](https://github.com/huggingface/huggingface.js/blob/main/packa
+[HfInference.ts:515](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInference.ts#L515)
+
+___
+
+### imageClassification
+
+▸ **imageClassification**(`args`, `options?`): `Promise`<[`ImageClassificationReturn`](../mod
