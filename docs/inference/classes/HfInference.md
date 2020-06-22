@@ -158,4 +158,9 @@ ___
 
 ### imageClassification
 
-▸ **imageClassification**(`args`, `options?`): `Promise`<[`ImageClassificationReturn`](../mod
+▸ **imageClassification**(`args`, `options?`): `Promise`<[`ImageClassificationReturn`](../modules#imageclassificationreturn)\>
+
+This task reads some image input and outputs the likelihood of classes.
+Recommended model: google/vit-base-patch16-224
+
+##
