@@ -180,4 +180,8 @@ Recommended model: google/vit-base-patch16-224
 
 ___
 
-### imageSegmentati
+### imageSegmentation
+
+▸ **imageSegmentation**(`args`, `options?`): `Promise`<[`ImageSegmentationReturn`](../modules#imagesegmentationreturn)\>
+
+This task re
