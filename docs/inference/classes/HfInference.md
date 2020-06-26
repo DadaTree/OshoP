@@ -168,4 +168,10 @@ Recommended model: google/vit-base-patch16-224
 | Name | Type |
 | :------ | :------ |
 | `args` | [`ImageClassificationArgs`](../modules#imageclassificationargs) |
-| `opti
+| `options?` | [`Options`](../interfaces/Options) |
+
+#### Returns
+
+`Promise`<[`ImageClassificationReturn`](../modules#imageclassificationreturn)\>
+
+##
