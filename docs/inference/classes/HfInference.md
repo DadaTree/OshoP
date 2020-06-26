@@ -163,4 +163,9 @@ ___
 This task reads some image input and outputs the likelihood of classes.
 Recommended model: google/vit-base-patch16-224
 
-##
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `args` | [`ImageClassificationArgs`](../modules#imageclassificationargs) |
+| `opti
