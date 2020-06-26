@@ -174,4 +174,10 @@ Recommended model: google/vit-base-patch16-224
 
 `Promise`<[`ImageClassificationReturn`](../modules#imageclassificationreturn)\>
 
-##
+#### Defined in
+
+[HfInference.ts:631](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInference.ts#L631)
+
+___
+
+### imageSegmentati
