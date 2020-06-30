@@ -185,4 +185,11 @@ ___
 ▸ **imageSegmentation**(`args`, `options?`): `Promise`<[`ImageSegmentationReturn`](../modules#imagesegmentationreturn)\>
 
 This task reads some image input and outputs the likelihood of classes & bounding boxes of detected objects.
-Recommended model: facebook/detr-resnet-50-pa
+Recommended model: facebook/detr-resnet-50-panoptic
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `args` | [`ImageSegmentationArgs`](../modules#imagesegmentationargs) |
+| `options?` 
