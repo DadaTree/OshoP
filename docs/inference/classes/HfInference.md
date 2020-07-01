@@ -198,4 +198,10 @@ Recommended model: facebook/detr-resnet-50-panoptic
 
 `Promise`<[`ImageSegmentationReturn`](../modules#imagesegmentationreturn)\>
 
-####
+#### Defined in
+
+[HfInference.ts:656](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInference.ts#L656)
+
+___
+
+### objectDetect
