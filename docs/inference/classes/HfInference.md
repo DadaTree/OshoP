@@ -204,4 +204,8 @@ Recommended model: facebook/detr-resnet-50-panoptic
 
 ___
 
-### objectDetect
+### objectDetection
+
+▸ **objectDetection**(`args`, `options?`): `Promise`<[`ObjectDetectionReturn`](../modules#objectdetectionreturn)\>
+
+This 
