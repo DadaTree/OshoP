@@ -192,4 +192,10 @@ Recommended model: facebook/detr-resnet-50-panoptic
 | Name | Type |
 | :------ | :------ |
 | `args` | [`ImageSegmentationArgs`](../modules#imagesegmentationargs) |
-| `options?` 
+| `options?` | [`Options`](../interfaces/Options) |
+
+#### Returns
+
+`Promise`<[`ImageSegmentationReturn`](../modules#imagesegmentationreturn)\>
+
+####
