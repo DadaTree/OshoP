@@ -208,4 +208,7 @@ ___
 
 ▸ **objectDetection**(`args`, `options?`): `Promise`<[`ObjectDetectionReturn`](../modules#objectdetectionreturn)\>
 
-This 
+This task reads some image input and outputs the likelihood of classes & bounding boxes of detected objects.
+Recommended model: facebook/detr-resnet-50
+
+###
