@@ -211,4 +211,9 @@ ___
 This task reads some image input and outputs the likelihood of classes & bounding boxes of detected objects.
 Recommended model: facebook/detr-resnet-50
 
-###
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `args` | [`ObjectDetectionArgs`](../modules#objectdetectionargs) |
+| `options?` | [`O
