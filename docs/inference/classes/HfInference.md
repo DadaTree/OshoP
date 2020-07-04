@@ -224,4 +224,10 @@ Recommended model: facebook/detr-resnet-50
 
 #### Defined in
 
-[HfInference.ts:645](
+[HfInference.ts:645](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInference.ts#L645)
+
+___
+
+### questionAnswer
+
+▸ **questionAnswer**(`ar
