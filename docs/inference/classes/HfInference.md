@@ -230,4 +230,6 @@ ___
 
 ### questionAnswer
 
-▸ **questionAnswer**(`ar
+▸ **questionAnswer**(`args`, `options?`): `Promise`<[`QuestionAnswerReturn`](../interfaces/QuestionAnswerReturn)\>
+
+Want to have a nice know-it-all bot that can 
