@@ -216,4 +216,12 @@ Recommended model: facebook/detr-resnet-50
 | Name | Type |
 | :------ | :------ |
 | `args` | [`ObjectDetectionArgs`](../modules#objectdetectionargs) |
-| `options?` | [`O
+| `options?` | [`Options`](../interfaces/Options) |
+
+#### Returns
+
+`Promise`<[`ObjectDetectionReturn`](../modules#objectdetectionreturn)\>
+
+#### Defined in
+
+[HfInference.ts:645](
