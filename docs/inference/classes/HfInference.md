@@ -238,4 +238,9 @@ Want to have a nice know-it-all bot that can answer any question?. Recommended m
 
 | Name | Type |
 | :------ | :------ |
-| `args` | [`QuestionAnswerArgs`]
+| `args` | [`QuestionAnswerArgs`](../modules#questionanswerargs) |
+| `options?` | [`Options`](../interfaces/Options) |
+
+#### Returns
+
+`Promise`<[`QuestionAnswerReturn`](.
