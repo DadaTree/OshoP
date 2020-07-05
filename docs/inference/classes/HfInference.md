@@ -243,4 +243,8 @@ Want to have a nice know-it-all bot that can answer any question?. Recommended m
 
 #### Returns
 
-`Promise`<[`QuestionAnswerReturn`](.
+`Promise`<[`QuestionAnswerReturn`](../interfaces/QuestionAnswerReturn)\>
+
+#### Defined in
+
+[HfInference.ts:529](https://github.com/huggingface/huggingface.js/blob/main/pac
