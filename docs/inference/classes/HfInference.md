@@ -232,4 +232,10 @@ ___
 
 ▸ **questionAnswer**(`args`, `options?`): `Promise`<[`QuestionAnswerReturn`](../interfaces/QuestionAnswerReturn)\>
 
-Want to have a nice know-it-all bot that can 
+Want to have a nice know-it-all bot that can answer any question?. Recommended model: deepset/roberta-base-squad2
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `args` | [`QuestionAnswerArgs`]
