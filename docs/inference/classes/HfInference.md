@@ -247,4 +247,15 @@ Want to have a nice know-it-all bot that can answer any question?. Recommended m
 
 #### Defined in
 
-[HfInference.ts:529](https://github.com/huggingface/huggingface.js/blob/main/pac
+[HfInference.ts:529](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInference.ts#L529)
+
+___
+
+### request
+
+▸ **request**(`args`, `options?`): `Promise`<`any`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :-----
