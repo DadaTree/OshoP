@@ -260,4 +260,12 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `args` | [`Args`](../interfaces/Args) & { `data?`: `any`  } |
-| `options?` | [`Options`](../interfaces/Options) & { `binary?`: `boolean` ; `blob?`: `
+| `options?` | [`Options`](../interfaces/Options) & { `binary?`: `boolean` ; `blob?`: `boolean`  } |
+
+#### Returns
+
+`Promise`<`any`\>
+
+#### Defined in
+
+[HfInference.ts:674](https://github.com/huggingface/huggingface.js/blob/main/packages/infer
