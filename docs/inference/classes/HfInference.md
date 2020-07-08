@@ -258,4 +258,6 @@ ___
 #### Parameters
 
 | Name | Type |
-| :------ | :-----
+| :------ | :------ |
+| `args` | [`Args`](../interfaces/Args) & { `data?`: `any`  } |
+| `options?` | [`Options`](../interfaces/Options) & { `binary?`: `boolean` ; `blob?`: `
