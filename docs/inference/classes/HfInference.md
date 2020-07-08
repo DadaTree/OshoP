@@ -268,4 +268,10 @@ ___
 
 #### Defined in
 
-[HfInference.ts:674](https://github.com/huggingface/huggingface.js/blob/main/packages/infer
+[HfInference.ts:674](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInference.ts#L674)
+
+___
+
+### summarization
+
+▸ **summarization**(`args`, `options?`): `Promise`<[`SummarizationReturn`](../interfaces
