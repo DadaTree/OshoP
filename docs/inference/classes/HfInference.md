@@ -281,4 +281,6 @@ This task is well known to summarize longer text into shorter text. Be careful, 
 #### Parameters
 
 | Name | Type |
-| :-
+| :------ | :------ |
+| `args` | [`SummarizationArgs`](../modules#summarizationargs) |
+| `options?` | [`Options`](../interfaces/Opt
