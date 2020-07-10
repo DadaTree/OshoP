@@ -291,4 +291,10 @@ This task is well known to summarize longer text into shorter text. Be careful, 
 
 #### Defined in
 
-[HfInference.ts:522](https://
+[HfInference.ts:522](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInference.ts#L522)
+
+___
+
+### tableQuestionAnswer
+
+▸ **tableQue
