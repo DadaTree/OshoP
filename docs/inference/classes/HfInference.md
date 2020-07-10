@@ -283,4 +283,12 @@ This task is well known to summarize longer text into shorter text. Be careful, 
 | Name | Type |
 | :------ | :------ |
 | `args` | [`SummarizationArgs`](../modules#summarizationargs) |
-| `options?` | [`Options`](../interfaces/Opt
+| `options?` | [`Options`](../interfaces/Options) |
+
+#### Returns
+
+`Promise`<[`SummarizationReturn`](../interfaces/SummarizationReturn)\>
+
+#### Defined in
+
+[HfInference.ts:522](https://
