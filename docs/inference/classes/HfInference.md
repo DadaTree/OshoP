@@ -297,4 +297,6 @@ ___
 
 ### tableQuestionAnswer
 
-▸ **tableQue
+▸ **tableQuestionAnswer**(`args`, `options?`): `Promise`<[`TableQuestionAnswerReturn`](../interfaces/TableQuestionAnswerReturn)\>
+
+Don’t know SQL? Don’t want to dive in
