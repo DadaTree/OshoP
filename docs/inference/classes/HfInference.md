@@ -304,4 +304,6 @@ Don’t know SQL? Don’t want to dive into a large spreadsheet? Ask questions i
 #### Parameters
 
 | Name | Type |
-| :------ |
+| :------ | :------ |
+| `args` | [`TableQuestionAnswerArgs`](../modules#tablequestionanswerargs) |
+| `options?` | [`Options`](../interfaces/Options) |
