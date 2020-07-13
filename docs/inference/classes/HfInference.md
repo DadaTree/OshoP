@@ -299,4 +299,9 @@ ___
 
 ▸ **tableQuestionAnswer**(`args`, `options?`): `Promise`<[`TableQuestionAnswerReturn`](../interfaces/TableQuestionAnswerReturn)\>
 
-Don’t know SQL? Don’t want to dive in
+Don’t know SQL? Don’t want to dive into a large spreadsheet? Ask questions in plain english! Recommended model: google/tapas-base-finetuned-wtq.
+
+#### Parameters
+
+| Name | Type |
+| :------ |
