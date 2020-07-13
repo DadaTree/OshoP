@@ -307,3 +307,11 @@ Don’t know SQL? Don’t want to dive into a large spreadsheet? Ask questions i
 | :------ | :------ |
 | `args` | [`TableQuestionAnswerArgs`](../modules#tablequestionanswerargs) |
 | `options?` | [`Options`](../interfaces/Options) |
+
+#### Returns
+
+`Promise`<[`TableQuestionAnswerReturn`](../interfaces/TableQuestionAnswerReturn)\>
+
+#### Defined in
+
+[HfInference.ts:536](ht
