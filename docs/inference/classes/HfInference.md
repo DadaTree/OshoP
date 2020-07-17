@@ -314,4 +314,10 @@ Don’t know SQL? Don’t want to dive into a large spreadsheet? Ask questions i
 
 #### Defined in
 
-[HfInference.ts:536](ht
+[HfInference.ts:536](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInference.ts#L536)
+
+___
+
+### textClassification
+
+▸ **tex
