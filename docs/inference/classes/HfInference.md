@@ -324,4 +324,9 @@ ___
 
 Usually used for sentiment-analysis this will output the likelihood of classes of an input. Recommended model: distilbert-base-uncased-finetuned-sst-2-english
 
-#### Par
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `args` | [`TextClassificationArgs`](../modules#textclassificationargs) |
+| `opti
