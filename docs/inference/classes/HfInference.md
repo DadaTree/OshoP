@@ -329,4 +329,12 @@ Usually used for sentiment-analysis this will output the likelihood of classes o
 | Name | Type |
 | :------ | :------ |
 | `args` | [`TextClassificationArgs`](../modules#textclassificationargs) |
-| `opti
+| `options?` | [`Options`](../interfaces/Options) |
+
+#### Returns
+
+`Promise`<[`TextClassificationReturn`](../modules#textclassificationreturn)\>
+
+#### Defined in
+
+[HfInferenc
