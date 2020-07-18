@@ -320,4 +320,6 @@ ___
 
 ### textClassification
 
-▸ **tex
+▸ **textClassification**(`args`, `options?`): `Promise`<[`TextClassificationReturn`](../modules#textclassificationreturn)\>
+
+Usu
