@@ -343,4 +343,6 @@ ___
 
 ### textGeneration
 
-▸ **textGenerat
+▸ **textGeneration**(`args`, `options?`): `Promise`<[`TextGenerationReturn`](../interfaces/TextGenerationReturn)\>
+
+Use to continue text from a prompt. This is a very generic
