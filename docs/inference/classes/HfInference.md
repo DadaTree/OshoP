@@ -337,4 +337,10 @@ Usually used for sentiment-analysis this will output the likelihood of classes o
 
 #### Defined in
 
-[HfInferenc
+[HfInference.ts:546](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInference.ts#L546)
+
+___
+
+### textGeneration
+
+▸ **textGenerat
