@@ -345,4 +345,10 @@ ___
 
 ▸ **textGeneration**(`args`, `options?`): `Promise`<[`TextGenerationReturn`](../interfaces/TextGenerationReturn)\>
 
-Use to continue text from a prompt. This is a very generic
+Use to continue text from a prompt. This is a very generic task. Recommended model: gpt2 (it’s a simple model, but fun to play with).
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `args` | [`Tex
