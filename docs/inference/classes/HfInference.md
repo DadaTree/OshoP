@@ -351,4 +351,9 @@ Use to continue text from a prompt. This is a very generic task. Recommended mod
 
 | Name | Type |
 | :------ | :------ |
-| `args` | [`Tex
+| `args` | [`TextGenerationArgs`](../modules#textgenerationargs) |
+| `options?` | [`Options`](../interfaces/Options) |
+
+#### Returns
+
+`Promise`<[`TextGenerationReturn`](../int
