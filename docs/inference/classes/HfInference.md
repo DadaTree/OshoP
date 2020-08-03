@@ -356,4 +356,8 @@ Use to continue text from a prompt. This is a very generic task. Recommended mod
 
 #### Returns
 
-`Promise`<[`TextGenerationReturn`](../int
+`Promise`<[`TextGenerationReturn`](../interfaces/TextGenerationReturn)\>
+
+#### Defined in
+
+[HfInference.ts:553](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/
