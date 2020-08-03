@@ -368,4 +368,11 @@ ___
 
 ▸ **textToImage**(`args`, `options?`): `Promise`<`Blob`\>
 
-This task reads some text input and o
+This task reads some text input and outputs an image.
+Recommended model: stabilityai/stable-diffusion-2
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `args` | [`TextToImageArgs`](../module
