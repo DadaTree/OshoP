@@ -360,4 +360,12 @@ Use to continue text from a prompt. This is a very generic task. Recommended mod
 
 #### Defined in
 
-[HfInference.ts:553](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/
+[HfInference.ts:553](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInference.ts#L553)
+
+___
+
+### textToImage
+
+▸ **textToImage**(`args`, `options?`): `Promise`<`Blob`\>
+
+This task reads some text input and o
