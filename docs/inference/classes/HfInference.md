@@ -390,4 +390,6 @@ ___
 
 ### tokenClassification
 
-▸ **tokenClassification**(`ar
+▸ **tokenClassification**(`args`, `options?`): `Promise`<[`TokenClassificationReturn`](../modules#tokenclassificationreturn)\>
+
+Usually used for sentence parsing, either grammatical, or 
