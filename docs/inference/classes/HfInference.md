@@ -375,4 +375,13 @@ Recommended model: stabilityai/stable-diffusion-2
 
 | Name | Type |
 | :------ | :------ |
-| `args` | [`TextToImageArgs`](../module
+| `args` | [`TextToImageArgs`](../modules#texttoimageargs) |
+| `options?` | [`Options`](../interfaces/Options) |
+
+#### Returns
+
+`Promise`<`Blob`\>
+
+#### Defined in
+
+[HfInference.ts:667](https:/
