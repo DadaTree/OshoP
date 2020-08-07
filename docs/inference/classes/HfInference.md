@@ -384,4 +384,10 @@ Recommended model: stabilityai/stable-diffusion-2
 
 #### Defined in
 
-[HfInference.ts:667](https:/
+[HfInference.ts:667](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInference.ts#L667)
+
+___
+
+### tokenClassification
+
+▸ **tokenClassification**(`ar
