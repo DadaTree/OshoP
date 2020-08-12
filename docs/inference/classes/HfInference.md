@@ -399,4 +399,8 @@ Usually used for sentence parsing, either grammatical, or Named Entity Recogniti
 | Name | Type |
 | :------ | :------ |
 | `args` | [`TokenClassificationArgs`](../modules#tokenclassificationargs) |
-| `option
+| `options?` | [`Options`](../interfaces/Options) |
+
+#### Returns
+
+`Promise`<[`TokenClassificationReturn`](../modules#tokenclassificationreturn
