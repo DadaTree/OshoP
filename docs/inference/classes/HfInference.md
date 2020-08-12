@@ -392,4 +392,4 @@ ___
 
 ▸ **tokenClassification**(`args`, `options?`): `Promise`<[`TokenClassificationReturn`](../modules#tokenclassificationreturn)\>
 
-Usually used for sentence parsing, either grammatical, or 
+Usually used for sentence parsing, either grammatical, or Named Entity Recognition (NER) to understand keywords contained within text. Recommended model: dbmdz/bert-large-cased-f
