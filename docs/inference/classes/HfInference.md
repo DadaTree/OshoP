@@ -403,4 +403,9 @@ Usually used for sentence parsing, either grammatical, or Named Entity Recogniti
 
 #### Returns
 
-`Promise`<[`TokenClassificationReturn`](../modules#tokenclassificationreturn
+`Promise`<[`TokenClassificationReturn`](../modules#tokenclassificationreturn)\>
+
+#### Defined in
+
+[HfInference.ts:560](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInference.ts#L560)
+
