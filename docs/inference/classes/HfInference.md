@@ -415,4 +415,9 @@ ___
 
 ▸ **translation**(`args`, `options?`): `Promise`<[`TranslationReturn`](../interfaces/TranslationReturn)\>
 
-This task is well known to translate t
+This task is well known to translate text from one language to another. Recommended model: Helsinki-NLP/opus-mt-ru-en.
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
