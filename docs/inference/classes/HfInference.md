@@ -409,3 +409,10 @@ Usually used for sentence parsing, either grammatical, or Named Entity Recogniti
 
 [HfInference.ts:560](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInference.ts#L560)
 
+___
+
+### translation
+
+▸ **translation**(`args`, `options?`): `Promise`<[`TranslationReturn`](../interfaces/TranslationReturn)\>
+
+This task is well known to translate t
