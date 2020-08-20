@@ -421,3 +421,9 @@ This task is well known to translate text from one language to another. Recommen
 
 | Name | Type |
 | :------ | :------ |
+| `args` | [`TranslationArgs`](../modules#translationargs) |
+| `options?` | [`Options`](../interfaces/Options) |
+
+#### Returns
+
+`Promise`<[`Tran
