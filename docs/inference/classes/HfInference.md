@@ -426,4 +426,8 @@ This task is well known to translate text from one language to another. Recommen
 
 #### Returns
 
-`Promise`<[`Tran
+`Promise`<[`TranslationReturn`](../interfaces/TranslationReturn)\>
+
+#### Defined in
+
+[HfInference.ts:570](https://github.com/huggingface/huggingface.js/blob/main/package
