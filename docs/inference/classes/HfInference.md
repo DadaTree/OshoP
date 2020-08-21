@@ -430,4 +430,10 @@ This task is well known to translate text from one language to another. Recommen
 
 #### Defined in
 
-[HfInference.ts:570](https://github.com/huggingface/huggingface.js/blob/main/package
+[HfInference.ts:570](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInference.ts#L570)
+
+___
+
+### zeroShotClassification
+
+▸ **zeroShotClassification**(`args`, `options?`): `Promise`<[`ZeroShotClassif
