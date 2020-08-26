@@ -436,4 +436,6 @@ ___
 
 ### zeroShotClassification
 
-▸ **zeroShotClassification**(`args`, `options?`): `Promise`<[`ZeroShotClassif
+▸ **zeroShotClassification**(`args`, `options?`): `Promise`<[`ZeroShotClassificationReturn`](../modules#zeroshotclassificationreturn)\>
+
+This task is super useful to try out classification with zero code, you simpl
