@@ -440,4 +440,9 @@ ___
 
 This task is super useful to try out classification with zero code, you simply pass a sentence/paragraph and the possible labels for that sentence, and you get a result. Recommended model: facebook/bart-large-mnli.
 
-#### Para
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `args` | [`ZeroShotClassificationArgs`](../modules#zeroshotclassificationargs) |
+| `option
