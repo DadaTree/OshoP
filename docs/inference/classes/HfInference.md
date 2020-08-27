@@ -445,4 +445,10 @@ This task is super useful to try out classification with zero code, you simply p
 | Name | Type |
 | :------ | :------ |
 | `args` | [`ZeroShotClassificationArgs`](../modules#zeroshotclassificationargs) |
-| `option
+| `options?` | [`Options`](../interfaces/Options) |
+
+#### Returns
+
+`Promise`<[`ZeroShotClassificationReturn`](../modules#zeroshotclassificationreturn)\>
+
+###
