@@ -451,4 +451,11 @@ This task is super useful to try out classification with zero code, you simply p
 
 `Promise`<[`ZeroShotClassificationReturn`](../modules#zeroshotclassificationreturn)\>
 
-###
+#### Defined in
+
+[HfInference.ts:577](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInference.ts#L577)
+
+___
+
+### toArray
+
