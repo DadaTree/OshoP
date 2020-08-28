@@ -459,3 +459,12 @@ ___
 
 ### toArray
 
+▸ `Static` `Private` **toArray**(`obj`): `any`[]
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `obj` | `any` |
+
+####
