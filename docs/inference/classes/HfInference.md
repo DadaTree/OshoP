@@ -473,4 +473,4 @@ ___
 
 #### Defined in
 
-[HfInference.ts:729](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInference.ts#L
+[HfInference.ts:729](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInference.ts#L729)
