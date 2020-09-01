@@ -18,4 +18,8 @@ ___
 
 • **score**: `number`
 
-The label for the class (model specific
+The label for the class (model specific)
+
+#### Defined in
+
+[HfInference.ts:395](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInference.ts#L395)
