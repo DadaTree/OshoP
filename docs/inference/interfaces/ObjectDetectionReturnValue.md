@@ -6,4 +6,9 @@
 
 • **box**: `Object`
 
-A dict (with keys [xmin,ymin,xmax,y
+A dict (with keys [xmin,ymin,xmax,ymax]) representing the bounding box of a detected object.
+
+#### Type declaration
+
+| Name | Type |
+| :------ 
