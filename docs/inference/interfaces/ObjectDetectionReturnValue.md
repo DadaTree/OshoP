@@ -27,4 +27,8 @@ ___
 
 • **label**: `string`
 
-The label for the class (
+The label for the class (model specific) of a detected object.
+
+#### Defined in
+
+[HfInference.ts:420](https://github.com/huggingface/huggingface.js/blob/main/pac
