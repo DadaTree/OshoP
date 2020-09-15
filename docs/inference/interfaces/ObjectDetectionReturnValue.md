@@ -39,4 +39,8 @@ ___
 
 • **score**: `number`
 
-A float that represents how likely it is that the detected objec
+A float that represents how likely it is that the detected object belongs to the given class.
+
+#### Defined in
+
+[HfInference.ts:425](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfIn
