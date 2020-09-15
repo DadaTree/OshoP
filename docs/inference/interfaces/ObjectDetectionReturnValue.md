@@ -31,4 +31,12 @@ The label for the class (model specific) of a detected object.
 
 #### Defined in
 
-[HfInference.ts:420](https://github.com/huggingface/huggingface.js/blob/main/pac
+[HfInference.ts:420](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInference.ts#L420)
+
+___
+
+### score
+
+• **score**: `number`
+
+A float that represents how likely it is that the detected objec
