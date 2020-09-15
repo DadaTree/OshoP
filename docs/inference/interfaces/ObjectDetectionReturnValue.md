@@ -43,4 +43,4 @@ A float that represents how likely it is that the detected object belongs to the
 
 #### Defined in
 
-[HfInference.ts:425](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfIn
+[HfInference.ts:425](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInference.ts#L425)
