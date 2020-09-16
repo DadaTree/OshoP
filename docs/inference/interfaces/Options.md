@@ -10,4 +10,12 @@
 
 #### Defined in
 
-[HfInference.ts:5](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInference.ts
+[HfInference.ts:5](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInference.ts#L5)
+
+___
+
+### use\_cache
+
+• `Optional` **use\_cache**: `boolean`
+
+(Default: true). Boolean. There is a cache layer on the inference API to spee
