@@ -38,4 +38,8 @@ ___
 
 ___
 
-### w
+### wait\_for\_model
+
+• `Optional` **wait\_for\_model**: `boolean`
+
+(Default: false) Boolean. If the model is not ready, wait for it instead of receiving 503. It lim
