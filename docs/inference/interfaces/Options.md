@@ -32,4 +32,10 @@ ___
 
 (Default: false). Boolean to use GPU instead of CPU for inference (requires Startup plan at least).
 
-####
+#### Defined in
+
+[HfInference.ts:13](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInference.ts#L13)
+
+___
+
+### w
