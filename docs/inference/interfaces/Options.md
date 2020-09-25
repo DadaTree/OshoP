@@ -28,4 +28,8 @@ ___
 
 ### use\_gpu
 
-• `Optio
+• `Optional` **use\_gpu**: `boolean`
+
+(Default: false). Boolean to use GPU instead of CPU for inference (requires Startup plan at least).
+
+####
