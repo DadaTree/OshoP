@@ -46,4 +46,4 @@ ___
 
 #### Defined in
 
-[HfInference.ts:18](https://github.com/huggingface/huggin
+[HfInference.ts:18](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInference.ts#L18)
