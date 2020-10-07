@@ -1,0 +1,3 @@
+# Interface: TableQuestionAnswerReturn
+
+## Properties
