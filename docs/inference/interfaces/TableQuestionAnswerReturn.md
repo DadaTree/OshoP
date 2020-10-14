@@ -20,4 +20,10 @@ ___
 
 The plaintext answer
 
-#### De
+#### Defined in
+
+[HfInference.ts:139](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInference.ts#L139)
+
+___
+
+### cell
