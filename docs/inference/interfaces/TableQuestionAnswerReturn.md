@@ -26,4 +26,12 @@ The plaintext answer
 
 ___
 
-### cell
+### cells
+
+• **cells**: `string`[]
+
+A list of coordinates of the cells contents
+
+#### Defined in
+
+[HfInference.ts:143](https://github.com/hugging
