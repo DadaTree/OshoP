@@ -42,4 +42,8 @@ ___
 
 • **coordinates**: `number`[][]
 
-a list 
+a list of coordinates of the cells referenced in the answer
+
+#### Defined in
+
+[HfInference.ts:147](https://github.com/huggingface/huggingface.js/blob/m
