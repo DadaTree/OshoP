@@ -34,4 +34,12 @@ A list of coordinates of the cells contents
 
 #### Defined in
 
-[HfInference.ts:143](https://github.com/hugging
+[HfInference.ts:143](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInference.ts#L143)
+
+___
+
+### coordinates
+
+• **coordinates**: `number`[][]
+
+a list 
