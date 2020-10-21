@@ -8,4 +8,14 @@
 
 #### Defined in
 
-[HfInference.ts:300](https://github.com/hugging
+[HfInference.ts:300](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInference.ts#L300)
+
+___
+
+### scores
+
+• **scores**: `number`[]
+
+#### Defined in
+
+[HfInference.ts:301
