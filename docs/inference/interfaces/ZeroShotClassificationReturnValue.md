@@ -18,4 +18,12 @@ ___
 
 #### Defined in
 
-[HfInference.ts:301
+[HfInference.ts:301](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInference.ts#L301)
+
+___
+
+### sequence
+
+• **sequence**: `string`
+
+##
