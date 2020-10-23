@@ -26,4 +26,6 @@ ___
 
 • **sequence**: `string`
 
-##
+#### Defined in
+
+[HfInference.ts:302](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInference.ts#L302)
