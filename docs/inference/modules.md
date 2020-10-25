@@ -282,3 +282,15 @@ ___
 Ƭ **ZeroShotClassificationArgs**: [`Args`](interfaces/Args) & { `inputs`: `string` \| `string`[] ; `parameters`: { `candidate_labels`: `string`[] ; `multi_label?`: `boolean`  }  }
 
 #### Defined in
+
+[HfInference.ts:282](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInference.ts#L282)
+
+___
+
+### ZeroShotClassificationReturn
+
+Ƭ **ZeroShotClassificationReturn**: [`ZeroShotClassificationReturnValue`](interfaces/ZeroShotClassificationReturnValue)[]
+
+#### Defined in
+
+[HfInference.ts:305](https://github.com/huggingface/huggingface.js/blob/main/packages/inference/src/HfInference.ts#L305)
