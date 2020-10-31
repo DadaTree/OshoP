@@ -9,4 +9,7 @@ for (const mdFile of await glob("**/*.md", { cwd: "../../docs" })) {
 		join("../../docs", mdFile),
 		content
 			// Fix MD links
-			.replaceAll(/\([^)]+\.md\b(#[^)]+)?\)/g, (val
+			.replaceAll(/\([^)]+\.md\b(#[^)]+)?\)/g, (val) => val.replace(".md", ""))
+			// Fix links of main page
+			.replaceAll(/\(packages\/[^)]+\)/g, (val) => val.replace("packages/", ""))
+			
