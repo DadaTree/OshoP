@@ -12,4 +12,9 @@ for (const mdFile of await glob("**/*.md", { cwd: "../../docs" })) {
 			.replaceAll(/\([^)]+\.md\b(#[^)]+)?\)/g, (val) => val.replace(".md", ""))
 			// Fix links of main page
 			.replaceAll(/\(packages\/[^)]+\)/g, (val) => val.replace("packages/", ""))
-			
+			// When on HF, remove links to HF
+			.replaceAll(/.*\[full documentation\].*\n\n/g, "")
+	);
+}
+
+// (modules.md#imagesegmentationreturnvalue)
