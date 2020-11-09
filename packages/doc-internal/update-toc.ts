@@ -8,4 +8,12 @@ import { parse, stringify } from "yaml";
 
 interface Section {
 	title:     string;
-	local?:   
+	local?:    string;
+	sections?: Section[];
+}
+
+const content = readFileSync("../../docs/_toctree.yml");
+
+const TOC = parse(content.toString()) as Section[];
+
+const 
