@@ -16,4 +16,7 @@ const content = readFileSync("../../docs/_toctree.yml");
 
 const TOC = parse(content.toString()) as Section[];
 
-const 
+const dirs = readdirSync("../../docs", { withFileTypes: true }).filter((dir) => dir.isDirectory());
+
+for (const dir of dirs) {
+	const section = TOC.
