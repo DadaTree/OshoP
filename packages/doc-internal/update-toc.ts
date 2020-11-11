@@ -19,4 +19,7 @@ const TOC = parse(content.toString()) as Section[];
 const dirs = readdirSync("../../docs", { withFileTypes: true }).filter((dir) => dir.isDirectory());
 
 for (const dir of dirs) {
-	const section = TOC.
+	const section = TOC.find((section) => section.sections?.some((file) => file.local?.startsWith(dir.name + "/")));
+
+	if (!section) {
+		throw new Error("Missing folder in 
