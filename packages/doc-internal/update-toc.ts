@@ -28,4 +28,6 @@ for (const dir of dirs) {
 	// Remove folders under dir
 	section.sections = section.sections!.filter((section) => !section.sections);
 
-	cons
+	const subdirs = readdirSync(join("../../docs", dir.name), { withFileTypes: true }).filter((dir) => dir.isDirectory());
+
+	for (const subdir of subdirs
