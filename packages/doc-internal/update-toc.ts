@@ -22,4 +22,10 @@ for (const dir of dirs) {
 	const section = TOC.find((section) => section.sections?.some((file) => file.local?.startsWith(dir.name + "/")));
 
 	if (!section) {
-		throw new Error("Missing folder in 
+		throw new Error("Missing folder in TOC: " + dir.name);
+	}
+
+	// Remove folders under dir
+	section.sections = section.sections!.filter((section) => !section.sections);
+
+	cons
