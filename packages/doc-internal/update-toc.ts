@@ -30,4 +30,8 @@ for (const dir of dirs) {
 
 	const subdirs = readdirSync(join("../../docs", dir.name), { withFileTypes: true }).filter((dir) => dir.isDirectory());
 
-	for (const subdir of subdirs
+	for (const subdir of subdirs) {
+		const newSection: Section = { title: subdir.name[0].toUpperCase() + subdir.name.slice(1), sections: [] };
+		section.sections.push(newSection);
+
+		const files = readdirSync(join("../
