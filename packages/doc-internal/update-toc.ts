@@ -34,4 +34,9 @@ for (const dir of dirs) {
 		const newSection: Section = { title: subdir.name[0].toUpperCase() + subdir.name.slice(1), sections: [] };
 		section.sections.push(newSection);
 
-		const files = readdirSync(join("../
+		const files = readdirSync(join("../../docs", dir.name, subdir.name), { withFileTypes: true }).filter((dir) =>
+			dir.isFile()
+		);
+
+		for (const file of files) {
+			newSection.section
