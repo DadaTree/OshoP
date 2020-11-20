@@ -39,4 +39,12 @@ for (const dir of dirs) {
 		);
 
 		for (const file of files) {
-			newSection.section
+			newSection.sections!.push({
+				title: file.name.slice(0, -".md".length),
+				local: `${dir.name}/${subdir.name}/${file.name.slice(0, -".md".length)}`,
+			});
+		}
+	}
+}
+
+wri
