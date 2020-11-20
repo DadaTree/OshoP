@@ -47,4 +47,4 @@ for (const dir of dirs) {
 	}
 }
 
-wri
+writeFileSync("../../docs/_toctree.yml", stringify(TOC));
