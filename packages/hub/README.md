@@ -17,4 +17,8 @@ import { createRepo, commit, deleteRepo, listFiles, whoAmI } from "@huggingface/
 import type { RepoId, Credentials } from "@huggingface/hub";
 
 const repo: RepoId = { type: "model", name: "myname/some-model" };
-const credentials: 
+const credentials: Credentials = { accessToken: "hf_..." };
+
+const {name: username} = await whoAmI({credentials});
+
+for await (const model of listModels({search: {owner: username}, credent
