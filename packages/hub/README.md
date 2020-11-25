@@ -21,4 +21,13 @@ const credentials: Credentials = { accessToken: "hf_..." };
 
 const {name: username} = await whoAmI({credentials});
 
-for await (const model of listModels({search: {owner: username}, credent
+for await (const model of listModels({search: {owner: username}, credentials})) {
+  console.log("My model:", model);
+}
+
+await createRepo({ repo, credentials, license: "mit" });
+
+await commit({
+  repo,
+  credentials,
+  operations: 
