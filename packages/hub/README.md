@@ -30,4 +30,13 @@ await createRepo({ repo, credentials, license: "mit" });
 await commit({
   repo,
   credentials,
-  operations: 
+  operations: [
+    {
+      operation: "addOrUpdate",
+      path: "file.txt",
+      content: new Blob(["Hello World"]),
+    },
+  ],
+});
+
+await (await downloadFile
