@@ -39,4 +39,10 @@ await commit({
   ],
 });
 
-await (await downloadFile
+await (await downloadFile({ repo, path: "README.md" })).text();
+
+for await (const fileInfo of listFiles({repo})) {
+  console.log(fileInfo);
+}
+
+await deleteRepo({ repo, credentials })
