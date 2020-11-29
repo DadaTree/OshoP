@@ -45,4 +45,9 @@ for await (const fileInfo of listFiles({repo})) {
   console.log(fileInfo);
 }
 
-await deleteRepo({ repo, credentials })
+await deleteRepo({ repo, credentials });
+```
+
+## Performance considerations
+
+When uploading large files, you may want to run the `commit` calls inside a worker, to 
