@@ -21,3 +21,9 @@ export async function createApiError(
 	throw error;
 }
 
+/**
+ * Error thrown when an API call to the Hugging Face Hub fails.
+ */
+export class ApiError extends Error {
+	statusCode: number;
+	url:    
