@@ -26,4 +26,8 @@ export async function createApiError(
  */
 export class ApiError extends Error {
 	statusCode: number;
-	url:    
+	url:        string;
+	requestId?: string;
+	data?:      JsonObject;
+
+	constructor(url: string, statusCode: number, requestId?: string, message?: string) {
