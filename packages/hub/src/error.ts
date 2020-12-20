@@ -31,3 +31,10 @@ export class ApiError extends Error {
 	data?:      JsonObject;
 
 	constructor(url: string, statusCode: number, requestId?: string, message?: string) {
+		super(message);
+
+		this.statusCode = statusCode;
+		this.requestId = requestId;
+		this.url = url;
+	}
+}
