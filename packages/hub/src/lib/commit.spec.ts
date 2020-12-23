@@ -41,3 +41,49 @@ describe("commit", () => {
 					{
 						operation: "addOrUpdate",
 						content:   new Blob(["This is me"]),
+						path:      "test.txt",
+					},
+					{
+						operation: "addOrUpdate",
+						content:   new Blob([lfsContent]),
+						path:      "test.lfs.txt",
+					},
+					{
+						operation: "delete",
+						path:      "README.md",
+					},
+				],
+			});
+
+			const fileContent = await downloadFile({ repo, path: "test.txt" });
+			assert.strictEqual(fileContent?.status, 200);
+			assert.strictEqual(await fileContent?.text(), "This is me");
+
+			const lfsFileContent = await downloadFile({ repo, path: "test.lfs.txt" });
+			assert.strictEqual(lfsFileContent?.status, 200);
+			assert.strictEqual(await lfsFileContent?.text(), lfsContent);
+
+			const lfsFilePointer = await fetch(`${HUB_URL}/${repoName}/raw/main/test.lfs.txt`);
+			assert.strictEqual(lfsFilePointer.status, 200);
+			assert.strictEqual(
+				(await lfsFilePointer.text()).trim(),
+				`
+version https://git-lfs.github.com/spec/v1
+oid sha256:a3bbce7ee1df7233d85b5f4d60faa3755f93f537804f8b540c72b0739239ddf8
+size ${lfsContent.length}
+        `.trim()
+			);
+
+			const readme2 = await downloadFile({ repo, path: "README.md" });
+			assert.strictEqual(readme2, null);
+		} finally {
+			await deleteRepo({
+				repo: {
+					name: repoName,
+					type: "model",
+				},
+				credentials: { accessToken: TEST_ACCESS_TOKEN },
+			});
+		}
+	}, 30_000);
+});
