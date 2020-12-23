@@ -10,4 +10,9 @@ export type {
 	SpaceHardwareFlavor,
 	SpaceResourceConfig,
 	SpaceResourceRequirement,
-	SpaceRuntim
+	SpaceRuntime,
+	SpaceSdk,
+	SpaceStage,
+	Task,
+} from "./types/public";
+export { ApiError } from "./error";
