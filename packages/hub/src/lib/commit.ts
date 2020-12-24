@@ -7,4 +7,8 @@ import type {
 	ApiLfsBatchRequest,
 	ApiLfsBatchResponse,
 	ApiLfsCompleteMultipartRequest,
-	ApiPreuploadR
+	ApiPreuploadRequest,
+	ApiPreuploadResponse,
+} from "../types/api/api-commit";
+import type { Credentials, RepoId } from "../types/public";
+import { base64FromBytes } from 
