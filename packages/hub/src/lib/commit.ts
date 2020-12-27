@@ -16,4 +16,8 @@ import { checkCredentials } from "../utils/checkCredentials";
 import { chunk } from "../utils/chunk";
 import { promisesQueue } from "../utils/promisesQueue";
 import { promisesQueueStreaming } from "../utils/promisesQueueStreaming";
-import { 
+import { sha256 } from "../utils/sha256";
+
+const CONCURRENT_SHAS = 5;
+const CONCURRENT_LFS_UPLOADS = 5;
+const MULTIPART_PARALLEL_UPL
