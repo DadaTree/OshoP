@@ -20,4 +20,11 @@ import { sha256 } from "../utils/sha256";
 
 const CONCURRENT_SHAS = 5;
 const CONCURRENT_LFS_UPLOADS = 5;
-const MULTIPART_PARALLEL_UPL
+const MULTIPART_PARALLEL_UPLOAD = 5;
+
+export interface CommitDeletedEntry {
+	operation: "delete";
+	path:      string;
+}
+
+type ContentSource = Blob; // Todo: offer a smart Blob wra
