@@ -32,4 +32,8 @@ type ContentSource = Blob; // Todo: offer a smart Blob wrapper around (filePath 
 export interface CommitFile {
 	operation: "addOrUpdate";
 	path:      string;
-	content:   ContentS
+	content:   ContentSource;
+	// forceLfs?: boolean
+}
+
+// TODO: find a nice way to handle LFS & non-LFS files in an uniform manner, see https://github.com/hugging
