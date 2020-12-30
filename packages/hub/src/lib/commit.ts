@@ -41,4 +41,10 @@ export interface CommitFile {
 // 	operation: "rename";
 // 	path:      string;
 // 	oldPath:   string;
-// 	content?:  Conte
+// 	content?:  ContentSource;
+// };
+
+export type CommitOperation = CommitDeletedEntry | CommitFile /* | CommitRenameFile */;
+
+export interface CommitParams {
+	title:     
