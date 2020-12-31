@@ -47,4 +47,9 @@ export interface CommitFile {
 export type CommitOperation = CommitDeletedEntry | CommitFile /* | CommitRenameFile */;
 
 export interface CommitParams {
-	title:     
+	title:          string;
+	description?:   string;
+	repo:           RepoId;
+	operations:     CommitOperation[];
+	credentials:    Credentials;
+	/**
