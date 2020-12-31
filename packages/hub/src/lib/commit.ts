@@ -52,4 +52,9 @@ export interface CommitParams {
 	repo:           RepoId;
 	operations:     CommitOperation[];
 	credentials:    Credentials;
+	/** @default "main" */
+	branch?:        string;
 	/**
+	 * Parent commit. Optional
+	 *
+	 * - When opening a PR: will use parentComm
