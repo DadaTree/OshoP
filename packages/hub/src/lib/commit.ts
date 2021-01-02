@@ -57,4 +57,7 @@ export interface CommitParams {
 	/**
 	 * Parent commit. Optional
 	 *
-	 * - When opening a PR: will use parentComm
+	 * - When opening a PR: will use parentCommit as the parent commit
+	 * - When committing on a branch: Will make sure that there were no intermediate commits
+	 */
+	parentCommit?:  string;
