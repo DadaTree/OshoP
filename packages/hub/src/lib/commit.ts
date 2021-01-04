@@ -61,3 +61,12 @@ export interface CommitParams {
 	 * - When committing on a branch: Will make sure that there were no intermediate commits
 	 */
 	parentCommit?:  string;
+	isPullRequest?: boolean;
+	hubUrl?:        string;
+}
+
+export interface CommitOutput {
+	pullRequestUrl?: string;
+	commit: {
+		oid: string;
+		url: st
