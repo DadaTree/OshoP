@@ -79,4 +79,8 @@ function isFileOperation(op: CommitOperation): op is CommitFile {
 }
 
 /**
- * I
+ * Internal function for now, used by commit.
+ *
+ * Can be exposed later to offer fine-tuned progress info
+ */
+async function* commitIter(params: CommitPara
