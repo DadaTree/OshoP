@@ -69,4 +69,14 @@ export interface CommitOutput {
 	pullRequestUrl?: string;
 	commit: {
 		oid: string;
-		url: st
+		url: string;
+	};
+	hookOutput: string;
+}
+
+function isFileOperation(op: CommitOperation): op is CommitFile {
+	return op.operation === "addOrUpdate";
+}
+
+/**
+ * I
