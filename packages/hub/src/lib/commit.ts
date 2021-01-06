@@ -83,4 +83,10 @@ function isFileOperation(op: CommitOperation): op is CommitFile {
  *
  * Can be exposed later to offer fine-tuned progress info
  */
-async function* commitIter(params: CommitPara
+async function* commitIter(params: CommitParams): AsyncGenerator<unknown, CommitOutput> {
+	checkCredentials(params.credentials);
+	yield "preuploading";
+
+	const lfsShas = new Map<string, string | null>();
+
+	
