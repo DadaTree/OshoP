@@ -89,4 +89,6 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 
 	const lfsShas = new Map<string, string | null>();
 
-	
+	const gitAttributes = (
+		params.operations.find((op) => isFileOperation(op) && op.path === ".gitattributes") as CommitFile | undefined
+	)?.content;
