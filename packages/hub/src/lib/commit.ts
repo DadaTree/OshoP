@@ -92,3 +92,6 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 	const gitAttributes = (
 		params.operations.find((op) => isFileOperation(op) && op.path === ".gitattributes") as CommitFile | undefined
 	)?.content;
+
+	for (const operations of chunk(params.operations.filter(isFileOperation), 100)) {
+		const payload: ApiPreuploadReq
