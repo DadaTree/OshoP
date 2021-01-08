@@ -94,4 +94,7 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 	)?.content;
 
 	for (const operations of chunk(params.operations.filter(isFileOperation), 100)) {
-		const payload: ApiPreuploadReq
+		const payload: ApiPreuploadRequest = {
+			gitAttributes: gitAttributes && (await gitAttributes.text()),
+			files:         await Promise.all(
+				operations.map(as
