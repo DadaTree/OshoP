@@ -100,4 +100,10 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 				operations.map(async (operation) => ({
 					path:   operation.path,
 					size:   operation.content.size,
-					sample: base64FromBytes(new Uint8Array(await o
+					sample: base64FromBytes(new Uint8Array(await operation.content.slice(0, 512).arrayBuffer())),
+				}))
+			),
+		};
+
+		const res = await fetch(
+			`${params.hubUrl ?? HUB_URL}/
