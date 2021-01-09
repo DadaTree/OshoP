@@ -97,4 +97,7 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 		const payload: ApiPreuploadRequest = {
 			gitAttributes: gitAttributes && (await gitAttributes.text()),
 			files:         await Promise.all(
-				operations.map(as
+				operations.map(async (operation) => ({
+					path:   operation.path,
+					size:   operation.content.size,
+					sample: base64FromBytes(new Uint8Array(await o
