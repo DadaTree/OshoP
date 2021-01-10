@@ -106,4 +106,6 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 		};
 
 		const res = await fetch(
-			`${params.hubUrl ?? HUB_URL}/
+			`${params.hubUrl ?? HUB_URL}/api/${params.repo.type}s/${params.repo.name}/preupload/${encodeURIComponent(
+				params.branch ?? "main"
+			)}` + (params.isPullReq
