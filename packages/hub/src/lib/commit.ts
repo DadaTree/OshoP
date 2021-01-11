@@ -120,4 +120,11 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 		);
 
 		if (!res.ok) {
-			throw await createApiErr
+			throw await createApiError(res);
+		}
+
+		const json: ApiPreuploadResponse = await res.json();
+
+		for (const file of json.files) {
+			if (file.uploadMode === "lfs") {
+				lfsShas.set(file.path, null)
