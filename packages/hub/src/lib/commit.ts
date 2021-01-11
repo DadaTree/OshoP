@@ -113,4 +113,11 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 				method:  "POST",
 				headers: {
 					Authorization:  `Bearer ${params.credentials.accessToken}`,
-					"C
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(payload),
+			}
+		);
+
+		if (!res.ok) {
+			throw await createApiErr
