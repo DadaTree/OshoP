@@ -135,4 +135,10 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 	yield "uploading to LFS";
 
 	for (const operations of chunk(
-		params.operations.filter(isFileOperation).filter((op) => lfsShas.has(op.p
+		params.operations.filter(isFileOperation).filter((op) => lfsShas.has(op.path)),
+		100
+	)) {
+		yield `hashing ${operations.length} files`;
+
+		const shas = await promisesQueue(
+			operations.map((op) => as
