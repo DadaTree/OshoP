@@ -127,4 +127,12 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 
 		for (const file of json.files) {
 			if (file.uploadMode === "lfs") {
-				lfsShas.set(file.path, null)
+				lfsShas.set(file.path, null);
+			}
+		}
+	}
+
+	yield "uploading to LFS";
+
+	for (const operations of chunk(
+		params.operations.filter(isFileOperation).filter((op) => lfsShas.has(op.p
