@@ -141,4 +141,10 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 		yield `hashing ${operations.length} files`;
 
 		const shas = await promisesQueue(
-			operations.map((op) => as
+			operations.map((op) => async () => {
+				const sha = await sha256(op.content);
+				lfsShas.set(op.path, sha);
+				return sha;
+			}),
+			CONCURRENT_SHAS
+		
