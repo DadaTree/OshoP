@@ -147,4 +147,9 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 				return sha;
 			}),
 			CONCURRENT_SHAS
-		
+		);
+
+		const payload: ApiLfsBatchRequest = {
+			operation: "upload",
+			// multipart is a custom protocol for HF
+			transfers: ["basic
