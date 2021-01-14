@@ -152,4 +152,11 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 		const payload: ApiLfsBatchRequest = {
 			operation: "upload",
 			// multipart is a custom protocol for HF
-			transfers: ["basic
+			transfers: ["basic", "multipart"],
+			hash_algo: "sha_256",
+			ref:       {
+				name: params.branch ?? "main",
+			},
+			objects: operations.map((op, i) => ({
+				oid:  shas[i],
+				size: op.c
