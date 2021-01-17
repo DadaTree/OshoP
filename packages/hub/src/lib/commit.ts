@@ -159,4 +159,10 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 			},
 			objects: operations.map((op, i) => ({
 				oid:  shas[i],
-				size: op.c
+				size: op.content.size,
+			})),
+		};
+
+		const res = await fetch(
+			`${params.hubUrl ?? HUB_URL}/${params.repo.type === "model" ? "" : params.repo.type + "s/"}${
+				
