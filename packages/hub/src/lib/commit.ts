@@ -165,4 +165,9 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 
 		const res = await fetch(
 			`${params.hubUrl ?? HUB_URL}/${params.repo.type === "model" ? "" : params.repo.type + "s/"}${
-				
+				params.repo.name
+			}.git/info/lfs/objects/batch`,
+			{
+				method:  "POST",
+				headers: {
+					Authorization:  `Bearer ${params.credentials.acces
