@@ -170,4 +170,8 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 			{
 				method:  "POST",
 				headers: {
-					Authorization:  `Bearer ${params.credentials.acces
+					Authorization:  `Bearer ${params.credentials.accessToken}`,
+					Accept:         "application/vnd.git-lfs+json",
+					"Content-Type": "application/vnd.git-lfs+json",
+				},
+				body: JSON.stringify(payload)
