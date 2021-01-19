@@ -174,4 +174,13 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 					Accept:         "application/vnd.git-lfs+json",
 					"Content-Type": "application/vnd.git-lfs+json",
 				},
-				body: JSON.stringify(payload)
+				body: JSON.stringify(payload),
+			}
+		);
+
+		if (!res.ok) {
+			throw await createApiError(res);
+		}
+
+		const json: ApiLfsBatchResponse = await res.json();
+		cons
