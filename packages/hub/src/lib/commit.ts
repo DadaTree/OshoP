@@ -183,4 +183,8 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 		}
 
 		const json: ApiLfsBatchResponse = await res.json();
-		cons
+		const batchRequestId = res.headers.get("X-Request-Id")!;
+
+		const shaToOperation = new Map(operations.map((op, i) => [shas[i], op]));
+
+		await promisesQ
