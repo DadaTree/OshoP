@@ -187,4 +187,9 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 
 		const shaToOperation = new Map(operations.map((op, i) => [shas[i], op]));
 
-		await promisesQ
+		await promisesQueueStreaming(
+			json.objects.map((obj) => async () => {
+				const op = shaToOperation.get(obj.oid)!;
+
+				if (obj.error) {
+					con
