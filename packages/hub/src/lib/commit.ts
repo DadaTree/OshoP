@@ -192,4 +192,6 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 				const op = shaToOperation.get(obj.oid)!;
 
 				if (obj.error) {
-					con
+					const errorMessage = `Error while doing LFS batch call for ${operations[shas.indexOf(obj.oid)].path}: ${
+						obj.error.message
+					} - Re
