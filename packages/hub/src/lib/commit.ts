@@ -194,4 +194,8 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 				if (obj.error) {
 					const errorMessage = `Error while doing LFS batch call for ${operations[shas.indexOf(obj.oid)].path}: ${
 						obj.error.message
-					} - Re
+					} - Request ID: ${batchRequestId}`;
+					throw new ApiError(res.url, obj.error.code, batchRequestId, errorMessage);
+				}
+				if (!obj.actions?.upload) {
+					
