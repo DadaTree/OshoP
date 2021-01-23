@@ -203,4 +203,7 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 				const content = op.content;
 				const header = obj.actions.upload.header;
 				if (header?.chunk_size) {
-					const
+					const chunkSize = parseInt(header.chunk_size);
+
+					// multipart upload
+					// parts are in upload.header['00001'] to upload.h
