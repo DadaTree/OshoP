@@ -198,4 +198,9 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 					throw new ApiError(res.url, obj.error.code, batchRequestId, errorMessage);
 				}
 				if (!obj.actions?.upload) {
-					
+					return;
+				}
+				const content = op.content;
+				const header = obj.actions.upload.header;
+				if (header?.chunk_size) {
+					const
