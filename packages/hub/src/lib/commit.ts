@@ -211,4 +211,5 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 					const completionUrl = obj.actions.upload.href;
 					const parts = Object.keys(header).filter((key) => /^[0-9]+$/.test(key));
 
-					i
+					if (parts.length !== Math.ceil(content.length / chunkSize)) {
+						throw new Error("Invalid server response to upload large LFS fi
