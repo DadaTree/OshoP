@@ -206,4 +206,9 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 					const chunkSize = parseInt(header.chunk_size);
 
 					// multipart upload
-					// parts are in upload.header['00001'] to upload.h
+					// parts are in upload.header['00001'] to upload.header['99999']
+
+					const completionUrl = obj.actions.upload.href;
+					const parts = Object.keys(header).filter((key) => /^[0-9]+$/.test(key));
+
+					i
