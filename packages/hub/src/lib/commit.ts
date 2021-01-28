@@ -212,4 +212,9 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 					const parts = Object.keys(header).filter((key) => /^[0-9]+$/.test(key));
 
 					if (parts.length !== Math.ceil(content.length / chunkSize)) {
-						throw new Error("Invalid server response to upload large LFS fi
+						throw new Error("Invalid server response to upload large LFS file, wrong number of parts");
+					}
+
+					const completeReq: ApiLfsCompleteMultipartRequest = {
+						oid:   obj.oid,
+						parts: parts.map((part) 
