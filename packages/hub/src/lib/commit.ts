@@ -217,4 +217,11 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 
 					const completeReq: ApiLfsCompleteMultipartRequest = {
 						oid:   obj.oid,
-						parts: parts.map((part) 
+						parts: parts.map((part) => ({
+							partNumber: +part,
+							etag:       "",
+						})),
+					};
+
+					await promisesQueue(
+						parts.map((part) => async () =>
