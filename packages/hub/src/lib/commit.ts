@@ -228,4 +228,9 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 							const index = parseInt(part) - 1;
 							const res = await fetch(header[part], {
 								method: "PUT",
-								body:   content.slice(i
+								body:   content.slice(index * chunkSize, (index + 1) * chunkSize),
+							});
+
+							if (!res.ok) {
+								throw await createApiError(res, {
+									reques
