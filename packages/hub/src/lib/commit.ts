@@ -224,4 +224,8 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 					};
 
 					await promisesQueue(
-						parts.map((part) => async () =>
+						parts.map((part) => async () => {
+							const index = parseInt(part) - 1;
+							const res = await fetch(header[part], {
+								method: "PUT",
+								body:   content.slice(i
