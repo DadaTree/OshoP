@@ -233,4 +233,6 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 
 							if (!res.ok) {
 								throw await createApiError(res, {
-									reques
+									requestId: batchRequestId,
+									message:   `Error while uploading part ${part} of ${
+										operations[shas.indexOf(obj.oid)].pat
