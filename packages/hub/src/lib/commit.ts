@@ -235,4 +235,12 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 								throw await createApiError(res, {
 									requestId: batchRequestId,
 									message:   `Error while uploading part ${part} of ${
-										operations[shas.indexOf(obj.oid)].pat
+										operations[shas.indexOf(obj.oid)].path
+									} to LFS storage`,
+								});
+							}
+
+							const eTag = res.headers.get("ETag");
+
+							if (!eTag) {
+								throw new Error("Cannot get ET
