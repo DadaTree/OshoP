@@ -243,4 +243,10 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 							const eTag = res.headers.get("ETag");
 
 							if (!eTag) {
-								throw new Error("Cannot get ET
+								throw new Error("Cannot get ETag of part during multipart upload");
+							}
+
+							completeReq.parts[Number(part) - 1].etag = eTag;
+						}),
+						MULTIPART_PARALLEL_UPLOAD
+					)
