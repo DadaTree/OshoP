@@ -255,4 +255,10 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 						method:  "POST",
 						body:    JSON.stringify(completeReq),
 						headers: {
-							Accept:         "ap
+							Accept:         "application/vnd.git-lfs+json",
+							"Content-Type": "application/vnd.git-lfs+json",
+						},
+					});
+
+					if (!res.ok) {
+						throw await create
