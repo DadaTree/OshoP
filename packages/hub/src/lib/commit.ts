@@ -249,4 +249,10 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 							completeReq.parts[Number(part) - 1].etag = eTag;
 						}),
 						MULTIPART_PARALLEL_UPLOAD
-					)
+					);
+
+					const res = await fetch(completionUrl, {
+						method:  "POST",
+						body:    JSON.stringify(completeReq),
+						headers: {
+							Accept:         "ap
