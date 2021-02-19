@@ -261,4 +261,6 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 					});
 
 					if (!res.ok) {
-						throw await create
+						throw await createApiError(res, {
+							requestId: batchRequestId,
+							message:   `Error completing multipart upload of ${operations[shas.indexOf(obj.oid)].p
