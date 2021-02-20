@@ -270,4 +270,11 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 					const res = await fetch(obj.actions.upload.href, {
 						method:  "PUT",
 						headers: {
-							
+							"X-Request-Id": batchRequestId,
+						},
+						body: content,
+					});
+
+					if (!res.ok) {
+						throw await createApiError(res, {
+							req
