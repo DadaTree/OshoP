@@ -263,4 +263,11 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 					if (!res.ok) {
 						throw await createApiError(res, {
 							requestId: batchRequestId,
-							message:   `Error completing multipart upload of ${operations[shas.indexOf(obj.oid)].p
+							message:   `Error completing multipart upload of ${operations[shas.indexOf(obj.oid)].path} to LFS storage`,
+						});
+					}
+				} else {
+					const res = await fetch(obj.actions.upload.href, {
+						method:  "PUT",
+						headers: {
+							
