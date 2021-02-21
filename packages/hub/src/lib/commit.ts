@@ -277,4 +277,10 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 
 					if (!res.ok) {
 						throw await createApiError(res, {
-							req
+							requestId: batchRequestId,
+							message:   `Error while uploading ${operations[shas.indexOf(obj.oid)].path} to LFS storage`,
+						});
+					}
+				}
+			}),
+		
