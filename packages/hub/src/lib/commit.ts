@@ -283,4 +283,11 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 					}
 				}
 			}),
-		
+			CONCURRENT_LFS_UPLOADS
+		);
+	}
+
+	yield "committing";
+
+	const res = await fetch(
+		`${params.hubUrl ?? HUB_URL}/api/${params.repo.type}s/${params.rep
