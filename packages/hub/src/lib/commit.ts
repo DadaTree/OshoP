@@ -295,4 +295,10 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 		)}` + (params.isPullRequest ? "?create_pr=1" : ""),
 		{
 			method:  "POST",
-			head
+			headers: {
+				Authorization:  `Bearer ${params.credentials.accessToken}`,
+				"Content-Type": "application/x-ndjson",
+			},
+			body: [
+				{
+					key:   "h
