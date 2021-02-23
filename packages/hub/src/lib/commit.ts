@@ -290,4 +290,9 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 	yield "committing";
 
 	const res = await fetch(
-		`${params.hubUrl ?? HUB_URL}/api/${params.repo.type}s/${params.rep
+		`${params.hubUrl ?? HUB_URL}/api/${params.repo.type}s/${params.repo.name}/commit/${encodeURIComponent(
+			params.branch ?? "main"
+		)}` + (params.isPullRequest ? "?create_pr=1" : ""),
+		{
+			method:  "POST",
+			head
