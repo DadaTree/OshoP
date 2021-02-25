@@ -306,4 +306,9 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 						summary:      params.title,
 						description:  params.description,
 						parentCommit: params.parentCommit,
-					} satisfies ApiCommitH
+					} satisfies ApiCommitHeader,
+				},
+				...((await Promise.all(
+					params.operations.map((operation) =>
+						isFileOperation(operation) && lfsShas.has(operation.path)
+		
