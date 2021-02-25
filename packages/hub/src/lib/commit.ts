@@ -301,4 +301,9 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 			},
 			body: [
 				{
-					key:   "h
+					key:   "header",
+					value: {
+						summary:      params.title,
+						description:  params.description,
+						parentCommit: params.parentCommit,
+					} satisfies ApiCommitH
