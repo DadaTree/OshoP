@@ -311,4 +311,9 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 				...((await Promise.all(
 					params.operations.map((operation) =>
 						isFileOperation(operation) && lfsShas.has(operation.path)
-		
+							? {
+									key:   "lfsFile",
+									value: {
+										path: operation.path,
+										algo: "sha256",
+										size: oper
