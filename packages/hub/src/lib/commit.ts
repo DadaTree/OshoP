@@ -316,4 +316,8 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 									value: {
 										path: operation.path,
 										algo: "sha256",
-										size: oper
+										size: operation.content.length,
+										oid:  lfsShas.get(operation.path)!,
+									} satisfies ApiCommitLfsFile,
+							  }
+							: co
