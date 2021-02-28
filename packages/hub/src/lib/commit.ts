@@ -320,4 +320,11 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 										oid:  lfsShas.get(operation.path)!,
 									} satisfies ApiCommitLfsFile,
 							  }
-							: co
+							: convertOperationToNdJson(operation)
+					)
+				)) satisfies ApiCommitOperation[]),
+			]
+				.map((x) => JSON.stringify(x))
+				.join("\n"),
+		}
+	)
