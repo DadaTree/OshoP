@@ -327,4 +327,13 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 				.map((x) => JSON.stringify(x))
 				.join("\n"),
 		}
-	)
+	);
+
+	if (!res.ok) {
+		throw await createApiError(res);
+	}
+
+	const json = await res.json();
+
+	return {
+		pullRequestUrl: json.pullRequest
