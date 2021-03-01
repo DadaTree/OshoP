@@ -336,4 +336,13 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 	const json = await res.json();
 
 	return {
-		pullRequestUrl: json.pullRequest
+		pullRequestUrl: json.pullRequestUrl,
+		commit:         {
+			oid: json.commitOid,
+			url: json.commitUrl,
+		},
+		hookOutput: json.hookOutput,
+	};
+}
+
+export async function
