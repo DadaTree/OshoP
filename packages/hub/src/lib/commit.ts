@@ -345,4 +345,7 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 	};
 }
 
-export async function
+export async function commit(params: CommitParams): Promise<CommitOutput> {
+	const iterator = commitIter(params);
+	let res = await iterator.next();
+	while (!res.done)
