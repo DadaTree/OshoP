@@ -354,4 +354,9 @@ export async function commit(params: CommitParams): Promise<CommitOutput> {
 	return res.value;
 }
 
-async function convertOperationToNdJson(operation: CommitOperation): Promise<
+async function convertOperationToNdJson(operation: CommitOperation): Promise<ApiCommitOperation> {
+	switch (operation.operation) {
+		case "addOrUpdate": {
+			// todo: handle LFS
+			return {
+				key:   
