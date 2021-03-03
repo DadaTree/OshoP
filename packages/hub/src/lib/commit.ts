@@ -348,4 +348,10 @@ async function* commitIter(params: CommitParams): AsyncGenerator<unknown, Commit
 export async function commit(params: CommitParams): Promise<CommitOutput> {
 	const iterator = commitIter(params);
 	let res = await iterator.next();
-	while (!res.done)
+	while (!res.done) {
+		res = await iterator.next();
+	}
+	return res.value;
+}
+
+async function convertOperationToNdJson(operation: CommitOperation): Promise<
