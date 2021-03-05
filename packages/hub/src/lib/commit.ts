@@ -359,4 +359,7 @@ async function convertOperationToNdJson(operation: CommitOperation): Promise<Api
 		case "addOrUpdate": {
 			// todo: handle LFS
 			return {
-				key:   
+				key:   "file",
+				value: {
+					content:  base64FromBytes(new Uint8Array(await operation.content.arrayBuffer())),
+					path:  
