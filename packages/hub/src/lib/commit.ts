@@ -362,4 +362,11 @@ async function convertOperationToNdJson(operation: CommitOperation): Promise<Api
 				key:   "file",
 				value: {
 					content:  base64FromBytes(new Uint8Array(await operation.content.arrayBuffer())),
-					path:  
+					path:     operation.path,
+					encoding: "base64",
+				},
+			};
+		}
+		// case "rename": {
+		// 	// todo: detect when remote file is already LFS, and in that case rename as LFS
+	
