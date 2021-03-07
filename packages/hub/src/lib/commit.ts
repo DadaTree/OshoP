@@ -369,4 +369,9 @@ async function convertOperationToNdJson(operation: CommitOperation): Promise<Api
 		}
 		// case "rename": {
 		// 	// todo: detect when remote file is already LFS, and in that case rename as LFS
-	
+		// 	return {
+		// 		key:   "file",
+		// 		value: {
+		// 			content: operation.content,
+		// 			path:    operation.path,
+		// 			oldPath: operation.oldPa
