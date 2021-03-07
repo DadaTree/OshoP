@@ -374,4 +374,14 @@ async function convertOperationToNdJson(operation: CommitOperation): Promise<Api
 		// 		value: {
 		// 			content: operation.content,
 		// 			path:    operation.path,
-		// 			oldPath: operation.oldPa
+		// 			oldPath: operation.oldPath
+		// 		}
+		// 	};
+		// }
+		case "delete": {
+			return {
+				key:   "deletedFile",
+				value: {
+					path: operation.path,
+				},
+			}
