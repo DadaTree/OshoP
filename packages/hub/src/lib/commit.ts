@@ -384,4 +384,9 @@ async function convertOperationToNdJson(operation: CommitOperation): Promise<Api
 				value: {
 					path: operation.path,
 				},
-			}
+			};
+		}
+		default:
+			throw new TypeError("Unknown operation: " + (operation as any).operation);
+	}
+}
