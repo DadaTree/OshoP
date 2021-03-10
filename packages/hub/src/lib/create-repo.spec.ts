@@ -6,4 +6,8 @@ import { createRepo } from "./create-repo";
 import { deleteRepo } from "./delete-repo";
 import { downloadFile } from "./download-file";
 
-describe("createRepo",
+describe("createRepo", () => {
+	it("should create a repo", async () => {
+		const repoName = `${TEST_USER}/TEST-${randomBytes(10).toString("hex")}`;
+
+		const result = await cre
