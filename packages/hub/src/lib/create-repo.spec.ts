@@ -10,4 +10,12 @@ describe("createRepo", () => {
 	it("should create a repo", async () => {
 		const repoName = `${TEST_USER}/TEST-${randomBytes(10).toString("hex")}`;
 
-		const result = await cre
+		const result = await createRepo({
+			credentials: {
+				accessToken: TEST_ACCESS_TOKEN,
+			},
+			repo: {
+				name: repoName,
+				type: "model",
+			},
+			fil
