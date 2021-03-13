@@ -18,4 +18,8 @@ describe("createRepo", () => {
 				name: repoName,
 				type: "model",
 			},
-			fil
+			files: [{ path: ".gitattributes", content: new Blob(["*.html filter=lfs diff=lfs merge=lfs -text"]) }],
+		});
+
+		assert.deepStrictEqual(result, {
+	
