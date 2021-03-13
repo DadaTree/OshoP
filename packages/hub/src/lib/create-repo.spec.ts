@@ -22,4 +22,12 @@ describe("createRepo", () => {
 		});
 
 		assert.deepStrictEqual(result, {
-	
+			repoUrl: `${HUB_URL}/${repoName}`,
+		});
+
+		const content = await downloadFile({
+			repo: {
+				name: repoName,
+				type: "model",
+			},
+			path: ".gitattribute
