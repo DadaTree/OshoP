@@ -36,4 +36,13 @@ describe("createRepo", () => {
 		assert(content);
 		assert.strictEqual(await content.text(), "*.html filter=lfs diff=lfs merge=lfs -text");
 
-		await deleteRepo
+		await deleteRepo({
+			repo: {
+				name: repoName,
+				type: "model",
+			},
+			credentials: { accessToken: TEST_ACCESS_TOKEN },
+		});
+	});
+
+	it("should throw a client err
