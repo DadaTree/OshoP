@@ -30,4 +30,10 @@ describe("createRepo", () => {
 				name: repoName,
 				type: "model",
 			},
-			path: ".gitattribute
+			path: ".gitattributes",
+		});
+
+		assert(content);
+		assert.strictEqual(await content.text(), "*.html filter=lfs diff=lfs merge=lfs -text");
+
+		await deleteRepo
