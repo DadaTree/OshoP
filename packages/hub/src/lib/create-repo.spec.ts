@@ -47,4 +47,8 @@ describe("createRepo", () => {
 
 	it("should throw a client error when trying to create a repo without a fully-qualified name", async () => {
 		const tryCreate = createRepo({
-			repo:        { name: "canoni
+			repo:        { name: "canonical", type: "model" },
+			credentials: { accessToken: TEST_ACCESS_TOKEN },
+		});
+
+		await expect(tryCreate).rejects.toBeInstanceOf(
