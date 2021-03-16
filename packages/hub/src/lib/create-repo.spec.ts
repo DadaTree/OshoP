@@ -45,4 +45,6 @@ describe("createRepo", () => {
 		});
 	});
 
-	it("should throw a client err
+	it("should throw a client error when trying to create a repo without a fully-qualified name", async () => {
+		const tryCreate = createRepo({
+			repo:        { name: "canoni
