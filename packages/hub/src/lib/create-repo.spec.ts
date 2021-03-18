@@ -51,4 +51,6 @@ describe("createRepo", () => {
 			credentials: { accessToken: TEST_ACCESS_TOKEN },
 		});
 
-		await expect(tryCreate).rejects.toBeInstanceOf(
+		await expect(tryCreate).rejects.toBeInstanceOf(TypeError);
+	});
+});
