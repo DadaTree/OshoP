@@ -7,4 +7,8 @@ import { checkCredentials } from "../utils/checkCredentials";
 
 export async function createRepo(params: {
 	repo:        RepoId;
-	credentials: C
+	credentials: Credentials;
+	private?:    boolean;
+	license?:    string;
+	/**
+	 * Only a few lightweight files are supported at repo creat
