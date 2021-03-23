@@ -11,4 +11,9 @@ export async function createRepo(params: {
 	private?:    boolean;
 	license?:    string;
 	/**
-	 * Only a few lightweight files are supported at repo creat
+	 * Only a few lightweight files are supported at repo creation
+	 */
+	files?:      Array<{ content: ArrayBuffer | Blob; path: string }>;
+	/** @required for when {@link repo.type} === "space" */
+	sdk?:        SpaceSdk;
+	hubUrl?
