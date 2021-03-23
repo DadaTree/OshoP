@@ -16,4 +16,7 @@ export async function createRepo(params: {
 	files?:      Array<{ content: ArrayBuffer | Blob; path: string }>;
 	/** @required for when {@link repo.type} === "space" */
 	sdk?:        SpaceSdk;
-	hubUrl?
+	hubUrl?:     string;
+}): Promise<{ repoUrl: string }> {
+	checkCredentials(params.credentials);
+	const [namespace, repoName] = params.repo.name.split("/"
