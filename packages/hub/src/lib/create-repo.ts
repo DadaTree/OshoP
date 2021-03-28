@@ -34,4 +34,13 @@ export async function createRepo(params: {
 			private:      params.private,
 			organization: namespace,
 			license:      params.license,
-			...(params.repo.ty
+			...(params.repo.type === "space"
+				? {
+						type: "space",
+						sdk:  "static",
+				  }
+				: {
+						type: params.repo.type,
+				  }),
+			files: params.files
+				? await Promise
