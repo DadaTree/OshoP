@@ -29,4 +29,9 @@ export async function createRepo(params: {
 
 	const res = await fetch(`${params.hubUrl ?? HUB_URL}/api/repos/create`, {
 		method: "POST",
-		body:
+		body:   JSON.stringify({
+			name:         repoName,
+			private:      params.private,
+			organization: namespace,
+			license:      params.license,
+			...(params.repo.ty
