@@ -43,4 +43,9 @@ export async function createRepo(params: {
 						type: params.repo.type,
 				  }),
 			files: params.files
-				? await Promise
+				? await Promise.all(
+						params.files.map(async (file) => ({
+							encoding: "base64",
+							path:     file.path,
+							content:  base64FromBytes(
+				
