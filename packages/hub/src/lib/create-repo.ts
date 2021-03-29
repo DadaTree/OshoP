@@ -48,4 +48,9 @@ export async function createRepo(params: {
 							encoding: "base64",
 							path:     file.path,
 							content:  base64FromBytes(
-				
+								new Uint8Array(file.content instanceof Blob ? await file.content.arrayBuffer() : file.content)
+							),
+						}))
+				  )
+				: undefined,
+		} satisfies ApiCreateRepo
