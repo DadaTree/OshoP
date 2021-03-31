@@ -53,4 +53,11 @@ export async function createRepo(params: {
 						}))
 				  )
 				: undefined,
-		} satisfies ApiCreateRepo
+		} satisfies ApiCreateRepoPayload),
+		headers: {
+			Authorization:  `Bearer ${params.credentials.accessToken}`,
+			"Content-Type": "application/json",
+		},
+	});
+
+	if 
