@@ -60,4 +60,9 @@ export async function createRepo(params: {
 		},
 	});
 
-	if 
+	if (!res.ok) {
+		throw await createApiError(res);
+	}
+	const output = await res.json();
+	return { repoUrl: output.url };
+}
