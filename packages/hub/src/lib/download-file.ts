@@ -6,4 +6,10 @@ import { checkCredentials } from "../utils/checkCredentials";
 /**
  * @returns null when the file doesn't exist
  */
-export async function downloadFile
+export async function downloadFile(params: {
+	repo:         RepoId;
+	path:         string;
+	/**
+	 * If true, will download the raw git file.
+	 *
+	 * For example, when calling on a file st
