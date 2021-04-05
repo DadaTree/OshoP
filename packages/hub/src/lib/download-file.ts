@@ -17,4 +17,7 @@ export async function downloadFile(params: {
 	raw?:         boolean;
 	revision?:    string;
 	credentials?: Credentials;
-	h
+	hubUrl?:      string;
+}): Promise<Response | null> {
+	checkCredentials(params.credentials);
+	const url = `${params.hubUrl ?? HUB_URL}
