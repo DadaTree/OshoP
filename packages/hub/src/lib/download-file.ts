@@ -20,4 +20,6 @@ export async function downloadFile(params: {
 	hubUrl?:      string;
 }): Promise<Response | null> {
 	checkCredentials(params.credentials);
-	const url = `${params.hubUrl ?? HUB_URL}
+	const url = `${params.hubUrl ?? HUB_URL}/${params.repo.type === "model" ? "" : `${params.repo.type}s/`}${
+		params.repo.name
+	}/${params.raw ? "raw" : "resolve"}/${encodeURICompo
