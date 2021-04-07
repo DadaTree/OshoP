@@ -22,4 +22,9 @@ export async function downloadFile(params: {
 	checkCredentials(params.credentials);
 	const url = `${params.hubUrl ?? HUB_URL}/${params.repo.type === "model" ? "" : `${params.repo.type}s/`}${
 		params.repo.name
-	}/${params.raw ? "raw" : "resolve"}/${encodeURICompo
+	}/${params.raw ? "raw" : "resolve"}/${encodeURIComponent(params.revision ?? "main")}/${params.path}`;
+
+	let resp = await fetch(url, {
+		headers: params.credentials
+			? {
+					Authorization: `Bearer ${params.crede
