@@ -34,4 +34,9 @@ export async function downloadFile(params: {
 
 	// On browser we need to do the redirects ourselves
 	let redirects = 0;
-	while (resp.status >=
+	while (resp.status >= 300 && resp.status < 400) {
+		if (++redirects >= 20) {
+			throw new Error("Too many redirects");
+		}
+
+		const newUrl = resp
