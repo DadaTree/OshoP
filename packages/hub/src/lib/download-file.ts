@@ -27,4 +27,11 @@ export async function downloadFile(params: {
 	let resp = await fetch(url, {
 		headers: params.credentials
 			? {
-					Authorization: `Bearer ${params.crede
+					Authorization: `Bearer ${params.credentials.accessToken}`,
+			  }
+			: {},
+	});
+
+	// On browser we need to do the redirects ourselves
+	let redirects = 0;
+	while (resp.status >=
