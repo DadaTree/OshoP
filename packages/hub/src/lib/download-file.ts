@@ -43,4 +43,9 @@ export async function downloadFile(params: {
 		const useCredentials = new URL(newUrl).host === new URL(url).host;
 
 		resp = await fetch(newUrl, {
-			header
+			headers:
+				useCredentials && params.credentials
+					? {
+							Authorization: `Bearer ${params.credentials.accessToken}`,
+					  }
+					: {
