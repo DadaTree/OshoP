@@ -39,4 +39,8 @@ export async function downloadFile(params: {
 			throw new Error("Too many redirects");
 		}
 
-		const newUrl = resp
+		const newUrl = resp.headers.get("Location")!;
+		const useCredentials = new URL(newUrl).host === new URL(url).host;
+
+		resp = await fetch(newUrl, {
+			header
