@@ -10,3 +10,8 @@ describe("fileDownloadInfo", () => {
 			},
 			path:     "tf_model.h5",
 			revision: "dd4bc8b21efa05ec961e3efc4ee5e3832a3679c7",
+			hubUrl:   "https://huggingface.co",
+		});
+
+		assert.strictEqual(info?.size, 536063208);
+		assert.strictEqual(info?.etag, '"a7a17d6d844b5de815ccab5f4
