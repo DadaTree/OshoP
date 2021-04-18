@@ -14,4 +14,8 @@ describe("fileDownloadInfo", () => {
 		});
 
 		assert.strictEqual(info?.size, 536063208);
-		assert.strictEqual(info?.etag, '"a7a17d6d844b5de815ccab5f4
+		assert.strictEqual(info?.etag, '"a7a17d6d844b5de815ccab5f42cad6d24496db3850a2a43d8258221018ce87d2"');
+		assert(info?.downloadLink);
+	});
+
+	it("should fetch raw LFS pointer info", async ()
