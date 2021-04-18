@@ -18,4 +18,10 @@ describe("fileDownloadInfo", () => {
 		assert(info?.downloadLink);
 	});
 
-	it("should fetch raw LFS pointer info", async ()
+	it("should fetch raw LFS pointer info", async () => {
+		const info = await fileDownloadInfo({
+			repo: {
+				name: "bert-base-uncased",
+				type: "model",
+			},
+			path:
