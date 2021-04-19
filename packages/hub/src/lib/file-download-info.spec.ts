@@ -24,4 +24,8 @@ describe("fileDownloadInfo", () => {
 				name: "bert-base-uncased",
 				type: "model",
 			},
-			path:
+			path:     "tf_model.h5",
+			revision: "dd4bc8b21efa05ec961e3efc4ee5e3832a3679c7",
+			hubUrl:   "https://huggingface.co",
+			raw:      true,
+		});
