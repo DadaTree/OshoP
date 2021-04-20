@@ -32,4 +32,10 @@ describe("fileDownloadInfo", () => {
 
 		assert.strictEqual(info?.size, 134);
 		assert.strictEqual(info?.etag, '"9eb98c817f04b051b3bcca591bcd4e03cec88018"');
-		ass
+		assert(!info?.downloadLink);
+	});
+
+	it("should fetch non-LFS file info", async () => {
+		const info = await fileDownloadInfo({
+			repo: {
+		
