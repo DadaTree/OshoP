@@ -38,4 +38,9 @@ describe("fileDownloadInfo", () => {
 	it("should fetch non-LFS file info", async () => {
 		const info = await fileDownloadInfo({
 			repo: {
-		
+				name: "bert-base-uncased",
+				type: "model",
+			},
+			path:     "tokenizer_config.json",
+			revision: "1a7dd4986e3dab699c24ca19b2afd0f5e1a80f37",
+	
