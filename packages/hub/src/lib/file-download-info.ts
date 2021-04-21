@@ -7,4 +7,11 @@ export interface FileDownloadInfoOutput {
 	size:         number;
 	etag:         string;
 	/**
-	 * In case 
+	 * In case of LFS file, link to download directly from cloud provider
+	 */
+	downloadLink: string | null;
+}
+/**
+ * @returns null when the file doesn't exist
+ */
+e
