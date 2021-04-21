@@ -43,4 +43,8 @@ describe("fileDownloadInfo", () => {
 			},
 			path:     "tokenizer_config.json",
 			revision: "1a7dd4986e3dab699c24ca19b2afd0f5e1a80f37",
-	
+			hubUrl:   "https://huggingface.co",
+		});
+
+		assert.strictEqual(info?.size, 28);
+		assert.strictEqual(info?.etag, '"a661b1a138dac6dc5590367402d100765010ffd6"');
