@@ -48,3 +48,5 @@ describe("fileDownloadInfo", () => {
 
 		assert.strictEqual(info?.size, 28);
 		assert.strictEqual(info?.etag, '"a661b1a138dac6dc5590367402d100765010ffd6"');
+	});
+});
