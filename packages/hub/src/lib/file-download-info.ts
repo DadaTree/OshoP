@@ -14,4 +14,8 @@ export interface FileDownloadInfoOutput {
 /**
  * @returns null when the file doesn't exist
  */
-e
+export async function fileDownloadInfo(params: {
+	repo:                  RepoId;
+	path:                  string;
+	revision?:             string;
+	
