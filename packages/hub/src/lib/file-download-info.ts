@@ -18,4 +18,9 @@ export async function fileDownloadInfo(params: {
 	repo:                  RepoId;
 	path:                  string;
 	revision?:             string;
-	
+	credentials?:          Credentials;
+	hubUrl?:               string;
+	/**
+	 * To get the raw pointer file behind a LFS file
+	 */
+	raw?:  
