@@ -23,4 +23,8 @@ export async function fileDownloadInfo(params: {
 	/**
 	 * To get the raw pointer file behind a LFS file
 	 */
-	raw?:  
+	raw?:                  boolean;
+	/**
+	 * To avoid the content-disposition header in the `downloadLink` for LFS files
+	 *
+	 * So that on browsers you can u
