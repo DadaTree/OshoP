@@ -27,4 +27,10 @@ export async function fileDownloadInfo(params: {
 	/**
 	 * To avoid the content-disposition header in the `downloadLink` for LFS files
 	 *
-	 * So that on browsers you can u
+	 * So that on browsers you can use the URL in an iframe for example
+	 */
+	noContentDisposition?: boolean;
+}): Promise<FileDownloadInfoOutput | null> {
+	checkCredentials(params.credentials);
+	const url =
+		`${params.
