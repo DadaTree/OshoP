@@ -33,4 +33,6 @@ export async function fileDownloadInfo(params: {
 }): Promise<FileDownloadInfoOutput | null> {
 	checkCredentials(params.credentials);
 	const url =
-		`${params.
+		`${params.hubUrl ?? HUB_URL}/${params.repo.type === "model" ? "" : `${params.repo.type}s/`}${params.repo.name}/${
+			params.raw ? "raw" : "resolve"
+		}/${encodeURICompo
