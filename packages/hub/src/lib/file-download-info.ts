@@ -35,4 +35,7 @@ export async function fileDownloadInfo(params: {
 	const url =
 		`${params.hubUrl ?? HUB_URL}/${params.repo.type === "model" ? "" : `${params.repo.type}s/`}${params.repo.name}/${
 			params.raw ? "raw" : "resolve"
-		}/${encodeURICompo
+		}/${encodeURIComponent(params.revision ?? "main")}/${params.path}` +
+		(params.noContentDisposition ? "?noContentDisposition=1" : "");
+
+	let resp = await fetch(url
