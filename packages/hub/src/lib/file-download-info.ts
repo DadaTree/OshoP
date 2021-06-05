@@ -38,4 +38,10 @@ export async function fileDownloadInfo(params: {
 		}/${encodeURIComponent(params.revision ?? "main")}/${params.path}` +
 		(params.noContentDisposition ? "?noContentDisposition=1" : "");
 
-	let resp = await fetch(url
+	let resp = await fetch(url, {
+		method:  "HEAD",
+		headers: params.credentials
+			? {
+					Authorization: `Bearer ${params.credentials.accessToken}`,
+			  }
+			: {
