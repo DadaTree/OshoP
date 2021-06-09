@@ -44,4 +44,9 @@ export async function fileDownloadInfo(params: {
 			? {
 					Authorization: `Bearer ${params.credentials.accessToken}`,
 			  }
-			: {
+			: {},
+		redirect: "manual",
+	});
+
+	let redirects = 0;
+	while (resp.status >= 300 && resp.status < 400 && new URL(resp.headers.get("Location")!).host === 
