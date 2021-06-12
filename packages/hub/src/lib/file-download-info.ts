@@ -49,4 +49,11 @@ export async function fileDownloadInfo(params: {
 	});
 
 	let redirects = 0;
-	while (resp.status >= 300 && resp.status < 400 && new URL(resp.headers.get("Location")!).host === 
+	while (resp.status >= 300 && resp.status < 400 && new URL(resp.headers.get("Location")!).host === new URL(url).host) {
+		if (++redirects >= 20) {
+			throw new Error("Too many redirects");
+		}
+
+		resp = await fetch(url, {
+			method:  "HEAD",
+			headers: params.
