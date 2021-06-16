@@ -56,4 +56,13 @@ export async function fileDownloadInfo(params: {
 
 		resp = await fetch(url, {
 			method:  "HEAD",
-			headers: params.
+			headers: params.credentials
+				? {
+						Authorization: `Bearer ${params.credentials.accessToken}`,
+				  }
+				: {},
+			redirect: "manual",
+		});
+	}
+
+	if (resp.status === 
