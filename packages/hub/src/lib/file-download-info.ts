@@ -65,4 +65,10 @@ export async function fileDownloadInfo(params: {
 		});
 	}
 
-	if (resp.status === 
+	if (resp.status === 404 && resp.headers.get("X-Error-Code") === "EntryNotFound") {
+		return null;
+	}
+
+	let isLfs = false;
+
+	if (resp.status >= 300 && resp.statu
