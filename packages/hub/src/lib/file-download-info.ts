@@ -75,4 +75,11 @@ export async function fileDownloadInfo(params: {
 		if (resp.headers.has("X-Linked-Size")) {
 			isLfs = true;
 		} else {
-			throw new Error("Invalid response from server: redirect to external ser
+			throw new Error("Invalid response from server: redirect to external server should have X-Linked-Size header");
+		}
+	} else if (!resp.ok) {
+		throw await createApiError(resp);
+	}
+
+	return {
+		etag:
