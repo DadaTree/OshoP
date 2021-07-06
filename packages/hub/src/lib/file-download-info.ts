@@ -71,4 +71,8 @@ export async function fileDownloadInfo(params: {
 
 	let isLfs = false;
 
-	if (resp.status >= 300 && resp.statu
+	if (resp.status >= 300 && resp.status < 400) {
+		if (resp.headers.has("X-Linked-Size")) {
+			isLfs = true;
+		} else {
+			throw new Error("Invalid response from server: redirect to external ser
