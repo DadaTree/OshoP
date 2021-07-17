@@ -82,4 +82,5 @@ export async function fileDownloadInfo(params: {
 	}
 
 	return {
-		etag:
+		etag:         isLfs ? resp.headers.get("X-Linked-ETag")! : resp.headers.get("ETag")!,
+		size:         isLfs ? parseInt(resp.headers.get("X-Lin
