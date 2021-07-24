@@ -85,3 +85,5 @@ export async function fileDownloadInfo(params: {
 		etag:         isLfs ? resp.headers.get("X-Linked-ETag")! : resp.headers.get("ETag")!,
 		size:         isLfs ? parseInt(resp.headers.get("X-Linked-Size")!) : parseInt(resp.headers.get("Content-Length")!),
 		downloadLink: isLfs ? resp.headers.get("Location") : null,
+	};
+}
