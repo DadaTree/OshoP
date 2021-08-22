@@ -5,4 +5,6 @@ export * from "./download-file";
 export * from "./file-download-info";
 export * from "./list-datasets";
 export * from "./list-models";
-export * from "./li
+export * from "./list-spaces";
+export * from "./list-files";
+export * from "./who-am-i";
