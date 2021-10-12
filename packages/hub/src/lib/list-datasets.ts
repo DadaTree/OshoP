@@ -9,4 +9,13 @@ import { parseLinkHeader } from "../utils/parseLinkHeader";
 export interface DatasetEntry {
 	id:        string;
 	name:      string;
-	private:   
+	private:   boolean;
+	downloads: number;
+}
+
+export async function* listDatasets(params?: {
+	search?: {
+		owner?: string;
+	};
+	credentials?: Credentials;
+	hubUrl
