@@ -18,4 +18,8 @@ export async function* listDatasets(params?: {
 		owner?: string;
 	};
 	credentials?: Credentials;
-	hubUrl
+	hubUrl?:      string;
+}): AsyncGenerator<DatasetEntry> {
+	checkCredentials(params?.credentials);
+	const search = new URLSearchParams({
+		...(params?.search?.ow
