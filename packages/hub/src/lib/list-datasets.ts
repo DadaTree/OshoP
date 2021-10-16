@@ -22,4 +22,6 @@ export async function* listDatasets(params?: {
 }): AsyncGenerator<DatasetEntry> {
 	checkCredentials(params?.credentials);
 	const search = new URLSearchParams({
-		...(params?.search?.ow
+		...(params?.search?.owner ? { author: params.search.owner } : undefined),
+	}).toString();
+	let url: string | undefined = `${params?.hubUrl || HUB_URL}/api/datasets` + (search ? "?
