@@ -24,4 +24,10 @@ export async function* listDatasets(params?: {
 	const search = new URLSearchParams({
 		...(params?.search?.owner ? { author: params.search.owner } : undefined),
 	}).toString();
-	let url: string | undefined = `${params?.hubUrl || HUB_URL}/api/datasets` + (search ? "?
+	let url: string | undefined = `${params?.hubUrl || HUB_URL}/api/datasets` + (search ? "?" + search : "");
+
+	while (url) {
+		const res: Response = await fetch(url, {
+			headers: {
+				accept: "application/json",
+				...(params?
