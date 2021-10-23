@@ -30,4 +30,9 @@ export async function* listDatasets(params?: {
 		const res: Response = await fetch(url, {
 			headers: {
 				accept: "application/json",
-				...(params?
+				...(params?.credentials ? { Authorization: `Bearer ${params.credentials.accessToken}` } : undefined),
+			},
+		});
+
+		if (!res.ok) {
+			throw createApiErro
