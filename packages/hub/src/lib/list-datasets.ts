@@ -43,4 +43,12 @@ export async function* listDatasets(params?: {
 		for (const item of items) {
 			yield {
 				id:        item._id,
-				n
+				name:      item.id,
+				private:   item.private,
+				downloads: item.downloads,
+			};
+		}
+
+		const linkHeader = res.headers.get("Link");
+
+		url = linkHeader 
