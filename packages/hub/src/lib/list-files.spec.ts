@@ -94,3 +94,92 @@ describe("listFiles", () => {
 								safety: "innocuous",
 							},
 							{
+								module: "torch",
+								name:   "FloatStorage",
+								safety: "innocuous",
+							},
+							{
+								module: "torch._utils",
+								name:   "_rebuild_tensor_v2",
+								safety: "innocuous",
+							},
+						],
+					},
+					repositoryId: "models/bert-base-uncased",
+					safe:         true,
+				},
+				size: 440473133,
+				type: "file",
+			},
+			{
+				lastCommit: {
+					date:  "2019-09-23T19:48:44.000Z",
+					id:    "dd4bc8b21efa05ec961e3efc4ee5e3832a3679c7",
+					title: "Update tf_model.h5",
+				},
+				lfs: {
+					oid:         "a7a17d6d844b5de815ccab5f42cad6d24496db3850a2a43d8258221018ce87d2",
+					size:        536063208,
+					pointerSize: 134,
+				},
+				oid:      "9eb98c817f04b051b3bcca591bcd4e03cec88018",
+				path:     "tf_model.h5",
+				security: {
+					avScan: {
+						virusFound: false,
+						virusNames: null,
+					},
+					blobId:           "9eb98c817f04b051b3bcca591bcd4e03cec88018",
+					name:             "tf_model.h5",
+					pickleImportScan: null,
+					repositoryId:     "models/bert-base-uncased",
+					safe:             true,
+				},
+				size: 536063208,
+				type: "file",
+			},
+			{
+				lastCommit: {
+					date:  "2018-11-14T23:35:08.000Z",
+					id:    "2f07d813ca87c8c709147704c87210359ccf2309",
+					title: "Update vocab.txt",
+				},
+				oid:      "fb140275c155a9c7c5a3b3e0e77a9e839594a938",
+				path:     "vocab.txt",
+				security: {
+					avScan: {
+						virusFound: false,
+						virusNames: null,
+					},
+					blobId:           "fb140275c155a9c7c5a3b3e0e77a9e839594a938",
+					name:             "vocab.txt",
+					pickleImportScan: null,
+					repositoryId:     "models/bert-base-uncased",
+					safe:             true,
+				},
+				size: 231508,
+				type: "file",
+			},
+		]);
+	});
+
+	it("should fetch the list of files from the repo, including subfolders", async () => {
+		const cursor = listFiles({
+			repo: {
+				name: "xsum",
+				type: "dataset",
+			},
+			revision:  "0f3ea2f2b55fcb11e71fb1e3aec6822e44ddcb0f",
+			hubUrl:    "https://huggingface.co",
+			recursive: true,
+		});
+
+		const files: ListFileEntry[] = [];
+
+		for await (const entry of cursor) {
+			files.push(entry);
+		}
+
+		assert(files.some((file) => file.path === "data/XSUM-EMNLP18-Summary-Data-Original.tar.gz"));
+	});
+});
