@@ -51,4 +51,6 @@ export async function* listDatasets(params?: {
 
 		const linkHeader = res.headers.get("Link");
 
-		url = linkHeader 
+		url = linkHeader ? parseLinkHeader(linkHeader).next : undefined;
+	}
+}
