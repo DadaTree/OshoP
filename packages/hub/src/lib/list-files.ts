@@ -55,3 +55,20 @@ export async function* listFiles(params: {
 				accept: "application/json",
 				...(params.credentials ? { Authorization: `Bearer ${params.credentials.accessToken}` } : undefined),
 			},
+		});
+
+		if (!res.ok) {
+			throw createApiError(res);
+		}
+
+		const items: ApiIndexTreeEntry[] = await res.json();
+
+		for (const item of items) {
+			yield item;
+		}
+
+		const linkHeader = res.headers.get("Link");
+
+		url = linkHeader ? parseLinkHeader(linkHeader).next : undefined;
+	}
+}
