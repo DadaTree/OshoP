@@ -10,4 +10,8 @@ describe("whoAmI", () => {
 			type:          "user",
 			id:            "62f264b9f3c90f4b6514a269",
 			name:          "hub.js",
-			fullname:   
+			fullname:      "@huggingface/hub CI bot",
+			email:         "eliott@huggingface.co",
+			emailVerified: true,
+			plan:          "NO_PLAN",
+			canPay:       
