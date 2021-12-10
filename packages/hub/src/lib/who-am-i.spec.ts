@@ -14,4 +14,8 @@ describe("whoAmI", () => {
 			email:         "eliott@huggingface.co",
 			emailVerified: true,
 			plan:          "NO_PLAN",
-			canPay:       
+			canPay:        false,
+			isPro:         false,
+			periodEnd:     null,
+			avatarUrl:     "/avatars/934b830e9fdaa879487852f79eef7165.svg",
+			orgs
