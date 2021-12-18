@@ -18,4 +18,9 @@ describe("whoAmI", () => {
 			isPro:         false,
 			periodEnd:     null,
 			avatarUrl:     "/avatars/934b830e9fdaa879487852f79eef7165.svg",
-			orgs
+			orgs:          [],
+			auth:          {
+				type:        "access_token",
+				accessToken: {
+					displayName: "ci-huggingface-hub.js",
+					rol
