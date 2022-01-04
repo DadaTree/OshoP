@@ -23,4 +23,9 @@ describe("whoAmI", () => {
 				type:        "access_token",
 				accessToken: {
 					displayName: "ci-huggingface-hub.js",
-					rol
+					role:        "write",
+				},
+			},
+		});
+	});
+});
