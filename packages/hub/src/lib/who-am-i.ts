@@ -86,3 +86,16 @@ export async function whoAmI(params: {
 		auth: {
 			type:         AuthType;
 			accessToken?: {
+				displayName: string;
+				expiration?: Date; // actually string but we fix it below
+				role:        AccessTokenRole;
+			};
+		};
+	} = await res.json();
+
+	if (typeof response.auth.accessToken?.expiration === "string") {
+		response.auth.accessToken.expiration = new Date(response.auth.accessToken.expiration);
+	}
+
+	return response;
+}
