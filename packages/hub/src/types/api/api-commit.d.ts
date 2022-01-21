@@ -120,3 +120,64 @@ export interface ApiPreuploadRequest {
 		 * Full size of the LFS file
 		 */
 		size:   number;
+		/**
+		 * Base64-encoded sample of the first 512 bytes of the file
+		 */
+		sample: string;
+	}>;
+}
+
+export interface ApiPreuploadResponse {
+	files: Array<{
+		path:       string;
+		uploadMode: "lfs" | "regular";
+	}>;
+}
+
+export interface ApiCommitHeader {
+	summary:       string;
+	description?:  string;
+	/**
+	 * Parent commit. Optional
+	 *
+	 * - When opening a PR: will use parentCommit as the parent commit
+	 * - When committing on a branch: Will make sure that there were no intermediate commits
+	 */
+	parentCommit?: string;
+}
+
+export interface ApiCommitDeletedEntry {
+	path: string;
+}
+
+interface ApiCommitLfsFile {
+	path:     string;
+	oldPath?: string;
+	/** Required if {@link oldPath} is not set */
+	algo?:    "sha256";
+	/** Required if {@link oldPath} is not set */
+	oid?:     string;
+	size?:    number;
+}
+
+export interface ApiCommitFile {
+	/** Required if {@link oldPath} is not set */
+	content?:  string;
+	path:      string;
+	oldPath?:  string;
+	encoding?: "utf-8" | "base64";
+}
+
+export type ApiCommitOperation =
+	| {
+			key:   "file";
+			value: ApiCommitFile;
+	  }
+	| {
+			key:   "lfsFile";
+			value: ApiCommitLfsFile;
+	  }
+	| {
+			key:   "deletedFile";
+			value: ApiCommitDeletedEntry;
+	  };
