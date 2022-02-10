@@ -19,4 +19,7 @@ export type ApiCreateRepoPayload = {
 	| {
 			type:        "space";
 			hardware?:   SpaceHardwareFlavor;
-			sdk:   
+			sdk:         SpaceSdk;
+			sdkVersion?: string;
+	  }
+);
