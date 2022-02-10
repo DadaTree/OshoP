@@ -7,4 +7,8 @@ export type ApiCreateRepoPayload = {
 	canonical?:          boolean;
 	license?:            string;
 	template?:           string;
-	organization?:       
+	organization?:       string;
+	/** @default false */
+	private?:            boolean;
+	lfsmultipartthresh?: number;
+	files?:              SetRequired<ApiCommitFile,
