@@ -11,4 +11,12 @@ export type ApiCreateRepoPayload = {
 	/** @default false */
 	private?:            boolean;
 	lfsmultipartthresh?: number;
-	files?:              SetRequired<ApiCommitFile,
+	files?:              SetRequired<ApiCommitFile, "content">[];
+} & (
+	| {
+			type: Exclude<RepoType, "space">;
+	  }
+	| {
+			type:        "space";
+			hardware?:   SpaceHardwareFlavor;
+			sdk:   
