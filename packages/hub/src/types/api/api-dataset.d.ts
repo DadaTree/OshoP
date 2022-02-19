@@ -1,4 +1,9 @@
 export interface ApiDatasetInfo {
 	_id:                 string;
 	id:                  string;
-	arxivIds?:   
+	arxivIds?:           string[];
+	author?:             string;
+	cardExists?:         true;
+	cardError?:          unknown;
+	cardData?:           unknown;
+	contributors?:
