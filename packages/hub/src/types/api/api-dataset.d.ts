@@ -6,4 +6,7 @@ export interface ApiDatasetInfo {
 	cardExists?:         true;
 	cardError?:          unknown;
 	cardData?:           unknown;
-	contributors?:
+	contributors?:       Array<{ user: string; _id: string }>;
+	disabled:            boolean;
+	discussionsDisabled: boolean;
+	gated:               false | "auto" |
