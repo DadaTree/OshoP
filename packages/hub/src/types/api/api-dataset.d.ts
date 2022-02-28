@@ -9,4 +9,8 @@ export interface ApiDatasetInfo {
 	contributors?:       Array<{ user: string; _id: string }>;
 	disabled:            boolean;
 	discussionsDisabled: boolean;
-	gated:               false | "auto" |
+	gated:               false | "auto" | "manual";
+	gitalyUid:           string;
+	lastAuthor:          { email: string; user?: AuthorId };
+	lastModified:        string; // date
+	likes
