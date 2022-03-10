@@ -13,4 +13,8 @@ export interface ApiDatasetInfo {
 	gitalyUid:           string;
 	lastAuthor:          { email: string; user?: AuthorId };
 	lastModified:        string; // date
-	likes
+	likes:               number;
+	likesRecent:         number;
+	private:             boolean;
+	updatedAt:           string; // date
+	sha:           
