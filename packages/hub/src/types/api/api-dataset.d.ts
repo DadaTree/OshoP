@@ -17,4 +17,8 @@ export interface ApiDatasetInfo {
 	likesRecent:         number;
 	private:             boolean;
 	updatedAt:           string; // date
-	sha:           
+	sha:                 string;
+	files?:              string[];
+	citation?:           string;
+	description?:        string;
+	downloads:      
