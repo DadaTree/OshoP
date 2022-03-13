@@ -21,4 +21,8 @@ export interface ApiDatasetInfo {
 	files?:              string[];
 	citation?:           string;
 	description?:        string;
-	downloads:      
+	downloads:           number;
+	downloadsAllTime:    number;
+	previewable?:        boolean;
+	doi?:                { id: string; commit: string };
+}
