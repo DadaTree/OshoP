@@ -45,3 +45,12 @@ interface ApiWhoAmIApp extends ApiWhoAmIBase {
 }
 
 export type ApiWhoAmIReponse = ApiWhoAmIUser | ApiWhoAmIOrg | ApiWhoAmIApp;
+
+export interface ApiWhoAmIAuthInfo {
+	type:         AuthType;
+	accessToken?: {
+		displayName: string;
+		expiration?: string;
+		role:        AccessTokenRole;
+	};
+}
