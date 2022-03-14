@@ -11,3 +11,37 @@ export interface ApiIndexTreeEntry {
 		pointerSize: number;
 	};
 	lastCommit: {
+		date:  string;
+		id:    string;
+		title: string;
+	} | null;
+	security?: ApiFileScanResult;
+}
+
+export interface ApiFileScanResult {
+	/** namespaced by repo type (models/, datasets/, spaces/) */
+	repositoryId:      string;
+	blobId:            string;
+	name:              string;
+	safe:              boolean;
+	avScan?:           ApiAVScan;
+	pickleImportScan?: ApiPickleImportScan;
+}
+
+interface AVScan {
+	virusFound:  boolean;
+	virusNames?: string[];
+}
+
+type ApiSafetyLevel = "innocuous" | "suspicious" | "dangerous";
+
+interface ApiPickleImport {
+	module: string;
+	name:   string;
+	safety: ApiSafetyLevel;
+}
+
+interface ApiPickleImportScan {
+	highestSafetyLevel: ApiSafetyLevelafetyLevel;
+	imports:            ApiPickleImport[];
+}
