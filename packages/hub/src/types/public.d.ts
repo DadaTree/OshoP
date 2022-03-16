@@ -12,4 +12,12 @@ export interface Credentials {
 	accessToken: AccessToken;
 }
 
-expo
+export type SpaceHardwareFlavor =
+	| "cpu-basic"
+	| "cpu-upgrade"
+	| "t4-small"
+	| "t4-medium"
+	| "a10g-small"
+	| "a10g-large"
+	| "a100-large";
+
