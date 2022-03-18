@@ -21,3 +21,9 @@ export type SpaceHardwareFlavor =
 	| "a10g-large"
 	| "a100-large";
 
+export type SpaceSdk = "streamlit" | "gradio" | "docker" | "static";
+
+export type SpaceStage =
+	| "NO_APP_FILE"
+	| "CONFIG_ERROR"
+	|
