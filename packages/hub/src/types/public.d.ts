@@ -26,4 +26,13 @@ export type SpaceSdk = "streamlit" | "gradio" | "docker" | "static";
 export type SpaceStage =
 	| "NO_APP_FILE"
 	| "CONFIG_ERROR"
-	|
+	| "BUILDING"
+	| "BUILD_ERROR"
+	| "RUNNING"
+	| "RUNNING_BUILDING"
+	| "RUNTIME_ERROR"
+	| "DELETING"
+	| "PAUSED"
+	| "SLEEPING";
+
+export type AccessTokenRole 
