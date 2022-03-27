@@ -35,4 +35,8 @@ export type SpaceStage =
 	| "PAUSED"
 	| "SLEEPING";
 
-export type AccessTokenRole 
+export type AccessTokenRole = "admin" | "write" | "contributor" | "read";
+
+export type AuthType = "access_token" | "app_token" | "app_token_as_user";
+
+export typ
