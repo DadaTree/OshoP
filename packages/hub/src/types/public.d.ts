@@ -63,3 +63,10 @@ export type Task =
 	| "object-detection"
 	| "image-segmentation"
 	| "text-to-image"
+	| "image-to-text"
+	| "image-to-image"
+	| "unconditional-image-generation"
+	| "video-classification"
+	| "reinforcement-learning"
+	| "robotics"
+	
