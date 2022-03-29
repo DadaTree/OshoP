@@ -39,4 +39,8 @@ export type AccessTokenRole = "admin" | "write" | "contributor" | "read";
 
 export type AuthType = "access_token" | "app_token" | "app_token_as_user";
 
-export typ
+export type Task =
+	| "text-classification"
+	| "token-classification"
+	| "table-question-answering"
+	| "question-answering"
