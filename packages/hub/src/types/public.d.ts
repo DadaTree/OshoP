@@ -44,3 +44,10 @@ export type Task =
 	| "token-classification"
 	| "table-question-answering"
 	| "question-answering"
+	| "zero-shot-classification"
+	| "translation"
+	| "summarization"
+	| "conversational"
+	| "feature-extraction"
+	| "text-generation"
+	| "text2text-gene
