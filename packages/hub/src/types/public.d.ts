@@ -69,4 +69,10 @@ export type Task =
 	| "video-classification"
 	| "reinforcement-learning"
 	| "robotics"
-	
+	| "tabular-classification"
+	| "tabular-regression"
+	| "tabular-to-text"
+	| "table-to-text"
+	| "multiple-choice"
+	| "text-retrieval"
+	| "time-series
