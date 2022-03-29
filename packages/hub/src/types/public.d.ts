@@ -50,4 +50,10 @@ export type Task =
 	| "conversational"
 	| "feature-extraction"
 	| "text-generation"
-	| "text2text-gene
+	| "text2text-generation"
+	| "fill-mask"
+	| "sentence-similarity"
+	| "text-to-speech"
+	| "automatic-speech-recognition"
+	| "audio-to-audio"
+	| "audio-classification
