@@ -56,4 +56,10 @@ export type Task =
 	| "text-to-speech"
 	| "automatic-speech-recognition"
 	| "audio-to-audio"
-	| "audio-classification
+	| "audio-classification"
+	| "voice-activity-detection"
+	| "depth-estimation"
+	| "image-classification"
+	| "object-detection"
+	| "image-segmentation"
+	| "text-to-image"
