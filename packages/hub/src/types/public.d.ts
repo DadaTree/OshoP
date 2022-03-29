@@ -75,4 +75,11 @@ export type Task =
 	| "table-to-text"
 	| "multiple-choice"
 	| "text-retrieval"
-	| "time-series
+	| "time-series-forecasting"
+	| "visual-question-answering"
+	| "document-question-answering"
+	| "zero-shot-image-classification"
+	| "graph-ml"
+	| "other";
+
+export interface Space
