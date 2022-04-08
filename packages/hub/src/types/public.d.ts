@@ -82,4 +82,10 @@ export type Task =
 	| "graph-ml"
 	| "other";
 
-export interface Space
+export interface SpaceRuntime {
+	stage:         SpaceStage;
+	sdk?:          SpaceSdk;
+	sdkVersion?:   string;
+	errorMessage?: string;
+	hardware?: {
+		current:     
