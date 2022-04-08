@@ -88,4 +88,7 @@ export interface SpaceRuntime {
 	sdkVersion?:   string;
 	errorMessage?: string;
 	hardware?: {
-		current:     
+		current:              SpaceHardwareFlavor | null;
+		currentPrettyName?:   string;
+		requested:            SpaceHardwareFlavor | null;
+		requestedPrettyN
