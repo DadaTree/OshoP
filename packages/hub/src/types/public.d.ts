@@ -91,4 +91,9 @@ export interface SpaceRuntime {
 		current:              SpaceHardwareFlavor | null;
 		currentPrettyName?:   string;
 		requested:            SpaceHardwareFlavor | null;
-		requestedPrettyN
+		requestedPrettyName?: string;
+	};
+	/** when calling /spaces, those props are only fetched if ?full=true */
+	resources?: SpaceResourceConfig;
+	/** in seconds */
+	gcTimeout?: number 
