@@ -110,4 +110,7 @@ export interface SpaceResourceRequirement {
 export interface SpaceResourceConfig {
 	requests:   SpaceResourceRequirement;
 	limits:     SpaceResourceRequirement;
-	replicas
+	replicas?:  number;
+	throttled?: boolean;
+	is_custom?: boolean;
+}
