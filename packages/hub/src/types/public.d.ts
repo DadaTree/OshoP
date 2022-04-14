@@ -103,4 +103,11 @@ export interface SpaceResourceRequirement {
 	cpu?:       string;
 	memory?:    string;
 	gpu?:       string;
-	gpuModel?:  s
+	gpuModel?:  string;
+	ephemeral?: string;
+}
+
+export interface SpaceResourceConfig {
+	requests:   SpaceResourceRequirement;
+	limits:     SpaceResourceRequirement;
+	replicas
