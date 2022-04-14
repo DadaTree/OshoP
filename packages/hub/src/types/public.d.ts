@@ -96,4 +96,11 @@ export interface SpaceRuntime {
 	/** when calling /spaces, those props are only fetched if ?full=true */
 	resources?: SpaceResourceConfig;
 	/** in seconds */
-	gcTimeout?: number 
+	gcTimeout?: number | null;
+}
+
+export interface SpaceResourceRequirement {
+	cpu?:       string;
+	memory?:    string;
+	gpu?:       string;
+	gpuModel?:  s
