@@ -4,4 +4,8 @@ export function base64FromBytes(arr: Uint8Array): string {
 	} else {
 		const bin: string[] = [];
 		arr.forEach((byte) => {
-			bin.push(Str
+			bin.push(String.fromCharCode(byte));
+		});
+		return globalThis.btoa(bin.join(""));
+	}
+}
