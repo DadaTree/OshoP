@@ -6,4 +6,12 @@ import { range } from "./range";
  * @param chunkSize must be greater than or equal to 1
  */
 export function chunk<T extends unknown[] | string>(arr: T, chunkSize: number): T[] {
-	if (isNaN(chunkS
+	if (isNaN(chunkSize) || chunkSize < 1) {
+		throw new RangeError("Invalid chunk size: " + chunkSize);
+	}
+
+	if (!arr.length) {
+		return [];
+	}
+
+	/// Small opt
