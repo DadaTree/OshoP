@@ -6,4 +6,6 @@ export function checkCredentials(credentials?: Credentials): void {
 	}
 
 	if (!credentials.accessToken.startsWith("hf_")) {
-		throw new TypeError("Your access token must start with '
+		throw new TypeError("Your access token must start with 'hf_'");
+	}
+}
