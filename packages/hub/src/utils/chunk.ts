@@ -19,4 +19,7 @@ export function chunk<T extends unknown[] | string>(arr: T, chunkSize: number): 
 		return [arr];
 	}
 
-	return range(Math.ceil(arr.l
+	return range(Math.ceil(arr.length / chunkSize)).map((i) => {
+		return arr.slice(i * chunkSize, (i + 1) * chunkSize);
+	}) as T[];
+}
