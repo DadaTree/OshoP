@@ -14,4 +14,9 @@ export function chunk<T extends unknown[] | string>(arr: T, chunkSize: number): 
 		return [];
 	}
 
-	/// Small opt
+	/// Small optimization to not chunk buffers unless needed
+	if (arr.length <= chunkSize) {
+		return [arr];
+	}
+
+	return range(Math.ceil(arr.l
