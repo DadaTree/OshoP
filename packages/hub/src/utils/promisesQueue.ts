@@ -8,4 +8,9 @@ export async function promisesQueue<T>(factories: (() => Promise<T>)[], concurre
 	const executing: Promise<void>[] = [];
 	for (const factory of factories) {
 		const p = factory();
-		prom
+		promises.push(p);
+		const e = p.then(() => {
+			executing.splice(executing.indexOf(e), 1);
+		});
+		executing.push(e);
+		if (executing.length >= c
