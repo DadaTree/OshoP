@@ -13,4 +13,9 @@ export async function promisesQueue<T>(factories: (() => Promise<T>)[], concurre
 			executing.splice(executing.indexOf(e), 1);
 		});
 		executing.push(e);
-		if (executing.length >= c
+		if (executing.length >= concurrency) {
+			await Promise.race(executing);
+		}
+	}
+	return Promise.all(promises);
+}
