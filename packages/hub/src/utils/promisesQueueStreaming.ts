@@ -5,4 +5,8 @@
  * - Expects an iterable as input
  * - Does not return a list of all results
  *
- * Inspired by github
+ * Inspired by github.com/rxaviers/async-pool
+ */
+export async function promisesQueueStreaming<T>(
+	factories: AsyncIterable<() => Promise<T>> | Iterable<() => Promise<T>>,
+	co
