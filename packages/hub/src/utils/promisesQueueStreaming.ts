@@ -14,4 +14,8 @@ export async function promisesQueueStreaming<T>(
 	const executing: Promise<void>[] = [];
 	for await (const factory of factories) {
 		const e = factory().then(() => {
-	
+			executing.splice(executing.indexOf(e), 1);
+		});
+		executing.push(e);
+		if (executing.length >= concurrency) {
+			await Promise.race
