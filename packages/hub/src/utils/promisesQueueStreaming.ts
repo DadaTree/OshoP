@@ -18,4 +18,8 @@ export async function promisesQueueStreaming<T>(
 		});
 		executing.push(e);
 		if (executing.length >= concurrency) {
-			await Promise.race
+			await Promise.race(executing);
+		}
+	}
+	await Promise.all(executing);
+}
