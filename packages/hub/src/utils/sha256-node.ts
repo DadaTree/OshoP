@@ -11,4 +11,10 @@ export async function sha256Node(buffer: ArrayBuffer | Blob): Promise<string> {
 	return promisifyRs(transform256);
 }
 
-const promisifyRs = (rs: Reada
+const promisifyRs = (rs: Readable): Promise<string> => {
+	return new Promise((resolve, reject) => {
+		let out = "";
+		rs.on("data", (chunk) => {
+			out += chunk;
+		});
+		rs.o
