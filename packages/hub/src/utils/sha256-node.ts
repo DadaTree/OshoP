@@ -17,4 +17,11 @@ const promisifyRs = (rs: Readable): Promise<string> => {
 		rs.on("data", (chunk) => {
 			out += chunk;
 		});
-		rs.o
+		rs.on("error", (err) => {
+			reject(err);
+		});
+		rs.on("end", () => {
+			resolve(out);
+		});
+	});
+};
