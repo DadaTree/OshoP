@@ -6,4 +6,16 @@ Check out the [full documentation](https://huggingface.co/docs/huggingface.js/in
 
 
 
-##
+## Install
+
+```console
+npm install @huggingface/inference
+
+yarn add @huggingface/inference
+
+pnpm add @huggingface/inference
+```
+
+## Usage
+
+❗*
