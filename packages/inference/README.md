@@ -18,4 +18,4 @@ pnpm add @huggingface/inference
 
 ## Usage
 
-❗*
+❗**Important note:** Using an API key is optional to get started, however you will be rate limited eventually. Join [Hugging Face](https://huggingface.co/jo
