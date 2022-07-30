@@ -28,3 +28,13 @@ Your API key should be kept private. If you need to protect it in front-end appl
 import { HfInference } from '@huggingface/inference'
 
 const hf = new HfInference('your api key')
+
+// Natural Language
+
+await hf.fillMask({
+  model: 'bert-base-uncased',
+  inputs: '[MASK] world!'
+})
+
+await hf.summarization({
+  model: 'facebook/bart-large-cnn
