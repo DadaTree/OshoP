@@ -37,4 +37,6 @@ await hf.fillMask({
 })
 
 await hf.summarization({
-  model: 'facebook/bart-large-cnn
+  model: 'facebook/bart-large-cnn',
+  inputs:
+    'The tower is 324 metres (1,063 ft) tall, about the same height as an 81-storey building, and the tallest structure in Paris. 
