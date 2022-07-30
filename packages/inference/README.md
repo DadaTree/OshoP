@@ -20,4 +20,11 @@ pnpm add @huggingface/inference
 
 ❗**Important note:** Using an API key is optional to get started, however you will be rate limited eventually. Join [Hugging Face](https://huggingface.co/join) and then visit [access tokens](https://huggingface.co/settings/tokens) to generate your API key for **free**. 
 
-Your API key should be kept private. If you need to protect it in front-end applications, we suggest setting up a proxy server that stores t
+Your API key should be kept private. If you need to protect it in front-end applications, we suggest setting up a proxy server that stores the API key.
+
+### Basic examples
+
+```typescript
+import { HfInference } from '@huggingface/inference'
+
+const hf = new HfInference('your api key')
