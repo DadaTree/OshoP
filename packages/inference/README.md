@@ -39,4 +39,4 @@ await hf.fillMask({
 await hf.summarization({
   model: 'facebook/bart-large-cnn',
   inputs:
-    'The tower is 324 metres (1,063 ft) tall, about the same height as an 81-storey building, and the tallest structure in Paris. 
+    'The tower is 324 metres (1,063 ft) tall, about the same height as an 81-storey building, and the tallest structure in Paris. Its base is square, measuring 125 metres (410 ft) on each side. During its construction, the Eiffel Tower surpassed the Washington Monument
