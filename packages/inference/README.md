@@ -48,4 +48,12 @@ await hf.summarization({
 await hf.questionAnswer({
   model: 'deepset/roberta-base-squad2',
   inputs: {
-    question: 'What is the capit
+    question: 'What is the capital of France?',
+    context: 'The capital of France is Paris.'
+  }
+})
+
+await hf.tableQuestionAnswer({
+  model: 'google/tapas-base-finetuned-wtq',
+  inputs: {
+  
