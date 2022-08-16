@@ -56,4 +56,6 @@ await hf.questionAnswer({
 await hf.tableQuestionAnswer({
   model: 'google/tapas-base-finetuned-wtq',
   inputs: {
-  
+    query: 'How many stars does the transformers repository have?',
+    table: {
+      Repository: ['Transformers', 'Datasets', 'Tokeni
