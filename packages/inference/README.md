@@ -61,4 +61,10 @@ await hf.tableQuestionAnswer({
       Repository: ['Transformers', 'Datasets', 'Tokenizers'],
       Stars: ['36542', '4512', '3934'],
       Contributors: ['651', '77', '34'],
-      'Programming language': ['
+      'Programming language': ['Python', 'Python', 'Rust, Python and NodeJS']
+    }
+  }
+})
+
+await hf.textClassification({
+  model: 'distilbert-base-uncased-finetun
