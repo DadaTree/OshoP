@@ -67,4 +67,10 @@ await hf.tableQuestionAnswer({
 })
 
 await hf.textClassification({
-  model: 'distilbert-base-uncased-finetun
+  model: 'distilbert-base-uncased-finetuned-sst-2-english',
+  inputs: 'I like you. I love you.'
+})
+
+await hf.textGeneration({
+  model: 'gpt2',
+  inputs: 'The answer to the universe is'
