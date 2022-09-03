@@ -74,3 +74,8 @@ await hf.textClassification({
 await hf.textGeneration({
   model: 'gpt2',
   inputs: 'The answer to the universe is'
+})
+
+await hf.tokenClassification({
+  model: 'dbmdz/bert-large-cased-finetuned-conll03-english',
+  inputs: 'My name is Sarah Jessica Parker but yo
