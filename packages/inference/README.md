@@ -78,4 +78,9 @@ await hf.textGeneration({
 
 await hf.tokenClassification({
   model: 'dbmdz/bert-large-cased-finetuned-conll03-english',
-  inputs: 'My name is Sarah Jessica Parker but yo
+  inputs: 'My name is Sarah Jessica Parker but you can call me Jessica'
+})
+
+await hf.translation({
+  model: 't5-base',
+  inputs: 'My name is Wolfgang and I live in Berlin'
