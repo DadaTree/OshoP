@@ -84,3 +84,9 @@ await hf.tokenClassification({
 await hf.translation({
   model: 't5-base',
   inputs: 'My name is Wolfgang and I live in Berlin'
+})
+
+await hf.zeroShotClassification({
+  model: 'facebook/bart-large-mnli',
+  inputs: [
+    'Hi, I recently bought a devic
