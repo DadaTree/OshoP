@@ -93,3 +93,9 @@ await hf.zeroShotClassification({
   ],
   parameters: { candidate_labels: ['refund', 'legal', 'faq'] }
 })
+
+await hf.conversational({
+  model: 'microsoft/DialoGPT-large',
+  inputs: {
+    past_user_inputs: ['Which movie is the best ?'],
+   
