@@ -98,4 +98,10 @@ await hf.conversational({
   model: 'microsoft/DialoGPT-large',
   inputs: {
     past_user_inputs: ['Which movie is the best ?'],
-   
+    generated_responses: ['It is Die Hard for sure.'],
+    text: 'Can you explain why ?'
+  }
+})
+
+await hf.featureExtraction({
+  model: 'sentence-tra
