@@ -89,4 +89,7 @@ await hf.translation({
 await hf.zeroShotClassification({
   model: 'facebook/bart-large-mnli',
   inputs: [
-    'Hi, I recently bought a devic
+    'Hi, I recently bought a device from your company but it is not working as advertised and I would like to get reimbursed!'
+  ],
+  parameters: { candidate_labels: ['refund', 'legal', 'faq'] }
+})
