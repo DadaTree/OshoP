@@ -104,4 +104,8 @@ await hf.conversational({
 })
 
 await hf.featureExtraction({
-  model: 'sentence-tra
+  model: 'sentence-transformers/paraphrase-xlm-r-multilingual-v1',
+  inputs: {
+    source_sentence: 'That is a happy person',
+    sentences: [
+      'That i
