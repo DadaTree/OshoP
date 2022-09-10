@@ -108,4 +108,13 @@ await hf.featureExtraction({
   inputs: {
     source_sentence: 'That is a happy person',
     sentences: [
-      'That i
+      'That is a happy dog',
+      'That is a very happy person',
+      'Today is a sunny day'
+    ]
+  }
+})
+
+// Audio
+
+await hf.automaticSpeechRecogniti
