@@ -117,4 +117,10 @@ await hf.featureExtraction({
 
 // Audio
 
-await hf.automaticSpeechRecogniti
+await hf.automaticSpeechRecognition({
+  model: 'facebook/wav2vec2-large-960h-lv60-self',
+  data: readFileSync('test/sample1.flac')
+})
+
+await hf.audioClassification({
+  model: 's
