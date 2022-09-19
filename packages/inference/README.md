@@ -136,4 +136,12 @@ await hf.imageClassification({
 
 await hf.objectDetection({
   data: readFileSync('test/cats.png'),
-  model: 'facebook/det
+  model: 'facebook/detr-resnet-50'
+})
+
+await hf.imageSegmentation({
+  data: readFileSync('test/cats.png'),
+  model: 'facebook/detr-resnet-50-panoptic'
+})
+
+await hf.textT
