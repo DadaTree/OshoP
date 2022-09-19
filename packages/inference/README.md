@@ -130,4 +130,10 @@ await hf.audioClassification({
 // Computer Vision
 
 await hf.imageClassification({
-  data: readFileSync('test
+  data: readFileSync('test/cheetah.png'),
+  model: 'google/vit-base-patch16-224'
+})
+
+await hf.objectDetection({
+  data: readFileSync('test/cats.png'),
+  model: 'facebook/det
