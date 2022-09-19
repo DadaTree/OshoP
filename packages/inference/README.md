@@ -123,4 +123,11 @@ await hf.automaticSpeechRecognition({
 })
 
 await hf.audioClassification({
-  model: 's
+  model: 'superb/hubert-large-superb-er',
+  data: readFileSync('test/sample1.flac')
+})
+
+// Computer Vision
+
+await hf.imageClassification({
+  data: readFileSync('test
