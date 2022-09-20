@@ -157,4 +157,9 @@ await hf.textToImage({
 
 - [x] Fill mask
 - [x] Summarization
-- [x
+- [x] Question answering
+- [x] Table question answering
+- [x] Text classification
+- [x] Text generation
+- [x] Text2Text generation
+- [x] T
