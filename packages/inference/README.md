@@ -146,4 +146,15 @@ await hf.imageSegmentation({
 
 await hf.textToImage({
   inputs: 'award winning high resolution photo of a giant tortoise/((ladybird)) hybrid, [trending on artstation]',
-  negative_pr
+  negative_prompt: 'blurry',
+  model: 'stabilityai/stable-diffusion-2',
+})
+```
+
+## Supported Tasks
+
+### Natural Language Processing
+
+- [x] Fill mask
+- [x] Summarization
+- [x
