@@ -162,4 +162,11 @@ await hf.textToImage({
 - [x] Text classification
 - [x] Text generation
 - [x] Text2Text generation
-- [x] T
+- [x] Token classification
+- [x] Named entity recognition
+- [x] Translation
+- [x] Zero-shot classification
+- [x] Conversational
+- [x] Feature extraction
+
+### Audio
