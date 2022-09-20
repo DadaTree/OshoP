@@ -144,4 +144,6 @@ await hf.imageSegmentation({
   model: 'facebook/detr-resnet-50-panoptic'
 })
 
-await hf.textT
+await hf.textToImage({
+  inputs: 'award winning high resolution photo of a giant tortoise/((ladybird)) hybrid, [trending on artstation]',
+  negative_pr
