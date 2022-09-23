@@ -170,3 +170,12 @@ await hf.textToImage({
 - [x] Feature extraction
 
 ### Audio
+
+- [x] Automatic speech recognition
+- [x] Audio classification
+
+### Computer Vision
+
+- [x] Image classification
+- [x] Object detection
+- [x] 
