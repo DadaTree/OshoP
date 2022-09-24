@@ -178,4 +178,13 @@ await hf.textToImage({
 
 - [x] Image classification
 - [x] Object detection
-- [x] 
+- [x] Image segmentation
+- [x] Text to image
+
+## Running tests
+
+```console
+HF_ACCESS_TOKEN="your access token" npm run test
+```
+
+## F
