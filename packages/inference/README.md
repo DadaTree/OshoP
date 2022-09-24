@@ -187,4 +187,6 @@ await hf.textToImage({
 HF_ACCESS_TOKEN="your access token" npm run test
 ```
 
-## F
+## Finding appropriate models
+
+We have an informative documentation project called [Tasks](https://huggingface.co/tasks) to list available models for 
