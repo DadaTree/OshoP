@@ -6,4 +6,11 @@
 	"description": "Typescript wrapper for the Hugging Face Inference API",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/hug
+		"url": "https://github.com/huggingface/huggingface.js.git"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"keywords": [
+		"hugging face",
+		"hugging fa
