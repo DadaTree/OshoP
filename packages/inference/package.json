@@ -30,4 +30,9 @@
 	"source": "src/index.ts",
 	"types": "dist/index.d.ts",
 	"main": "./dist/index.js",
-	"m
+	"module": "./dist/index.mjs",
+	"exports": {
+		".": {
+			"require": "./dist/index.js",
+			"import": "./dist/index.mjs",
+			"types": "./dist/index.d.ts"
