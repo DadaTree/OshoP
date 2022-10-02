@@ -36,3 +36,8 @@
 			"require": "./dist/index.js",
 			"import": "./dist/index.mjs",
 			"types": "./dist/index.d.ts"
+		}
+	},
+	"scripts": {
+		"build": "tsup src/index.ts --format cjs,esm --clean --dts",
+		"format": "prettier --write . && eslint --quiet --fix 
