@@ -190,3 +190,173 @@ export type TextGenerationArgs = Args & {
 		num_return_sequences?: number;
 		/**
 		 * (Default: None). Float (0.0-100.0). The more a token is used within generation the more it is penalized to not be picked in successive generation passes.
+		 */
+		repetition_penalty?:   number;
+		/**
+		 * (Default: True). Bool. If set to False, the return results will not contain the original query making it easier for prompting.
+		 */
+		return_full_text?:     boolean;
+		/**
+		 * (Default: 1.0). Float (0.0-100.0). The temperature of the sampling operation. 1 means regular sampling, 0 means always take the highest score, 100.0 is getting closer to uniform probability.
+		 */
+		temperature?:          number;
+		/**
+		 * (Default: None). Integer to define the top tokens considered within the sample operation to create new text.
+		 */
+		top_k?:                number;
+		/**
+		 * (Default: None). Float to define the tokens that are within the sample operation of text generation. Add tokens in the sample for more probable to least probable until the sum of the probabilities is greater than top_p.
+		 */
+		top_p?:                number;
+	};
+};
+
+export interface TextGenerationReturn {
+	/**
+	 * The continuated string
+	 */
+	generated_text: string;
+}
+
+export type TokenClassificationArgs = Args & {
+	/**
+	 * A string to be classified
+	 */
+	inputs:      string;
+	parameters?: {
+		/**
+		 * (Default: simple). There are several aggregation strategies:
+		 *
+		 * none: Every token gets classified without further aggregation.
+		 *
+		 * simple: Entities are grouped according to the default schema (B-, I- tags get merged when the tag is similar).
+		 *
+		 * first: Same as the simple strategy except words cannot end up with different tags. Words will use the tag of the first token when there is ambiguity.
+		 *
+		 * average: Same as the simple strategy except words cannot end up with different tags. Scores are averaged across tokens and then the maximum label is applied.
+		 *
+		 * max: Same as the simple strategy except words cannot end up with different tags. Word entity will be the token with the maximum score.
+		 */
+		aggregation_strategy?: "none" | "simple" | "first" | "average" | "max";
+	};
+};
+
+export interface TokenClassificationReturnValue {
+	/**
+	 * The offset stringwise where the answer is located. Useful to disambiguate if word occurs multiple times.
+	 */
+	end:          number;
+	/**
+	 * The type for the entity being recognized (model specific).
+	 */
+	entity_group: string;
+	/**
+	 * How likely the entity was recognized.
+	 */
+	score:        number;
+	/**
+	 * The offset stringwise where the answer is located. Useful to disambiguate if word occurs multiple times.
+	 */
+	start:        number;
+	/**
+	 * The string that was captured
+	 */
+	word:         string;
+}
+
+export type TokenClassificationReturn = TokenClassificationReturnValue[];
+
+export type TranslationArgs = Args & {
+	/**
+	 * A string to be translated
+	 */
+	inputs: string;
+};
+
+export interface TranslationReturn {
+	/**
+	 * The string after translation
+	 */
+	translation_text: string;
+}
+
+export type ZeroShotClassificationArgs = Args & {
+	/**
+	 * a string or list of strings
+	 */
+	inputs:     string | string[];
+	parameters: {
+		/**
+		 * a list of strings that are potential classes for inputs. (max 10 candidate_labels, for more, simply run multiple requests, results are going to be misleading if using too many candidate_labels anyway. If you want to keep the exact same, you can simply run multi_label=True and do the scaling on your end.
+		 */
+		candidate_labels: string[];
+		/**
+		 * (Default: false) Boolean that is set to True if classes can overlap
+		 */
+		multi_label?:     boolean;
+	};
+};
+
+export interface ZeroShotClassificationReturnValue {
+	labels:   string[];
+	scores:   number[];
+	sequence: string;
+}
+
+export type ZeroShotClassificationReturn = ZeroShotClassificationReturnValue[];
+
+export type ConversationalArgs = Args & {
+	inputs: {
+		/**
+		 * A list of strings corresponding to the earlier replies from the model.
+		 */
+		generated_responses?: string[];
+		/**
+		 * A list of strings corresponding to the earlier replies from the user. Should be of the same length of generated_responses.
+		 */
+		past_user_inputs?:    string[];
+		/**
+		 * The last input from the user in the conversation.
+		 */
+		text:                 string;
+	};
+	parameters?: {
+		/**
+		 * (Default: None). Integer to define the maximum length in tokens of the output summary.
+		 */
+		max_length?:         number;
+		/**
+		 * (Default: None). Float (0-120.0). The amount of time in seconds that the query should take maximum. Network can cause some overhead so it will be a soft limit.
+		 */
+		max_time?:           number;
+		/**
+		 * (Default: None). Integer to define the minimum length in tokens of the output summary.
+		 */
+		min_length?:         number;
+		/**
+		 * (Default: None). Float (0.0-100.0). The more a token is used within generation the more it is penalized to not be picked in successive generation passes.
+		 */
+		repetition_penalty?: number;
+		/**
+		 * (Default: 1.0). Float (0.0-100.0). The temperature of the sampling operation. 1 means regular sampling, 0 means always take the highest score, 100.0 is getting closer to uniform probability.
+		 */
+		temperature?:        number;
+		/**
+		 * (Default: None). Integer to define the top tokens considered within the sample operation to create new text.
+		 */
+		top_k?:              number;
+		/**
+		 * (Default: None). Float to define the tokens that are within the sample operation of text generation. Add tokens in the sample for more probable to least probable until the sum of the probabilities is greater than top_p.
+		 */
+		top_p?:              number;
+	};
+};
+
+export interface ConversationalReturn {
+	conversation: {
+		generated_responses: string[];
+		past_user_inputs:    string[];
+	};
+	generated_text: string;
+	warnings:       string[];
+}
