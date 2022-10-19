@@ -360,3 +360,152 @@ export interface ConversationalReturn {
 	generated_text: string;
 	warnings:       string[];
 }
+
+export type FeatureExtractionArgs = Args & {
+	/**
+	 * The inputs vary based on the model. For example when using sentence-transformers/paraphrase-xlm-r-multilingual-v1 the inputs will look like this:
+	 *
+	 *  inputs: &#123;
+	 *    "source_sentence": "That is a happy person",
+	 *    "sentences": ["That is a happy dog", "That is a very happy person", "Today is a sunny day"]
+	 *  &#125;
+	 */
+	inputs: Record<string, any> | Record<string, any>[];
+};
+
+/**
+ * Returned values are a list of floats, or a list of list of floats (depending on if you sent a string or a list of string, and if the automatic reduction, usually mean_pooling for instance was applied for you or not. This should be explained on the model's README.
+ */
+export type FeatureExtractionReturn = (number | number[])[];
+
+export type ImageClassificationArgs = Args & {
+	/**
+	 * Binary image data
+	 */
+	data: any;
+};
+
+export interface ImageClassificationReturnValue {
+	/**
+	 * A float that represents how likely it is that the image file belongs to this class.
+	 */
+	label: string;
+	/**
+	 * The label for the class (model specific)
+	 */
+	score: number;
+}
+
+export type ImageClassificationReturn = ImageClassificationReturnValue[];
+
+export type ObjectDetectionArgs = Args & {
+	/**
+	 * Binary image data
+	 */
+	data: any;
+};
+
+export interface ObjectDetectionReturnValue {
+	/**
+	 * A dict (with keys [xmin,ymin,xmax,ymax]) representing the bounding box of a detected object.
+	 */
+	box: {
+		xmax: number;
+		xmin: number;
+		ymax: number;
+		ymin: number;
+	};
+	/**
+	 * The label for the class (model specific) of a detected object.
+	 */
+	label: string;
+
+	/**
+	 * A float that represents how likely it is that the detected object belongs to the given class.
+	 */
+	score: number;
+}
+
+export type ObjectDetectionReturn = ObjectDetectionReturnValue[];
+
+export type ImageSegmentationArgs = Args & {
+	/**
+	 * Binary image data
+	 */
+	data: any;
+};
+
+export interface ImageSegmentationReturnValue {
+	/**
+	 * The label for the class (model specific) of a segment.
+	 */
+	label: string;
+	/**
+	 * A str (base64 str of a single channel black-and-white img) representing the mask of a segment.
+	 */
+	mask:  string;
+	/**
+	 * A float that represents how likely it is that the detected object belongs to the given class.
+	 */
+	score: number;
+}
+
+export type ImageSegmentationReturn = ImageSegmentationReturnValue[];
+
+export type AutomaticSpeechRecognitionArgs = Args & {
+	/**
+	 * Binary audio data
+	 */
+	data: any;
+};
+
+export interface AutomaticSpeechRecognitionReturn {
+	/**
+	 * The text that was recognized from the audio
+	 */
+	text: string;
+}
+
+export type AudioClassificationArgs = Args & {
+	/**
+	 * Binary audio data
+	 */
+	data: any;
+};
+
+export interface AudioClassificationReturnValue {
+	/**
+	 * The label for the class (model specific)
+	 */
+	label: string;
+
+	/**
+	 * A float that represents how likely it is that the audio file belongs to this class.
+	 */
+	score: number;
+}
+
+export type AudioClassificationReturn = AudioClassificationReturnValue[];
+
+export type TextToImageArgs = Args & {
+	/**
+	 * The text to generate an image from
+	 */
+	inputs: string;
+
+	/**
+	 * An optional negative prompt for the image generation
+	 */
+	negative_prompt?: string;
+};
+
+export type TextToImageReturn = Blob;
+
+export class HfInference {
+	private readonly apiKey:         string;
+	private readonly defaultOptions: Options;
+
+	constructor(apiKey = "", defaultOptions: Options = {}) {
+		this.apiKey = apiKey;
+		this.defaultOptions = defaultOptions;
+	}
