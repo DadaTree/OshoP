@@ -638,3 +638,99 @@ export class HfInference {
 			binary: true,
 		});
 	}
+
+	/**
+	 * This task reads some image input and outputs the likelihood of classes & bounding boxes of detected objects.
+	 * Recommended model: facebook/detr-resnet-50
+	 */
+	public async objectDetection(args: ObjectDetectionArgs, options?: Options): Promise<ObjectDetectionReturn> {
+		return await this.request(args, {
+			...options,
+			binary: true,
+		});
+	}
+
+	/**
+	 * This task reads some image input and outputs the likelihood of classes & bounding boxes of detected objects.
+	 * Recommended model: facebook/detr-resnet-50-panoptic
+	 */
+	public async imageSegmentation(args: ImageSegmentationArgs, options?: Options): Promise<ImageSegmentationReturn> {
+		return await this.request(args, {
+			...options,
+			binary: true,
+		});
+	}
+
+	/**
+	 * This task reads some text input and outputs an image.
+	 * Recommended model: stabilityai/stable-diffusion-2
+	 */
+	public async textToImage(args: TextToImageArgs, options?: Options): Promise<TextToImageReturn> {
+		return await this.request(args, {
+			...options,
+			blob: true,
+		});
+	}
+
+	public async request(
+		args: Args & { data?: any },
+		options?: Options & {
+			binary?: boolean;
+			blob?:   boolean;
+		}
+	): Promise<any> {
+		const mergedOptions = { ...this.defaultOptions, ...options };
+		const { model, ...otherArgs } = args;
+
+		const headers: Record<string, string> = {};
+		if (this.apiKey) {
+			headers["Authorization"] = `Bearer ${this.apiKey}`;
+		}
+
+		if (!options?.binary) {
+			headers["Content-Type"] = "application/json";
+		}
+
+		if (options?.binary && mergedOptions.wait_for_model) {
+			headers["X-Wait-For-Model"] = "true";
+		}
+
+		const response = await fetch(`https://api-inference.huggingface.co/models/${model}`, {
+			headers,
+			method: "POST",
+			body:   options?.binary
+				? args.data
+				: JSON.stringify({
+						...otherArgs,
+						options: mergedOptions,
+				  }),
+		});
+
+		if (mergedOptions.retry_on_error !== false && response.status === 503 && !mergedOptions.wait_for_model) {
+			return this.request(args, {
+				...mergedOptions,
+				wait_for_model: true,
+			});
+		}
+
+		if (options?.blob) {
+			if (!response.ok) {
+				throw new Error("An error occurred while fetching the blob");
+			}
+			return await response.blob();
+		}
+
+		const output = await response.json();
+		if (output.error) {
+			throw new Error(output.error);
+		}
+		return output;
+	}
+
+	private static toArray(obj: any): any[] {
+		if (Array.isArray(obj)) {
+			return obj;
+		}
+		return [obj];
+	}
+}
