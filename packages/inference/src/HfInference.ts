@@ -509,3 +509,132 @@ export class HfInference {
 		this.apiKey = apiKey;
 		this.defaultOptions = defaultOptions;
 	}
+
+	/**
+	 * Tries to fill in a hole with a missing word (token to be precise). That’s the base task for BERT models.
+	 */
+	public async fillMask(args: FillMaskArgs, options?: Options): Promise<FillMaskReturn> {
+		return this.request(args, options);
+	}
+
+	/**
+	 * This task is well known to summarize longer text into shorter text. Be careful, some models have a maximum length of input. That means that the summary cannot handle full books for instance. Be careful when choosing your model.
+	 */
+	public async summarization(args: SummarizationArgs, options?: Options): Promise<SummarizationReturn> {
+		return (await this.request(args, options))?.[0];
+	}
+
+	/**
+	 * Want to have a nice know-it-all bot that can answer any question?. Recommended model: deepset/roberta-base-squad2
+	 */
+	public async questionAnswer(args: QuestionAnswerArgs, options?: Options): Promise<QuestionAnswerReturn> {
+		return await this.request(args, options);
+	}
+
+	/**
+	 * Don’t know SQL? Don’t want to dive into a large spreadsheet? Ask questions in plain english! Recommended model: google/tapas-base-finetuned-wtq.
+	 */
+	public async tableQuestionAnswer(
+		args: TableQuestionAnswerArgs,
+		options?: Options
+	): Promise<TableQuestionAnswerReturn> {
+		return await this.request(args, options);
+	}
+
+	/**
+	 * Usually used for sentiment-analysis this will output the likelihood of classes of an input. Recommended model: distilbert-base-uncased-finetuned-sst-2-english
+	 */
+	public async textClassification(args: TextClassificationArgs, options?: Options): Promise<TextClassificationReturn> {
+		return (await this.request(args, options))?.[0];
+	}
+
+	/**
+	 * Use to continue text from a prompt. This is a very generic task. Recommended model: gpt2 (it’s a simple model, but fun to play with).
+	 */
+	public async textGeneration(args: TextGenerationArgs, options?: Options): Promise<TextGenerationReturn> {
+		return (await this.request(args, options))?.[0];
+	}
+
+	/**
+	 * Usually used for sentence parsing, either grammatical, or Named Entity Recognition (NER) to understand keywords contained within text. Recommended model: dbmdz/bert-large-cased-finetuned-conll03-english
+	 */
+	public async tokenClassification(
+		args: TokenClassificationArgs,
+		options?: Options
+	): Promise<TokenClassificationReturn> {
+		return HfInference.toArray(await this.request(args, options));
+	}
+
+	/**
+	 * This task is well known to translate text from one language to another. Recommended model: Helsinki-NLP/opus-mt-ru-en.
+	 */
+	public async translation(args: TranslationArgs, options?: Options): Promise<TranslationReturn> {
+		return (await this.request(args, options))?.[0];
+	}
+
+	/**
+	 * This task is super useful to try out classification with zero code, you simply pass a sentence/paragraph and the possible labels for that sentence, and you get a result. Recommended model: facebook/bart-large-mnli.
+	 */
+	public async zeroShotClassification(
+		args: ZeroShotClassificationArgs,
+		options?: Options
+	): Promise<ZeroShotClassificationReturn> {
+		return HfInference.toArray(await this.request(args, options));
+	}
+
+	/**
+	 * This task corresponds to any chatbot like structure. Models tend to have shorter max_length, so please check with caution when using a given model if you need long range dependency or not. Recommended model: microsoft/DialoGPT-large.
+	 *
+	 */
+	public async conversational(args: ConversationalArgs, options?: Options): Promise<ConversationalReturn> {
+		return await this.request(args, options);
+	}
+
+	/**
+	 * This task reads some text and outputs raw float values, that are usually consumed as part of a semantic database/semantic search.
+	 */
+	public async featureExtraction(args: FeatureExtractionArgs, options?: Options): Promise<FeatureExtractionReturn> {
+		return await this.request(args, options);
+	}
+
+	/**
+	 * This task reads some audio input and outputs the said words within the audio files.
+	 * Recommended model (english language): facebook/wav2vec2-large-960h-lv60-self
+	 */
+	public async automaticSpeechRecognition(
+		args: AutomaticSpeechRecognitionArgs,
+		options?: Options
+	): Promise<AutomaticSpeechRecognitionReturn> {
+		return await this.request(args, {
+			...options,
+			binary: true,
+		});
+	}
+
+	/**
+	 * This task reads some audio input and outputs the likelihood of classes.
+	 * Recommended model:  superb/hubert-large-superb-er
+	 */
+	public async audioClassification(
+		args: AudioClassificationArgs,
+		options?: Options
+	): Promise<AudioClassificationReturn> {
+		return await this.request(args, {
+			...options,
+			binary: true,
+		});
+	}
+
+	/**
+	 * This task reads some image input and outputs the likelihood of classes.
+	 * Recommended model: google/vit-base-patch16-224
+	 */
+	public async imageClassification(
+		args: ImageClassificationArgs,
+		options?: Options
+	): Promise<ImageClassificationReturn> {
+		return await this.request(args, {
+			...options,
+			binary: true,
+		});
+	}
