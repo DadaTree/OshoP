@@ -8,4 +8,7 @@ const dir = fileURLToPath(new URL(".", import.meta.url));
 const TIMEOUT = 60000 * 3;
 
 const FLAC_FILE = join(dir, "..", "test", "sample1.flac");
-const CHEETAH_F
+const CHEETAH_FILE = join(dir, "..", "test", "cheetah.png");
+const CAT_FILE = join(dir, "..", "test", "cats.png");
+
+if (!process.env.HF_ACCESS_TO
