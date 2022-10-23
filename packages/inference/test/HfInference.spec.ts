@@ -11,4 +11,11 @@ const FLAC_FILE = join(dir, "..", "test", "sample1.flac");
 const CHEETAH_FILE = join(dir, "..", "test", "cheetah.png");
 const CAT_FILE = join(dir, "..", "test", "cats.png");
 
-if (!process.env.HF_ACCESS_TO
+if (!process.env.HF_ACCESS_TOKEN) {
+	console.warn("Set HF_ACCESS_TOKEN in the env to run the tests for better rate limits");
+}
+
+describe.concurrent(
+	"HfInference",
+	() => {
+		// Individ
