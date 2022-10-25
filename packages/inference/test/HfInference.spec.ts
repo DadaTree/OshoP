@@ -19,4 +19,9 @@ describe.concurrent(
 	"HfInference",
 	() => {
 		// Individual tests can be ran without providing an api key, however running all tests without an api key will result in rate limiting error.
-		const
+		const hf = new HfInference(process.env.HF_ACCESS_TOKEN);
+
+		it("throws error if model does not exist", () => {
+			expect(
+				hf.fillMask({
+					model:  "this-model-doe
