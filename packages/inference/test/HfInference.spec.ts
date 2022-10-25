@@ -18,4 +18,5 @@ if (!process.env.HF_ACCESS_TOKEN) {
 describe.concurrent(
 	"HfInference",
 	() => {
-		// Individ
+		// Individual tests can be ran without providing an api key, however running all tests without an api key will result in rate limiting error.
+		const
