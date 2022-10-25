@@ -24,4 +24,7 @@ describe.concurrent(
 		it("throws error if model does not exist", () => {
 			expect(
 				hf.fillMask({
-					model:  "this-model-doe
+					model:  "this-model-does-not-exist-123",
+					inputs: "[MASK] world!",
+				})
+			).rejects.toThrowError("Model this-model-does-not-exist-123 does not e
