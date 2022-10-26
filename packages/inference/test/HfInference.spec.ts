@@ -27,4 +27,11 @@ describe.concurrent(
 					model:  "this-model-does-not-exist-123",
 					inputs: "[MASK] world!",
 				})
-			).rejects.toThrowError("Model this-model-does-not-exist-123 does not e
+			).rejects.toThrowError("Model this-model-does-not-exist-123 does not exist");
+		});
+
+		it("fillMask", async () => {
+			expect(
+				await hf.fillMask({
+					model:  "bert-base-uncased",
+		
