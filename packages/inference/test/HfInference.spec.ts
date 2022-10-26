@@ -39,4 +39,9 @@ describe.concurrent(
 			).toEqual(
 				expect.arrayContaining([
 					expect.objectContaining({
-						score:     expect.any(Nu
+						score:     expect.any(Number),
+						token:     expect.any(Number),
+						token_str: expect.any(String),
+						sequence:  expect.any(String),
+					}),
+				])
