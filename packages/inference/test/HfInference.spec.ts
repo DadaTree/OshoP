@@ -34,4 +34,9 @@ describe.concurrent(
 			expect(
 				await hf.fillMask({
 					model:  "bert-base-uncased",
-		
+					inputs: "[MASK] world!",
+				})
+			).toEqual(
+				expect.arrayContaining([
+					expect.objectContaining({
+						score:     expect.any(Nu
