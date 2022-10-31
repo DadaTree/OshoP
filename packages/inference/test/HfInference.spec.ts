@@ -45,3 +45,11 @@ describe.concurrent(
 						sequence:  expect.any(String),
 					}),
 				])
+			);
+		});
+
+		it("summarization", async () => {
+			expect(
+				await hf.summarization({
+					model: "facebook/bart-large-cnn",
+					
