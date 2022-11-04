@@ -60,4 +60,4 @@ describe.concurrent(
 				})
 			).toEqual({
 				summary_text:
-					"The tower is
+					"The tower is 324 metres (1,063 ft) tall, about the same height as an 81-storey building. Its base is square, measuring 125 metres (410 ft) on each side. During its co
