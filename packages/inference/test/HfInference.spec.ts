@@ -69,4 +69,9 @@ describe.concurrent(
 				await hf.questionAnswer({
 					model:  "deepset/roberta-base-squad2",
 					inputs: {
-						questio
+						question: "What is the capital of France?",
+						context:  "The capital of France is Paris.",
+					},
+				})
+			).toMatchObject({
+	
