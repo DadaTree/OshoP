@@ -81,4 +81,9 @@ describe.concurrent(
 			});
 		});
 
-		it("table question 
+		it("table question answer", async () => {
+			expect(
+				await hf.tableQuestionAnswer({
+					model:  "google/tapas-base-finetuned-wtq",
+					inputs: {
+						query:
