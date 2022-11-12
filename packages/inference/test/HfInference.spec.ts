@@ -74,4 +74,11 @@ describe.concurrent(
 					},
 				})
 			).toMatchObject({
-	
+				answer: "Paris",
+				score:  expect.any(Number),
+				start:  expect.any(Number),
+				end:    expect.any(Number),
+			});
+		});
+
+		it("table question 
