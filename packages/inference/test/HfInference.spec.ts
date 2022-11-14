@@ -96,4 +96,12 @@ describe.concurrent(
 					},
 				})
 			).toMatchObject({
-				answer:      "AVERAGE > 36542"
+				answer:      "AVERAGE > 36542",
+				coordinates: [[0, 1]],
+				cells:       ["36542"],
+				aggregator:  "AVERAGE",
+			});
+		});
+
+		it("textClassification", async () => {
+			expect(
