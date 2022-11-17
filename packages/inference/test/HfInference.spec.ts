@@ -109,3 +109,10 @@ describe.concurrent(
 					model:  "distilbert-base-uncased-finetuned-sst-2-english",
 					inputs: "I like you. I love you.",
 				})
+			).toEqual(
+				expect.arrayContaining([
+					expect.objectContaining({
+						label: expect.any(String),
+						score: expect.any(Number),
+					}),
+			
