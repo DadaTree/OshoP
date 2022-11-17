@@ -105,3 +105,7 @@ describe.concurrent(
 
 		it("textClassification", async () => {
 			expect(
+				await hf.textClassification({
+					model:  "distilbert-base-uncased-finetuned-sst-2-english",
+					inputs: "I like you. I love you.",
+				})
