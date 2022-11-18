@@ -123,4 +123,11 @@ describe.concurrent(
 			expect(
 				await hf.textGeneration({
 					model:  "gpt2",
-					inputs: "The
+					inputs: "The answer to the universe is",
+				})
+			).toMatchObject({
+				generated_text: expect.any(String),
+			});
+		});
+
+		it("textGeneration - google/flan-t
