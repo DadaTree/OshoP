@@ -130,4 +130,10 @@ describe.concurrent(
 			});
 		});
 
-		it("textGeneration - google/flan-t
+		it("textGeneration - google/flan-t5-xxl", async () => {
+			expect(
+				await hf.textGeneration({
+					model:  "google/flan-t5-xxl",
+					inputs: "The answer to the universe is",
+				})
+			).t
