@@ -115,4 +115,12 @@ describe.concurrent(
 						label: expect.any(String),
 						score: expect.any(Number),
 					}),
-			
+				])
+			);
+		});
+
+		it("textGeneration - gpt2", async () => {
+			expect(
+				await hf.textGeneration({
+					model:  "gpt2",
+					inputs: "The
