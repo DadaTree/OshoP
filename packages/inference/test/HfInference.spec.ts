@@ -136,4 +136,11 @@ describe.concurrent(
 					model:  "google/flan-t5-xxl",
 					inputs: "The answer to the universe is",
 				})
-			).t
+			).toMatchObject({
+				generated_text: expect.any(String),
+			});
+		});
+
+		it("tokenClassification", async () => {
+			expect(
+				await hf.tokenClassific
