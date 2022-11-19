@@ -145,4 +145,10 @@ describe.concurrent(
 			expect(
 				await hf.tokenClassification({
 					model:  "dbmdz/bert-large-cased-finetuned-conll03-english",
-					inputs: "My name is Sarah Jessica Parker but you can call me 
+					inputs: "My name is Sarah Jessica Parker but you can call me Jessica",
+				})
+			).toEqual(
+				expect.arrayContaining([
+					expect.objectContaining({
+						entity_group: expect.any(String),
+						
