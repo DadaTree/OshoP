@@ -143,4 +143,6 @@ describe.concurrent(
 
 		it("tokenClassification", async () => {
 			expect(
-				await hf.tokenClassific
+				await hf.tokenClassification({
+					model:  "dbmdz/bert-large-cased-finetuned-conll03-english",
+					inputs: "My name is Sarah Jessica Parker but you can call me 
