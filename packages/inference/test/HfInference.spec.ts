@@ -167,4 +167,9 @@ describe.concurrent(
 					inputs: "My name is Wolfgang and I live in Berlin",
 				})
 			).toMatchObject({
-				translation_text: "Mein Name ist Wolfgang un
+				translation_text: "Mein Name ist Wolfgang und ich lebe in Berlin",
+			});
+		});
+		it("zeroShotClassification", async () => {
+			expect.extend({
+				closeTo(received, expected, precision) 
