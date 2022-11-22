@@ -151,4 +151,7 @@ describe.concurrent(
 				expect.arrayContaining([
 					expect.objectContaining({
 						entity_group: expect.any(String),
-						
+						score:        expect.any(Number),
+						word:         expect.any(String),
+						start:        expect.any(Number),
+						end:          
