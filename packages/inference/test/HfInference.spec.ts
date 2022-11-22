@@ -163,4 +163,8 @@ describe.concurrent(
 		it("translation", async () => {
 			expect(
 				await hf.translation({
-					mode
+					model:  "t5-base",
+					inputs: "My name is Wolfgang and I live in Berlin",
+				})
+			).toMatchObject({
+				translation_text: "Mein Name ist Wolfgang un
