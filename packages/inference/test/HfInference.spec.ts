@@ -154,4 +154,13 @@ describe.concurrent(
 						score:        expect.any(Number),
 						word:         expect.any(String),
 						start:        expect.any(Number),
-						end:          
+						end:          expect.any(Number),
+					}),
+				])
+			);
+		});
+
+		it("translation", async () => {
+			expect(
+				await hf.translation({
+					mode
