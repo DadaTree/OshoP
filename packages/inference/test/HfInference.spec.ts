@@ -172,4 +172,10 @@ describe.concurrent(
 		});
 		it("zeroShotClassification", async () => {
 			expect.extend({
-				closeTo(received, expected, precision) 
+				closeTo(received, expected, precision) {
+					const { isNot } = this;
+					let pass = false;
+					let expectedDiff = 0;
+					let receivedDiff = 0;
+
+					if (received === Infin
