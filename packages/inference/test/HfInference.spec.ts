@@ -178,4 +178,7 @@ describe.concurrent(
 					let expectedDiff = 0;
 					let receivedDiff = 0;
 
-					if (received === Infin
+					if (received === Infinity && expected === Infinity) {
+						pass = true;
+					} else if (received === -Infinity && expected === -Infinity) {
+						pass = tru
