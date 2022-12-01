@@ -181,4 +181,8 @@ describe.concurrent(
 					if (received === Infinity && expected === Infinity) {
 						pass = true;
 					} else if (received === -Infinity && expected === -Infinity) {
-						pass = tru
+						pass = true;
+					} else {
+						expectedDiff = 10 ** -precision / 2;
+						receivedDiff = Math.abs(expected - received);
+						pass = receivedDiff < expect
