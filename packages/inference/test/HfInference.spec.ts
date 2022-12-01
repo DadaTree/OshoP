@@ -185,4 +185,11 @@ describe.concurrent(
 					} else {
 						expectedDiff = 10 ** -precision / 2;
 						receivedDiff = Math.abs(expected - received);
-						pass = receivedDiff < expect
+						pass = receivedDiff < expectedDiff;
+					}
+
+					return {
+						pass,
+						message: () =>
+							isNot
+								? `expected ${received} to not be close to ${expected}, received d
