@@ -192,4 +192,5 @@ describe.concurrent(
 						pass,
 						message: () =>
 							isNot
-								? `expected ${received} to not be close to ${expected}, received d
+								? `expected ${received} to not be close to ${expected}, received difference is ${receivedDiff}, but expected ${expectedDiff}`
+								: `expected ${received} to be close to ${expected}, receiv
