@@ -193,4 +193,10 @@ describe.concurrent(
 						message: () =>
 							isNot
 								? `expected ${received} to not be close to ${expected}, received difference is ${receivedDiff}, but expected ${expectedDiff}`
-								: `expected ${received} to be close to ${expected}, receiv
+								: `expected ${received} to be close to ${expected}, received difference is ${receivedDiff}, but expected ${expectedDiff}`,
+					};
+				},
+			});
+			expect(
+				await hf.zeroShotClassification({
+					model:  
