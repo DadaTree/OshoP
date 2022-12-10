@@ -199,4 +199,6 @@ describe.concurrent(
 			});
 			expect(
 				await hf.zeroShotClassification({
-					model:  
+					model:  "facebook/bart-large-mnli",
+					inputs: [
+						"Hi, I recently bought a device from your company but it is not working as advertised and I would li
