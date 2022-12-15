@@ -209,4 +209,7 @@ describe.concurrent(
 				expect.arrayContaining([
 					expect.objectContaining({
 						sequence:
-							"Hi, I recently bought a device from your company but it is not working as
+							"Hi, I recently bought a device from your company but it is not working as advertised and I would like to get reimbursed!",
+						labels: ["refund", "faq", "legal"],
+						scores: [
+							expect.closeTo(0.8
