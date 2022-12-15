@@ -212,4 +212,9 @@ describe.concurrent(
 							"Hi, I recently bought a device from your company but it is not working as advertised and I would like to get reimbursed!",
 						labels: ["refund", "faq", "legal"],
 						scores: [
-							expect.closeTo(0.8
+							expect.closeTo(0.877787709236145, 5),
+							expect.closeTo(0.10522633045911789, 5),
+							expect.closeTo(0.01698593981564045, 5),
+						],
+					}),
+				])
