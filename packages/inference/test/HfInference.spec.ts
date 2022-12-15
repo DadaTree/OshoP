@@ -206,4 +206,7 @@ describe.concurrent(
 					parameters: { candidate_labels: ["refund", "legal", "faq"] },
 				})
 			).toEqual(
-				expect.arrayCont
+				expect.arrayContaining([
+					expect.objectContaining({
+						sequence:
+							"Hi, I recently bought a device from your company but it is not working as
