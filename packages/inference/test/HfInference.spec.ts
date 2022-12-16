@@ -227,4 +227,10 @@ describe.concurrent(
 					inputs: {
 						past_user_inputs:    ["Which movie is the best ?"],
 						generated_responses: ["It is Die Hard for sure."],
-						text:          
+						text:                "Can you explain why ?",
+					},
+				})
+			).toMatchObject({
+				generated_text: "It's the best movie ever.",
+				conversation:   {
+				
