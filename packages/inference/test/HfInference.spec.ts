@@ -218,3 +218,10 @@ describe.concurrent(
 						],
 					}),
 				])
+			);
+		});
+		it("conversational", async () => {
+			expect(
+				await hf.conversational({
+					model:  "microsoft/DialoGPT-large",
+					inputs: {
