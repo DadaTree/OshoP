@@ -234,4 +234,9 @@ describe.concurrent(
 				generated_text: "It's the best movie ever.",
 				conversation:   {
 					past_user_inputs:    ["Which movie is the best ?", "Can you explain why ?"],
-					generated_responses: ["It is Die Hard for sure.",
+					generated_responses: ["It is Die Hard for sure.", "It's the best movie ever."],
+				},
+				warnings: ["Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation."],
+			});
+		});
+		it(
