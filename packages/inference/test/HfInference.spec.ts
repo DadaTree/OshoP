@@ -239,4 +239,7 @@ describe.concurrent(
 				warnings: ["Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation."],
 			});
 		});
-		it(
+		it("featureExtraction", async () => {
+			expect(
+				await hf.featureExtraction({
+					model:  "sentence-transformers/paraphrase-xl
