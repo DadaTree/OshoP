@@ -233,4 +233,5 @@ describe.concurrent(
 			).toMatchObject({
 				generated_text: "It's the best movie ever.",
 				conversation:   {
-				
+					past_user_inputs:    ["Which movie is the best ?", "Can you explain why ?"],
+					generated_responses: ["It is Die Hard for sure.",
