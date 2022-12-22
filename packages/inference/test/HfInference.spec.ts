@@ -242,4 +242,7 @@ describe.concurrent(
 		it("featureExtraction", async () => {
 			expect(
 				await hf.featureExtraction({
-					model:  "sentence-transformers/paraphrase-xl
+					model:  "sentence-transformers/paraphrase-xlm-r-multilingual-v1",
+					inputs: {
+						source_sentence: "That is a happy person",
+						sentences:       ["That is a happy d
