@@ -253,4 +253,8 @@ describe.concurrent(
 		it("automaticSpeechRecognition", async () => {
 			expect(
 				await hf.automaticSpeechRecognition({
-					model: "facebook/wav2vec2-lar
+					model: "facebook/wav2vec2-large-960h-lv60-self",
+					data:  readFileSync(FLAC_FILE),
+				})
+			).toMatchObject({
+				text: "GOING ALONG SLUSHY COUN
