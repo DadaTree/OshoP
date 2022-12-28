@@ -245,4 +245,7 @@ describe.concurrent(
 					model:  "sentence-transformers/paraphrase-xlm-r-multilingual-v1",
 					inputs: {
 						source_sentence: "That is a happy person",
-						sentences:       ["That is a happy d
+						sentences:       ["That is a happy dog", "That is a very happy person", "Today is a sunny day"],
+					},
+				})
+			).toEqual([expect.any(Number), expect.any(Number), expect.any(Number)])
