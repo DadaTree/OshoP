@@ -248,4 +248,9 @@ describe.concurrent(
 						sentences:       ["That is a happy dog", "That is a very happy person", "Today is a sunny day"],
 					},
 				})
-			).toEqual([expect.any(Number), expect.any(Number), expect.any(Number)])
+			).toEqual([expect.any(Number), expect.any(Number), expect.any(Number)]);
+		});
+		it("automaticSpeechRecognition", async () => {
+			expect(
+				await hf.automaticSpeechRecognition({
+					model: "facebook/wav2vec2-lar
