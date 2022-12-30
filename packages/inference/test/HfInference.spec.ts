@@ -261,3 +261,9 @@ describe.concurrent(
 			});
 		});
 		it("audioClassification", async () => {
+			expect(
+				await hf.audioClassification({
+					model: "superb/hubert-large-superb-er",
+					data:  readFileSync(FLAC_FILE),
+				})
+			).toEqu
