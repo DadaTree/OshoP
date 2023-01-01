@@ -279,3 +279,9 @@ describe.concurrent(
 			expect(
 				await hf.imageClassification({
 					data:  readFileSync(CHEETAH_FILE),
+					model: "google/vit-base-patch16-224",
+				})
+			).toEqual(
+				expect.arrayContaining([
+					expect.objectContaining({
+						score: expect.any(Num
