@@ -271,4 +271,11 @@ describe.concurrent(
 					expect.objectContaining({
 						score: expect.any(Number),
 						label: expect.any(String),
-	
+					}),
+				])
+			);
+		});
+		it("imageClassification", async () => {
+			expect(
+				await hf.imageClassification({
+					data:  readFileSync(CHEETAH_FILE),
