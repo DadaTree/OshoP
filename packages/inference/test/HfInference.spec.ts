@@ -266,4 +266,9 @@ describe.concurrent(
 					model: "superb/hubert-large-superb-er",
 					data:  readFileSync(FLAC_FILE),
 				})
-			).toEqu
+			).toEqual(
+				expect.arrayContaining([
+					expect.objectContaining({
+						score: expect.any(Number),
+						label: expect.any(String),
+	
