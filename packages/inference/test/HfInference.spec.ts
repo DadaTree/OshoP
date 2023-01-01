@@ -284,4 +284,12 @@ describe.concurrent(
 			).toEqual(
 				expect.arrayContaining([
 					expect.objectContaining({
-						score: expect.any(Num
+						score: expect.any(Number),
+						label: expect.any(String),
+					}),
+				])
+			);
+		});
+		it("objectDetection", async () => {
+			expect(
+				await 
