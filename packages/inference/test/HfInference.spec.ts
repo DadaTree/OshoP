@@ -301,4 +301,8 @@ describe.concurrent(
 					expect.objectContaining({
 						score: expect.any(Number),
 						label: expect.any(String),
-						box:   expect.objectContain
+						box:   expect.objectContaining({
+							xmin: expect.any(Number),
+							ymin: expect.any(Number),
+							xmax: expect.any(Number),
+							ymax: expect.any
