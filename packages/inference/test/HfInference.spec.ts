@@ -292,4 +292,9 @@ describe.concurrent(
 		});
 		it("objectDetection", async () => {
 			expect(
-				await 
+				await hf.imageClassification({
+					data:  readFileSync(CAT_FILE),
+					model: "facebook/detr-resnet-50",
+				})
+			).toEqual(
+				expect.arrayContaining([
