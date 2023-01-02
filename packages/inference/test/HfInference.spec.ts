@@ -298,3 +298,7 @@ describe.concurrent(
 				})
 			).toEqual(
 				expect.arrayContaining([
+					expect.objectContaining({
+						score: expect.any(Number),
+						label: expect.any(String),
+						box:   expect.objectContain
