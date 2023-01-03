@@ -305,4 +305,13 @@ describe.concurrent(
 							xmin: expect.any(Number),
 							ymin: expect.any(Number),
 							xmax: expect.any(Number),
-							ymax: expect.any
+							ymax: expect.any(Number),
+						}),
+					}),
+				])
+			);
+		});
+		it("imageSegmentation", async () => {
+			expect(
+				await hf.imageClassification({
+					data:  rea
