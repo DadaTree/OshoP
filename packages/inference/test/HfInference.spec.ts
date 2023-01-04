@@ -320,3 +320,11 @@ describe.concurrent(
 			).toEqual(
 				expect.arrayContaining([
 					expect.objectContaining({
+						score: expect.any(Number),
+						label: expect.any(String),
+						mask:  expect.any(String),
+					}),
+				])
+			);
+		});
+		it("tex
