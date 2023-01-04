@@ -314,4 +314,9 @@ describe.concurrent(
 		it("imageSegmentation", async () => {
 			expect(
 				await hf.imageClassification({
-					data:  rea
+					data:  readFileSync(CAT_FILE),
+					model: "facebook/detr-resnet-50-panoptic",
+				})
+			).toEqual(
+				expect.arrayContaining([
+					expect.objectContaining({
