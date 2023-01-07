@@ -327,4 +327,6 @@ describe.concurrent(
 				])
 			);
 		});
-		it("tex
+		it("textToImage", async () => {
+			const res = await hf.textToImage({
+				inputs:          "award winning high resolution pho
