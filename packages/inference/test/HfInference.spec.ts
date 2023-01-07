@@ -329,4 +329,6 @@ describe.concurrent(
 		});
 		it("textToImage", async () => {
 			const res = await hf.textToImage({
-				inputs:          "award winning high resolution pho
+				inputs:          "award winning high resolution photo of a giant tortoise/((ladybird)) hybrid, [trending on artstation]",
+				negative_prompt: "blurry",
+				model:           "stabilityai/stable
