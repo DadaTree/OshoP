@@ -331,4 +331,11 @@ describe.concurrent(
 			const res = await hf.textToImage({
 				inputs:          "award winning high resolution photo of a giant tortoise/((ladybird)) hybrid, [trending on artstation]",
 				negative_prompt: "blurry",
-				model:           "stabilityai/stable
+				model:           "stabilityai/stable-diffusion-2",
+			});
+
+			expect(res).toBeInstanceOf(Blob);
+		});
+	},
+	TIMEOUT
+);
