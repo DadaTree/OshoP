@@ -6,4 +6,9 @@ declare global {
 		}
 		interface AsymmetricMatchersContaining {
 			// todo: fix the any
-			closeTo(expected: number, preci
+			closeTo(expected: number, precision: number): any;
+		}
+	}
+}
+
+export {};
