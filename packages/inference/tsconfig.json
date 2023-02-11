@@ -4,4 +4,6 @@
 		"noEmit": true,
 		"module": "ESNext",
 		"target": "ESNext",
-		"moduleResolut
+		"moduleResolution": "Node"
+	}
+}
